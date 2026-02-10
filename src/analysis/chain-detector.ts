@@ -84,11 +84,13 @@ const SIGNALS: ChainSignal[] = [
   { pattern: /\boptimism\b/i, chain: "Ethereum", weight: 6, label: "Optimism" },
   { pattern: /\bzksync\b/i, chain: "Ethereum", weight: 6, label: "zkSync" },
 
-  // === Other EVM chains — all count as Ethereum ecosystem ===
-  { pattern: /avalanche|avax/i, chain: "Ethereum", weight: 6, label: "Avalanche/AVAX" },
-  { pattern: /c-chain/i, chain: "Ethereum", weight: 5, label: "C-Chain" },
-  { pattern: /\bbsc\b|bnb\s+chain|binance\s+smart\s+chain/i, chain: "Ethereum", weight: 5, label: "BSC/BNB Chain" },
-  { pattern: /pancakeswap/i, chain: "Ethereum", weight: 4, label: "PancakeSwap" },
+  // === Avalanche (separate L1) ===
+  { pattern: /avalanche|avax/i, chain: "Avalanche", weight: 6, label: "Avalanche/AVAX" },
+  { pattern: /c-chain/i, chain: "Avalanche", weight: 5, label: "C-Chain" },
+
+  // === BSC (separate L1) ===
+  { pattern: /\bbsc\b|bnb\s+chain|binance\s+smart\s+chain/i, chain: "BSC", weight: 7, label: "BSC/BNB Chain" },
+  { pattern: /pancakeswap/i, chain: "BSC", weight: 5, label: "PancakeSwap" },
 
   // === TON ===
   { pattern: /\bton\b.*\bblockchain\b|\bton\b.*\bcontract/i, chain: "TON", weight: 7, label: "TON blockchain" },
