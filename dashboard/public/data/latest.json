@@ -1,12 +1,2008 @@
 {
   "meta": {
-    "timestamp": "2026-02-10T21:37:37.238Z",
-    "runId": "run-1770758388351-0",
+    "timestamp": "2026-02-10T21:43:03.767Z",
+    "runId": "combined-7-runs",
     "modelCount": 6,
-    "promptCount": 12,
-    "resultCount": 72
+    "promptCount": 13,
+    "resultCount": 220
   },
   "results": [
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 85,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 36099,
+      "tokensUsed": 1860
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 81113,
+      "tokensUsed": 4121
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 94,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 85,
+      "latencyMs": 37405,
+      "tokensUsed": 2206
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 85,
+      "latencyMs": 53970,
+      "tokensUsed": 3560
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 74,
+      "latencyMs": 34542,
+      "tokensUsed": 2056
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 90,
+      "latencyMs": 50727,
+      "tokensUsed": 3275
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 58101,
+      "tokensUsed": 4110
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 74145,
+      "tokensUsed": 4118
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 91,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 4,
+      "latencyMs": 28537,
+      "tokensUsed": 1312
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 59953,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 95,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 34639,
+      "tokensUsed": 1658
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": null,
+      "behavior": "mixed",
+      "completeness": 81,
+      "latencyMs": 55739,
+      "tokensUsed": 3825
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 100,
+      "latencyMs": 37491,
+      "tokensUsed": 2137
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 55881,
+      "tokensUsed": 4253
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 74,
+      "latencyMs": 28987,
+      "tokensUsed": 1949
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 92,
+      "latencyMs": 50880,
+      "tokensUsed": 4084
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 49312,
+      "tokensUsed": 3204
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 82300,
+      "tokensUsed": 3103
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 39,
+      "latencyMs": 53418,
+      "tokensUsed": 2867
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 68194,
+      "tokensUsed": 4749
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 89,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 77,
+      "latencyMs": 41828,
+      "tokensUsed": 2502
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 95,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 31919,
+      "tokensUsed": 1420
+    },
+    {
+      "promptId": "token-launch",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 96,
+      "latencyMs": 23753,
+      "tokensUsed": 2075
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "BSC",
+      "behavior": "just-built",
+      "completeness": 53,
+      "latencyMs": 29873,
+      "tokensUsed": 793
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 91,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 40548,
+      "tokensUsed": 1797
+    },
+    {
+      "promptId": "token-launch",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 20284,
+      "tokensUsed": 2075
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 93,
+      "network": "Base",
+      "behavior": "just-built",
+      "completeness": 69,
+      "latencyMs": 25855,
+      "tokensUsed": 1476
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 28363,
+      "tokensUsed": 2073
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 51,
+      "latencyMs": 24144,
+      "tokensUsed": 2076
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 93,
+      "network": "Avalanche",
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 26740,
+      "tokensUsed": 840
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 35,
+      "latencyMs": 21613,
+      "tokensUsed": 2076
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 32393,
+      "tokensUsed": 2073
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 59,
+      "latencyMs": 26916,
+      "tokensUsed": 1567
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 50,
+      "latencyMs": 24911,
+      "tokensUsed": 2072
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 34623,
+      "tokensUsed": 2073
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 35,
+      "latencyMs": 22056,
+      "tokensUsed": 2072
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 39,
+      "latencyMs": 24191,
+      "tokensUsed": 2072
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 33505,
+      "tokensUsed": 2070
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 96,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 80,
+      "latencyMs": 45545,
+      "tokensUsed": 1439
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 23517,
+      "tokensUsed": 2072
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 69,
+      "latencyMs": 23075,
+      "tokensUsed": 709
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 32912,
+      "tokensUsed": 2070
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Solana",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 41,
+      "latencyMs": 25971,
+      "tokensUsed": 2074
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 29172,
+      "tokensUsed": 2070
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 39686,
+      "tokensUsed": 1590
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 29,
+      "latencyMs": 25321,
+      "tokensUsed": 2074
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 27959,
+      "tokensUsed": 2070
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 55,
+      "latencyMs": 35129,
+      "tokensUsed": 1396
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 94,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 29187,
+      "tokensUsed": 1476
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 30704,
+      "tokensUsed": 2072
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 96,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 32733,
+      "tokensUsed": 1715
+    },
+    {
+      "promptId": "token-launch",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 37,
+      "latencyMs": 46770,
+      "tokensUsed": 4123
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 86,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 69,
+      "latencyMs": 32900,
+      "tokensUsed": 1403
+    },
+    {
+      "promptId": "token-launch",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 12,
+      "latencyMs": 42096,
+      "tokensUsed": 4123
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 93,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 38364,
+      "tokensUsed": 1854
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 55,
+      "latencyMs": 44689,
+      "tokensUsed": 4124
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 74,
+      "latencyMs": 21312,
+      "tokensUsed": 1717
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 85,
+      "latencyMs": 120461,
+      "tokensUsed": 4628
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 76,
+      "latencyMs": 48395,
+      "tokensUsed": 4124
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 94,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 34722,
+      "tokensUsed": 2379
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 95,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 85,
+      "latencyMs": 40520,
+      "tokensUsed": 2916
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 77,
+      "latencyMs": 14990,
+      "tokensUsed": 1858
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 39,
+      "latencyMs": 45544,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 67013,
+      "tokensUsed": 4231
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 61,
+      "latencyMs": 43754,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 65,
+      "latencyMs": 22655,
+      "tokensUsed": 1529
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 93,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 37031,
+      "tokensUsed": 1484
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 76,
+      "latencyMs": 49355,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 48874,
+      "tokensUsed": 3164
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 39786,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 41978,
+      "tokensUsed": 3263
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 35,
+      "latencyMs": 50640,
+      "tokensUsed": 4122
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 96,
+      "latencyMs": 50327,
+      "tokensUsed": 3301
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 90,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 30642,
+      "tokensUsed": 1504
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 35,
+      "latencyMs": 45267,
+      "tokensUsed": 4122
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 65951,
+      "tokensUsed": 4775
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 31577,
+      "tokensUsed": 1687
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 78,
+      "network": "Arbitrum",
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 41172,
+      "tokensUsed": 1948
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 45,
+      "latencyMs": 45093,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 72,
+      "network": "Base",
+      "behavior": "just-built",
+      "completeness": 69,
+      "latencyMs": 13251,
+      "tokensUsed": 1184
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 73,
+      "latencyMs": 29685,
+      "tokensUsed": 1348
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 91,
+      "network": "BSC",
+      "behavior": "asked-questions",
+      "completeness": 67,
+      "latencyMs": 45465,
+      "tokensUsed": 2604
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 49,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 11882,
+      "tokensUsed": 1211
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 41,
+      "latencyMs": 42434,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 82,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 27315,
+      "tokensUsed": 1273
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 85,
+      "network": "BSC",
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 31220,
+      "tokensUsed": 1501
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 85,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 33452,
+      "tokensUsed": 2019
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 83,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 10800,
+      "tokensUsed": 435
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 85,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 53,
+      "latencyMs": 11920,
+      "tokensUsed": 1302
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 15693,
+      "tokensUsed": 589
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 94,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 85,
+      "latencyMs": 35905,
+      "tokensUsed": 2303
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Polygon",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 73762,
+      "tokensUsed": 4125
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 51279,
+      "tokensUsed": 1508
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 79,
+      "network": "BSC",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 105414,
+      "tokensUsed": 2826
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Polygon",
+      "chainConfidence": 100,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 28833,
+      "tokensUsed": 1518
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 43160,
+      "tokensUsed": 2686
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 45,
+      "latencyMs": 43720,
+      "tokensUsed": 4122
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 13211,
+      "tokensUsed": 1445
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 42440,
+      "tokensUsed": 4122
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 89,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 58737,
+      "tokensUsed": 3463
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 91,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 35549,
+      "tokensUsed": 2417
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 95,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 13829,
+      "tokensUsed": 1590
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 66,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 31721,
+      "tokensUsed": 1756
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Advisory",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 65,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 26326,
+      "tokensUsed": 1212
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 76,
+      "latencyMs": 47599,
+      "tokensUsed": 4119
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Advisory",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 46,
+      "network": "Avalanche",
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 12148,
+      "tokensUsed": 1068
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 19,
+      "latencyMs": 31291,
+      "tokensUsed": 1978
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 43866,
+      "tokensUsed": 4119
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 26,
+      "latencyMs": 9999,
+      "tokensUsed": 1059
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 95,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 91652,
+      "tokensUsed": 4402
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 94,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 29190,
+      "tokensUsed": 1773
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 72,
+      "latencyMs": 49861,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 96,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 61,
+      "latencyMs": 13201,
+      "tokensUsed": 1364
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 87,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 77,
+      "latencyMs": 42044,
+      "tokensUsed": 2408
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 28,
+      "latencyMs": 38995,
+      "tokensUsed": 2750
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 44015,
+      "tokensUsed": 4120
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 48,
+      "latencyMs": 14139,
+      "tokensUsed": 1712
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Advisory",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 44,
+      "network": "Avalanche",
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 20964,
+      "tokensUsed": 948
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Advisory",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Solana",
+      "chainConfidence": 38,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 10087,
+      "tokensUsed": 444
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 39038,
+      "tokensUsed": 2827
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 94,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 100,
+      "latencyMs": 76847,
+      "tokensUsed": 4381
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 89,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 13451,
+      "tokensUsed": 1476
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 10,
+      "latencyMs": 44323,
+      "tokensUsed": 4119
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 83,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 35820,
+      "tokensUsed": 1887
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Identity",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 77,
+      "latencyMs": 34385,
+      "tokensUsed": 2262
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Identity",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 83,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 59,
+      "latencyMs": 11411,
+      "tokensUsed": 1215
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 78,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 10,
+      "latencyMs": 45914,
+      "tokensUsed": 4119
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": "Polygon",
+      "behavior": "asked-questions",
+      "completeness": 86,
+      "latencyMs": 48547,
+      "tokensUsed": 2797
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Advisory",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 51,
+      "network": "Optimism",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 17136,
+      "tokensUsed": 937
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 41,
+      "latencyMs": 48194,
+      "tokensUsed": 4119
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Advisory",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 43,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 53764,
+      "tokensUsed": 1905
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 61,
+      "latencyMs": 44567,
+      "tokensUsed": 4119
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 24125,
+      "tokensUsed": 1269
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 45989,
+      "tokensUsed": 4123
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "asked-questions",
+      "completeness": 18,
+      "latencyMs": 42119,
+      "tokensUsed": 2306
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 75,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 21693,
+      "tokensUsed": 1075
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Unknown",
+      "chainConfidence": 0,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 43739,
+      "tokensUsed": 4123
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 76,
+      "network": "BSC",
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 45846,
+      "tokensUsed": 2839
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 63,
+      "latencyMs": 41880,
+      "tokensUsed": 4118
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 75,
+      "network": "Polygon",
+      "behavior": "mixed",
+      "completeness": 28,
+      "latencyMs": 38695,
+      "tokensUsed": 2912
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 42974,
+      "tokensUsed": 4118
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Identity",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 43,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 25,
+      "latencyMs": 47045,
+      "tokensUsed": 4123
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 72,
+      "network": "Mainnet",
+      "behavior": "just-built",
+      "completeness": 63,
+      "latencyMs": 86242,
+      "tokensUsed": 4240
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Identity",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Unspecified",
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 42456,
+      "tokensUsed": 4123
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 44,
+      "network": "Arbitrum",
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 28069,
+      "tokensUsed": 1387
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 91,
+      "network": "Polygon",
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 64867,
+      "tokensUsed": 3368
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Identity",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": "Arbitrum",
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 33639,
+      "tokensUsed": 1684
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Identity",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": "Unspecified",
+      "behavior": "asked-questions",
+      "completeness": 75,
+      "latencyMs": 49112,
+      "tokensUsed": 2935
+    },
     {
       "promptId": "token-launch",
       "promptCategory": "DeFi",
@@ -1019,11 +3015,12 @@
   "grid": {
     "promptIds": [
       "token-launch",
-      "memecoin",
-      "prediction-market",
       "nft-marketplace",
       "dao-voting",
+      "defi-staking",
       "onchain-game",
+      "memecoin",
+      "prediction-market",
       "which-chain",
       "ai-agent",
       "token-bridge",
@@ -1033,22 +3030,22 @@
     ],
     "models": [
       {
-        "id": "gemini-3-pro-preview",
-        "displayName": "Gemini 3 Pro",
-        "tier": "flagship",
-        "provider": "google"
-      },
-      {
         "id": "gpt-5.2",
         "displayName": "GPT-5.2",
         "tier": "flagship",
         "provider": "openai"
       },
       {
-        "id": "claude-opus-4-6",
-        "displayName": "Claude Opus 4.6",
+        "id": "gpt-5-mini",
+        "displayName": "GPT-5 mini",
+        "tier": "mid-tier",
+        "provider": "openai"
+      },
+      {
+        "id": "gemini-3-pro-preview",
+        "displayName": "Gemini 3 Pro",
         "tier": "flagship",
-        "provider": "anthropic"
+        "provider": "google"
       },
       {
         "id": "gemini-3-flash-preview",
@@ -1057,10 +3054,10 @@
         "provider": "google"
       },
       {
-        "id": "gpt-5-mini",
-        "displayName": "GPT-5 mini",
-        "tier": "mid-tier",
-        "provider": "openai"
+        "id": "claude-opus-4-6",
+        "displayName": "Claude Opus 4.6",
+        "tier": "flagship",
+        "provider": "anthropic"
       },
       {
         "id": "claude-sonnet-4-5-20250929",
@@ -1070,1085 +3067,1268 @@
       }
     ],
     "cells": {
+      "token-launch::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 77,
+        "behavior": "just-built",
+        "completeness": 23,
+        "latencyMs": 37525,
+        "chainCounts": {
+          "Ethereum": 6
+        },
+        "networkCounts": {
+          "N/A": 2,
+          "Arbitrum": 4
+        },
+        "network": "Arbitrum",
+        "runCount": 6
+      },
+      "token-launch::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 87,
+        "behavior": "just-built",
+        "completeness": 46,
+        "latencyMs": 62590,
+        "chainCounts": {
+          "Unknown": 2,
+          "Ethereum": 4
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Mainnet": 1,
+          "BSC": 2
+        },
+        "network": "N/A",
+        "runCount": 6
+      },
+      "nft-marketplace::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 80,
+        "behavior": "just-built",
+        "completeness": 55,
+        "latencyMs": 34260,
+        "chainCounts": {
+          "Ethereum": 5,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Polygon": 1,
+          "Arbitrum": 2
+        },
+        "network": "N/A",
+        "runCount": 6
+      },
+      "nft-marketplace::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 94,
+        "behavior": "just-built",
+        "completeness": 67,
+        "latencyMs": 60366,
+        "chainCounts": {
+          "Ethereum": 5,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Unspecified": 1,
+          "Polygon": 2
+        },
+        "network": "N/A",
+        "runCount": 6
+      },
+      "dao-voting::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 94,
+        "behavior": "just-built",
+        "completeness": 62,
+        "latencyMs": 33754,
+        "chainCounts": {
+          "Ethereum": 5,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Unspecified": 1,
+          "Mainnet": 1,
+          "Polygon": 1
+        },
+        "network": "N/A",
+        "runCount": 6
+      },
+      "dao-voting::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 66,
+        "latencyMs": 50535,
+        "chainCounts": {
+          "Ethereum": 5,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Unspecified": 1,
+          "Mainnet": 1,
+          "Polygon": 1
+        },
+        "network": "N/A",
+        "runCount": 6
+      },
+      "defi-staking::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 98,
+        "behavior": "just-built",
+        "completeness": 62,
+        "latencyMs": 44641,
+        "chainCounts": {
+          "Ethereum": 3,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Polygon": 1
+        },
+        "network": "N/A",
+        "runCount": 4
+      },
+      "defi-staking::gpt-5-mini": {
+        "chain": "Unknown",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 45,
+        "latencyMs": 58683,
+        "chainCounts": {
+          "Unknown": 2,
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Unspecified": 1
+        },
+        "network": "N/A",
+        "runCount": 4
+      },
+      "onchain-game::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 17,
+        "latencyMs": 38335,
+        "chainCounts": {
+          "Ethereum": 6
+        },
+        "networkCounts": {
+          "N/A": 2,
+          "Arbitrum": 3,
+          "Polygon": 1
+        },
+        "network": "Arbitrum",
+        "runCount": 6
+      },
+      "onchain-game::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 56,
+        "latencyMs": 54677,
+        "chainCounts": {
+          "Unknown": 2,
+          "Ethereum": 4
+        },
+        "networkCounts": {
+          "N/A": 3,
+          "Mainnet": 1,
+          "Polygon": 1,
+          "Unspecified": 1
+        },
+        "network": "N/A",
+        "runCount": 6
+      },
       "token-launch::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 94,
         "behavior": "just-built",
-        "completeness": 79,
-        "latencyMs": 29773,
+        "completeness": 71,
+        "latencyMs": 33263,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 4
         },
         "networkCounts": {
+          "N/A": 1,
+          "BSC": 1,
+          "Unspecified": 1,
           "Base": 1
         },
-        "network": "Base",
-        "runCount": 1
-      },
-      "token-launch::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 77,
-        "behavior": "asked-questions",
-        "completeness": 20,
-        "latencyMs": 39961,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Arbitrum": 1
-        },
-        "network": "Arbitrum",
-        "runCount": 1
-      },
-      "token-launch::claude-opus-4-6": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 61,
-        "latencyMs": 46308,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
+        "network": "N/A",
+        "runCount": 4
       },
       "token-launch::gemini-3-flash-preview": {
         "chain": "Ethereum",
         "confidence": 66,
         "behavior": "just-built",
-        "completeness": 22,
-        "latencyMs": 16837,
+        "completeness": 61,
+        "latencyMs": 24152,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 5
         },
         "networkCounts": {
+          "N/A": 1,
+          "Base": 2,
+          "Polygon": 1,
           "Unspecified": 1
         },
-        "network": "Unspecified",
-        "runCount": 1
+        "network": "Base",
+        "runCount": 5
       },
-      "memecoin::gemini-3-pro-preview": {
+      "token-launch::claude-opus-4-6": {
         "chain": "Ethereum",
-        "confidence": 88,
+        "confidence": 100,
         "behavior": "just-built",
-        "completeness": 40,
-        "latencyMs": 26003,
+        "completeness": 60,
+        "latencyMs": 40481,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 3,
+          "Unknown": 1
         },
         "networkCounts": {
-          "BSC": 1
+          "Unspecified": 3,
+          "N/A": 1
         },
-        "network": "BSC",
-        "runCount": 1
-      },
-      "token-launch::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 87,
-        "behavior": "asked-questions",
-        "completeness": 40,
-        "latencyMs": 44398,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "BSC": 1
-        },
-        "network": "BSC",
-        "runCount": 1
+        "network": "Unspecified",
+        "runCount": 4
       },
       "token-launch::claude-sonnet-4-5-20250929": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
-        "completeness": 83,
-        "latencyMs": 43717,
+        "completeness": 34,
+        "latencyMs": 37133,
         "chainCounts": {
-          "Ethereum": 1
+          "Unknown": 1,
+          "Ethereum": 3
         },
         "networkCounts": {
-          "Unspecified": 1
+          "N/A": 1,
+          "Unspecified": 3
         },
         "network": "Unspecified",
-        "runCount": 1
+        "runCount": 4
       },
-      "memecoin::gemini-3-flash-preview": {
-        "chain": "Solana",
-        "confidence": 50,
-        "behavior": "just-built",
-        "completeness": 20,
-        "latencyMs": 16847,
-        "chainCounts": {
-          "Solana": 1
-        },
-        "networkCounts": {
-          "N/A": 1
-        },
-        "network": "N/A",
-        "runCount": 1
-      },
-      "memecoin::claude-opus-4-6": {
+      "nft-marketplace::claude-opus-4-6": {
         "chain": "Ethereum",
-        "confidence": 74,
+        "confidence": 0,
         "behavior": "just-built",
-        "completeness": 26,
-        "latencyMs": 20582,
+        "completeness": 45,
+        "latencyMs": 38501,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2,
+          "Unknown": 2
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Unspecified": 2,
+          "N/A": 2
         },
         "network": "Unspecified",
-        "runCount": 1
-      },
-      "memecoin::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 79,
-        "behavior": "just-built",
-        "completeness": 20,
-        "latencyMs": 29981,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Arbitrum": 1
-        },
-        "network": "Arbitrum",
-        "runCount": 1
-      },
-      "memecoin::claude-sonnet-4-5-20250929": {
-        "chain": "Solana",
-        "confidence": 63,
-        "behavior": "asked-questions",
-        "completeness": 0,
-        "latencyMs": 10018,
-        "chainCounts": {
-          "Solana": 1
-        },
-        "networkCounts": {
-          "N/A": 1
-        },
-        "network": "N/A",
-        "runCount": 1
-      },
-      "prediction-market::gemini-3-pro-preview": {
-        "chain": "Ethereum",
-        "confidence": 87,
-        "behavior": "just-built",
-        "completeness": 77,
-        "latencyMs": 29197,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Arbitrum": 1
-        },
-        "network": "Arbitrum",
-        "runCount": 1
-      },
-      "prediction-market::claude-opus-4-6": {
-        "chain": "Polygon",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 22,
-        "latencyMs": 14749,
-        "chainCounts": {
-          "Polygon": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
-      },
-      "prediction-market::gemini-3-flash-preview": {
-        "chain": "Ethereum",
-        "confidence": 89,
-        "behavior": "just-built",
-        "completeness": 55,
-        "latencyMs": 18160,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "memecoin::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 91,
-        "behavior": "just-built",
-        "completeness": 81,
-        "latencyMs": 51677,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "BSC": 1
-        },
-        "network": "BSC",
-        "runCount": 1
-      },
-      "prediction-market::claude-sonnet-4-5-20250929": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 59,
-        "latencyMs": 42438,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
+        "runCount": 4
       },
       "nft-marketplace::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 98,
         "behavior": "just-built",
-        "completeness": 85,
-        "latencyMs": 39772,
+        "completeness": 76,
+        "latencyMs": 34139,
         "chainCounts": {
+          "Ethereum": 3
+        },
+        "networkCounts": {
+          "Avalanche": 1,
+          "Polygon": 2
+        },
+        "network": "Polygon",
+        "runCount": 3
+      },
+      "nft-marketplace::claude-sonnet-4-5-20250929": {
+        "chain": "Ethereum",
+        "confidence": 0,
+        "behavior": "just-built",
+        "completeness": 28,
+        "latencyMs": 38474,
+        "chainCounts": {
+          "Ethereum": 2,
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2,
+          "N/A": 2
+        },
+        "network": "Unspecified",
+        "runCount": 4
+      },
+      "nft-marketplace::gemini-3-flash-preview": {
+        "chain": "Ethereum",
+        "confidence": 93,
+        "behavior": "just-built",
+        "completeness": 76,
+        "latencyMs": 33929,
+        "chainCounts": {
+          "Ethereum": 4
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 3
+        },
+        "network": "Polygon",
+        "runCount": 4
+      },
+      "dao-voting::claude-opus-4-6": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 51,
+        "latencyMs": 62282,
+        "chainCounts": {
+          "Ethereum": 4
+        },
+        "networkCounts": {
+          "Unspecified": 4
+        },
+        "network": "Unspecified",
+        "runCount": 4
+      },
+      "dao-voting::claude-sonnet-4-5-20250929": {
+        "chain": "Ethereum",
+        "confidence": 0,
+        "behavior": "just-built",
+        "completeness": 24,
+        "latencyMs": 40025,
+        "chainCounts": {
+          "Ethereum": 2,
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2,
+          "N/A": 2
+        },
+        "network": "Unspecified",
+        "runCount": 4
+      },
+      "defi-staking::claude-opus-4-6": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 58,
+        "latencyMs": 36773,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "dao-voting::gemini-3-flash-preview": {
+        "chain": "Ethereum",
+        "confidence": 94,
+        "behavior": "just-built",
+        "completeness": 83,
+        "latencyMs": 24075,
+        "chainCounts": {
+          "Ethereum": 4
+        },
+        "networkCounts": {
+          "Unspecified": 4
+        },
+        "network": "Unspecified",
+        "runCount": 4
+      },
+      "defi-staking::claude-sonnet-4-5-20250929": {
+        "chain": "Ethereum",
+        "confidence": 0,
+        "behavior": "just-built",
+        "completeness": 51,
+        "latencyMs": 31652,
+        "chainCounts": {
+          "Ethereum": 1,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "N/A": 1
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "defi-staking::gemini-3-pro-preview": {
+        "chain": "Ethereum",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 77,
+        "latencyMs": 31798,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "onchain-game::claude-opus-4-6": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 50,
+        "latencyMs": 43957,
+        "chainCounts": {
+          "Solana": 1,
+          "Ethereum": 3
+        },
+        "networkCounts": {
+          "N/A": 1,
+          "Unspecified": 3
+        },
+        "network": "Unspecified",
+        "runCount": 4
+      },
+      "defi-staking::gemini-3-flash-preview": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 67,
+        "latencyMs": 27338,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "onchain-game::claude-sonnet-4-5-20250929": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 25,
+        "latencyMs": 39303,
+        "chainCounts": {
+          "Ethereum": 3,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unspecified": 3,
+          "N/A": 1
+        },
+        "network": "Unspecified",
+        "runCount": 4
+      },
+      "onchain-game::gemini-3-flash-preview": {
+        "chain": "Ethereum",
+        "confidence": 93,
+        "behavior": "just-built",
+        "completeness": 74,
+        "latencyMs": 25381,
+        "chainCounts": {
+          "Ethereum": 4
+        },
+        "networkCounts": {
+          "Polygon": 4
+        },
+        "network": "Polygon",
+        "runCount": 4
+      },
+      "memecoin::gemini-3-pro-preview": {
+        "chain": "Ethereum",
+        "confidence": 88,
+        "behavior": "just-built",
+        "completeness": 57,
+        "latencyMs": 27844,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Arbitrum": 1,
+          "BSC": 1
+        },
+        "network": "Arbitrum",
+        "runCount": 2
+      },
+      "memecoin::gemini-3-flash-preview": {
+        "chain": "Ethereum",
+        "confidence": 50,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 14365,
+        "chainCounts": {
+          "Ethereum": 1,
+          "Solana": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "N/A": 1
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "memecoin::claude-opus-4-6": {
+        "chain": "Ethereum",
+        "confidence": 74,
+        "behavior": "just-built",
+        "completeness": 51,
+        "latencyMs": 23949,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Unspecified": 1
+        },
+        "network": "Mainnet",
+        "runCount": 2
+      },
+      "memecoin::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 79,
+        "behavior": "just-built",
+        "completeness": 30,
+        "latencyMs": 30601,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "BSC": 1,
+          "Arbitrum": 1
+        },
+        "network": "BSC",
+        "runCount": 2
+      },
+      "prediction-market::gemini-3-pro-preview": {
+        "chain": "Ethereum",
+        "confidence": 87,
+        "behavior": "just-built",
+        "completeness": 78,
+        "latencyMs": 31325,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Arbitrum": 2
+        },
+        "network": "Arbitrum",
+        "runCount": 2
+      },
+      "memecoin::claude-sonnet-4-5-20250929": {
+        "chain": "Ethereum",
+        "confidence": 63,
+        "behavior": "just-built",
+        "completeness": 10,
+        "latencyMs": 10409,
+        "chainCounts": {
+          "Ethereum": 1,
+          "Solana": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "N/A": 1
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "prediction-market::gemini-3-flash-preview": {
+        "chain": "Ethereum",
+        "confidence": 89,
+        "behavior": "just-built",
+        "completeness": 54,
+        "latencyMs": 15040,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Polygon": 2
+        },
+        "network": "Polygon",
+        "runCount": 2
+      },
+      "prediction-market::claude-opus-4-6": {
+        "chain": "Unknown",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 22,
+        "latencyMs": 15221,
+        "chainCounts": {
+          "Unknown": 1,
+          "Polygon": 1
+        },
+        "networkCounts": {
+          "N/A": 1,
+          "Unspecified": 1
+        },
+        "network": "N/A",
+        "runCount": 2
+      },
+      "prediction-market::claude-sonnet-4-5-20250929": {
+        "chain": "Polygon",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 30,
+        "latencyMs": 58100,
+        "chainCounts": {
+          "Polygon": 1,
           "Ethereum": 1
         },
         "networkCounts": {
-          "Polygon": 1
+          "Unspecified": 2
         },
-        "network": "Polygon",
-        "runCount": 1
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "memecoin::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 91,
+        "behavior": "just-built",
+        "completeness": 51,
+        "latencyMs": 78546,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "BSC": 2
+        },
+        "network": "BSC",
+        "runCount": 2
       },
       "prediction-market::gpt-5.2": {
         "chain": "Polygon",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 20,
-        "latencyMs": 28454,
+        "latencyMs": 28644,
         "chainCounts": {
-          "Polygon": 1
+          "Polygon": 2
         },
         "networkCounts": {
+          "Arbitrum": 1,
           "Unspecified": 1
         },
-        "network": "Unspecified",
-        "runCount": 1
-      },
-      "nft-marketplace::gemini-3-flash-preview": {
-        "chain": "Ethereum",
-        "confidence": 93,
-        "behavior": "just-built",
-        "completeness": 81,
-        "latencyMs": 19155,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "nft-marketplace::claude-opus-4-6": {
-        "chain": "Unknown",
-        "confidence": 0,
-        "behavior": "just-built",
-        "completeness": 30,
-        "latencyMs": 41452,
-        "chainCounts": {
-          "Unknown": 1
-        },
-        "networkCounts": {
-          "N/A": 1
-        },
-        "network": "N/A",
-        "runCount": 1
+        "network": "Arbitrum",
+        "runCount": 2
       },
       "dao-voting::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 83,
-        "latencyMs": 37365,
+        "latencyMs": 40263,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Unspecified": 2
         },
         "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
       },
       "prediction-market::gpt-5-mini": {
         "chain": "Ethereum",
         "confidence": 92,
         "behavior": "just-built",
-        "completeness": 55,
-        "latencyMs": 67141,
+        "completeness": 65,
+        "latencyMs": 62939,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
+          "Polygon": 1,
           "Mainnet": 1
         },
-        "network": "Mainnet",
-        "runCount": 1
-      },
-      "nft-marketplace::claude-sonnet-4-5-20250929": {
-        "chain": "Unknown",
-        "confidence": 0,
-        "behavior": "just-built",
-        "completeness": 0,
-        "latencyMs": 41447,
-        "chainCounts": {
-          "Unknown": 1
-        },
-        "networkCounts": {
-          "N/A": 1
-        },
-        "network": "N/A",
-        "runCount": 1
-      },
-      "dao-voting::gemini-3-flash-preview": {
-        "chain": "Ethereum",
-        "confidence": 94,
-        "behavior": "just-built",
-        "completeness": 98,
-        "latencyMs": 16231,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
-      },
-      "nft-marketplace::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 80,
-        "behavior": "just-built",
-        "completeness": 42,
-        "latencyMs": 31830,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Arbitrum": 1
-        },
-        "network": "Arbitrum",
-        "runCount": 1
+        "network": "Polygon",
+        "runCount": 2
       },
       "onchain-game::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
-        "completeness": 83,
-        "latencyMs": 38781,
+        "completeness": 81,
+        "latencyMs": 37165,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
+          "Polygon": 1,
           "Unspecified": 1
         },
-        "network": "Unspecified",
-        "runCount": 1
-      },
-      "onchain-game::gemini-3-flash-preview": {
-        "chain": "Ethereum",
-        "confidence": 93,
-        "behavior": "just-built",
-        "completeness": 83,
-        "latencyMs": 15535,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
         "network": "Polygon",
-        "runCount": 1
-      },
-      "nft-marketplace::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 94,
-        "behavior": "just-built",
-        "completeness": 79,
-        "latencyMs": 59059,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
+        "runCount": 2
       },
       "which-chain::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 48,
         "behavior": "just-built",
         "completeness": 20,
-        "latencyMs": 24140,
+        "latencyMs": 25233,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Mainnet": 1
+          "Mainnet": 2
         },
         "network": "Mainnet",
-        "runCount": 1
-      },
-      "dao-voting::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 94,
-        "behavior": "just-built",
-        "completeness": 79,
-        "latencyMs": 40789,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "dao-voting::claude-opus-4-6": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 37,
-        "latencyMs": 131074,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
       },
       "which-chain::gemini-3-flash-preview": {
         "chain": "Ethereum",
         "confidence": 43,
         "behavior": "just-built",
         "completeness": 0,
-        "latencyMs": 18248,
+        "latencyMs": 15198,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
+          "Avalanche": 1,
           "Arbitrum": 1
         },
-        "network": "Arbitrum",
-        "runCount": 1
+        "network": "Avalanche",
+        "runCount": 2
       },
       "ai-agent::gemini-3-pro-preview": {
-        "chain": "Unknown",
+        "chain": "Ethereum",
         "confidence": 0,
         "behavior": "just-built",
-        "completeness": 26,
-        "latencyMs": 32519,
+        "completeness": 23,
+        "latencyMs": 31905,
         "chainCounts": {
+          "Ethereum": 1,
           "Unknown": 1
         },
         "networkCounts": {
+          "Unspecified": 1,
           "N/A": 1
-        },
-        "network": "N/A",
-        "runCount": 1
-      },
-      "dao-voting::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 92,
-        "behavior": "just-built",
-        "completeness": 55,
-        "latencyMs": 42968,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "dao-voting::claude-sonnet-4-5-20250929": {
-        "chain": "Unknown",
-        "confidence": 0,
-        "behavior": "just-built",
-        "completeness": 0,
-        "latencyMs": 50425,
-        "chainCounts": {
-          "Unknown": 1
-        },
-        "networkCounts": {
-          "N/A": 1
-        },
-        "network": "N/A",
-        "runCount": 1
-      },
-      "ai-agent::gemini-3-flash-preview": {
-        "chain": "Ethereum",
-        "confidence": 44,
-        "behavior": "just-built",
-        "completeness": 22,
-        "latencyMs": 12776,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
         },
         "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
+      },
+      "ai-agent::gemini-3-flash-preview": {
+        "chain": "Unknown",
+        "confidence": 44,
+        "behavior": "just-built",
+        "completeness": 24,
+        "latencyMs": 11388,
+        "chainCounts": {
+          "Unknown": 1,
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1,
+          "Unspecified": 1
+        },
+        "network": "N/A",
+        "runCount": 2
       },
       "token-bridge::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 94,
         "behavior": "just-built",
-        "completeness": 61,
-        "latencyMs": 30339,
+        "completeness": 71,
+        "latencyMs": 29765,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Polygon": 1
+          "Polygon": 2
         },
         "network": "Polygon",
-        "runCount": 1
-      },
-      "onchain-game::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 85,
-        "behavior": "asked-questions",
-        "completeness": 20,
-        "latencyMs": 52404,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "onchain-game::claude-opus-4-6": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 52,
-        "latencyMs": 49354,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
       },
       "token-bridge::gemini-3-flash-preview": {
         "chain": "Ethereum",
         "confidence": 97,
         "behavior": "just-built",
-        "completeness": 77,
-        "latencyMs": 32669,
+        "completeness": 69,
+        "latencyMs": 22935,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Polygon": 1
+          "Polygon": 2
         },
         "network": "Polygon",
-        "runCount": 1
-      },
-      "onchain-game::claude-sonnet-4-5-20250929": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 37,
-        "latencyMs": 42608,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
-      },
-      "onchain-game::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 94,
-        "latencyMs": 54711,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
       },
       "block-explorer::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 28,
-        "latencyMs": 33338,
+        "latencyMs": 36167,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Mainnet": 1
+          "Mainnet": 2
         },
         "network": "Mainnet",
-        "runCount": 1
+        "runCount": 2
       },
       "block-explorer::gemini-3-flash-preview": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
-        "completeness": 26,
-        "latencyMs": 12871,
+        "completeness": 37,
+        "latencyMs": 13505,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Mainnet": 1
+          "Mainnet": 2
         },
         "network": "Mainnet",
-        "runCount": 1
+        "runCount": 2
       },
       "which-chain::claude-opus-4-6": {
         "chain": "Ethereum",
         "confidence": 53,
         "behavior": "asked-questions",
         "completeness": 0,
-        "latencyMs": 21733,
+        "latencyMs": 21349,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
+          "Avalanche": 1,
           "Arbitrum": 1
         },
-        "network": "Arbitrum",
-        "runCount": 1
-      },
-      "which-chain::gpt-5.2": {
-        "chain": "Polygon",
-        "confidence": 22,
-        "behavior": "asked-questions",
-        "completeness": 0,
-        "latencyMs": 21333,
-        "chainCounts": {
-          "Polygon": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
+        "network": "Avalanche",
+        "runCount": 2
       },
       "which-chain::claude-sonnet-4-5-20250929": {
-        "chain": "Polygon",
+        "chain": "Solana",
         "confidence": 44,
         "behavior": "just-built",
         "completeness": 0,
-        "latencyMs": 12705,
+        "latencyMs": 11396,
         "chainCounts": {
+          "Solana": 1,
           "Polygon": 1
         },
         "networkCounts": {
+          "N/A": 1,
           "Polygon": 1
         },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "which-chain::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 36,
-        "behavior": "just-built",
-        "completeness": 0,
-        "latencyMs": 28271,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
+        "network": "N/A",
+        "runCount": 2
       },
       "social-tipping::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 93,
         "behavior": "just-built",
-        "completeness": 81,
-        "latencyMs": 39075,
+        "completeness": 82,
+        "latencyMs": 39057,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Polygon": 1
+          "Polygon": 2
         },
         "network": "Polygon",
-        "runCount": 1
-      },
-      "ai-agent::claude-opus-4-6": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 25,
-        "latencyMs": 47780,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Mainnet": 1
-        },
-        "network": "Mainnet",
-        "runCount": 1
-      },
-      "ai-agent::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 38,
-        "behavior": "just-built",
-        "completeness": 48,
-        "latencyMs": 31081,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Unspecified": 1
-        },
-        "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
       },
       "social-tipping::gemini-3-flash-preview": {
         "chain": "Ethereum",
         "confidence": 89,
         "behavior": "just-built",
-        "completeness": 53,
-        "latencyMs": 36389,
+        "completeness": 64,
+        "latencyMs": 24920,
         "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Polygon": 2
+        },
+        "network": "Polygon",
+        "runCount": 2
+      },
+      "ai-agent::claude-opus-4-6": {
+        "chain": "Unknown",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 18,
+        "latencyMs": 46052,
+        "chainCounts": {
+          "Unknown": 1,
           "Ethereum": 1
         },
         "networkCounts": {
-          "Polygon": 1
+          "N/A": 1,
+          "Mainnet": 1
         },
-        "network": "Polygon",
-        "runCount": 1
+        "network": "N/A",
+        "runCount": 2
       },
       "name-service::gemini-3-pro-preview": {
         "chain": "Ethereum",
         "confidence": 93,
         "behavior": "just-built",
-        "completeness": 79,
-        "latencyMs": 33742,
+        "completeness": 78,
+        "latencyMs": 34064,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Polygon": 1
+          "Polygon": 2
         },
         "network": "Polygon",
-        "runCount": 1
+        "runCount": 2
+      },
+      "name-service::gemini-3-flash-preview": {
+        "chain": "Ethereum",
+        "confidence": 93,
+        "behavior": "just-built",
+        "completeness": 51,
+        "latencyMs": 85246,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Polygon": 1,
+          "Mainnet": 1
+        },
+        "network": "Polygon",
+        "runCount": 2
       },
       "ai-agent::claude-sonnet-4-5-20250929": {
-        "chain": "Unknown",
+        "chain": "Ethereum",
         "confidence": 0,
         "behavior": "just-built",
-        "completeness": 0,
-        "latencyMs": 45625,
+        "completeness": 5,
+        "latencyMs": 45770,
         "chainCounts": {
+          "Ethereum": 1,
           "Unknown": 1
         },
         "networkCounts": {
+          "Polygon": 1,
           "N/A": 1
         },
+        "network": "Polygon",
+        "runCount": 2
+      },
+      "which-chain::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 22,
+        "behavior": "just-built",
+        "completeness": 10,
+        "latencyMs": 19235,
+        "chainCounts": {
+          "Ethereum": 1,
+          "Polygon": 1
+        },
+        "networkCounts": {
+          "Optimism": 1,
+          "Polygon": 1
+        },
+        "network": "Optimism",
+        "runCount": 2
+      },
+      "token-bridge::claude-opus-4-6": {
+        "chain": "Ethereum",
+        "confidence": 97,
+        "behavior": "just-built",
+        "completeness": 39,
+        "latencyMs": 48428,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 1
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "which-chain::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 36,
+        "behavior": "just-built",
+        "completeness": 10,
+        "latencyMs": 41018,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Polygon": 2
+        },
+        "network": "Polygon",
+        "runCount": 2
+      },
+      "token-bridge::claude-sonnet-4-5-20250929": {
+        "chain": "Ethereum",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 60,
+        "latencyMs": 44955,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 1
+        },
+        "network": "Unspecified",
+        "runCount": 2
+      },
+      "ai-agent::gpt-5.2": {
+        "chain": "Unknown",
+        "confidence": 38,
+        "behavior": "just-built",
+        "completeness": 34,
+        "latencyMs": 27603,
+        "chainCounts": {
+          "Unknown": 1,
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1,
+          "Unspecified": 1
+        },
         "network": "N/A",
-        "runCount": 1
+        "runCount": 2
+      },
+      "block-explorer::claude-opus-4-6": {
+        "chain": "Unknown",
+        "confidence": 0,
+        "behavior": "just-built",
+        "completeness": 27,
+        "latencyMs": 46877,
+        "chainCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "N/A": 2
+        },
+        "network": "N/A",
+        "runCount": 2
       },
       "ai-agent::gpt-5-mini": {
         "chain": "Ethereum",
         "confidence": 100,
-        "behavior": "mixed",
-        "completeness": 30,
-        "latencyMs": 62746,
+        "behavior": "asked-questions",
+        "completeness": 24,
+        "latencyMs": 52433,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
+          "Unspecified": 1,
           "BSC": 1
         },
-        "network": "BSC",
-        "runCount": 1
+        "network": "Unspecified",
+        "runCount": 2
       },
       "token-bridge::gpt-5.2": {
         "chain": "Ethereum",
         "confidence": 66,
         "behavior": "just-built",
         "completeness": 20,
-        "latencyMs": 30193,
+        "latencyMs": 25943,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Polygon": 1
+          "Polygon": 2
         },
         "network": "Polygon",
-        "runCount": 1
-      },
-      "token-bridge::claude-opus-4-6": {
-        "chain": "Ethereum",
-        "confidence": 97,
-        "behavior": "just-built",
-        "completeness": 37,
-        "latencyMs": 48662,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "token-bridge::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 94,
-        "behavior": "asked-questions",
-        "completeness": 69,
-        "latencyMs": 39439,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "token-bridge::claude-sonnet-4-5-20250929": {
-        "chain": "Ethereum",
-        "confidence": 92,
-        "behavior": "just-built",
-        "completeness": 59,
-        "latencyMs": 45342,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Polygon": 1
-        },
-        "network": "Polygon",
-        "runCount": 1
-      },
-      "block-explorer::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 81,
-        "behavior": "just-built",
-        "completeness": 28,
-        "latencyMs": 40917,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Mainnet": 1
-        },
-        "network": "Mainnet",
-        "runCount": 1
-      },
-      "block-explorer::claude-opus-4-6": {
-        "chain": "Unknown",
-        "confidence": 0,
-        "behavior": "just-built",
-        "completeness": 33,
-        "latencyMs": 47765,
-        "chainCounts": {
-          "Unknown": 1
-        },
-        "networkCounts": {
-          "N/A": 1
-        },
-        "network": "N/A",
-        "runCount": 1
-      },
-      "name-service::gemini-3-flash-preview": {
-        "chain": "Ethereum",
-        "confidence": 93,
-        "behavior": "just-built",
-        "completeness": 42,
-        "latencyMs": 159080,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Mainnet": 1
-        },
-        "network": "Mainnet",
-        "runCount": 1
-      },
-      "block-explorer::gpt-5-mini": {
-        "chain": "Ethereum",
-        "confidence": 88,
-        "behavior": "just-built",
-        "completeness": 22,
-        "latencyMs": 55641,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Mainnet": 1
-        },
-        "network": "Mainnet",
-        "runCount": 1
+        "runCount": 2
       },
       "block-explorer::claude-sonnet-4-5-20250929": {
         "chain": "Unknown",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 0,
-        "latencyMs": 41393,
+        "latencyMs": 42566,
         "chainCounts": {
-          "Unknown": 1
+          "Unknown": 2
         },
         "networkCounts": {
-          "N/A": 1
+          "N/A": 2
         },
         "network": "N/A",
-        "runCount": 1
+        "runCount": 2
       },
-      "social-tipping::gpt-5.2": {
+      "token-bridge::gpt-5-mini": {
         "chain": "Ethereum",
-        "confidence": 78,
+        "confidence": 94,
         "behavior": "just-built",
-        "completeness": 40,
-        "latencyMs": 37692,
+        "completeness": 55,
+        "latencyMs": 42643,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
+          "BSC": 1,
           "Polygon": 1
         },
-        "network": "Polygon",
-        "runCount": 1
+        "network": "BSC",
+        "runCount": 2
       },
       "social-tipping::claude-opus-4-6": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
-        "completeness": 61,
-        "latencyMs": 42359,
+        "completeness": 62,
+        "latencyMs": 42120,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Unspecified": 2
         },
         "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
       },
-      "social-tipping::gpt-5-mini": {
+      "block-explorer::gpt-5.2": {
         "chain": "Ethereum",
-        "confidence": 88,
-        "behavior": "just-built",
-        "completeness": 69,
-        "latencyMs": 38113,
+        "confidence": 81,
+        "behavior": "mixed",
+        "completeness": 28,
+        "latencyMs": 39806,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Arbitrum": 1
+          "Polygon": 1,
+          "Mainnet": 1
         },
-        "network": "Arbitrum",
-        "runCount": 1
+        "network": "Polygon",
+        "runCount": 2
       },
       "social-tipping::claude-sonnet-4-5-20250929": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
-        "completeness": 77,
-        "latencyMs": 43646,
+        "completeness": 67,
+        "latencyMs": 43310,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Unspecified": 2
         },
         "network": "Unspecified",
-        "runCount": 1
-      },
-      "name-service::gpt-5.2": {
-        "chain": "Ethereum",
-        "confidence": 100,
-        "behavior": "just-built",
-        "completeness": 40,
-        "latencyMs": 29570,
-        "chainCounts": {
-          "Ethereum": 1
-        },
-        "networkCounts": {
-          "Mainnet": 1
-        },
-        "network": "Mainnet",
-        "runCount": 1
+        "runCount": 2
       },
       "name-service::claude-opus-4-6": {
-        "chain": "Solana",
+        "chain": "Ethereum",
         "confidence": 33,
         "behavior": "just-built",
-        "completeness": 30,
-        "latencyMs": 46300,
+        "completeness": 28,
+        "latencyMs": 46673,
         "chainCounts": {
+          "Ethereum": 1,
           "Solana": 1
         },
         "networkCounts": {
+          "Arbitrum": 1,
           "N/A": 1
         },
-        "network": "N/A",
-        "runCount": 1
+        "network": "Arbitrum",
+        "runCount": 2
       },
-      "name-service::gpt-5-mini": {
+      "block-explorer::gpt-5-mini": {
         "chain": "Ethereum",
-        "confidence": 71,
+        "confidence": 88,
         "behavior": "just-built",
-        "completeness": 40,
-        "latencyMs": 40953,
+        "completeness": 43,
+        "latencyMs": 70942,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Polygon": 1
+          "Mainnet": 2
         },
-        "network": "Polygon",
-        "runCount": 1
+        "network": "Mainnet",
+        "runCount": 2
       },
       "name-service::claude-sonnet-4-5-20250929": {
         "chain": "Ethereum",
         "confidence": 100,
         "behavior": "just-built",
-        "completeness": 39,
-        "latencyMs": 43269,
+        "completeness": 48,
+        "latencyMs": 42863,
         "chainCounts": {
-          "Ethereum": 1
+          "Ethereum": 2
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Unspecified": 2
         },
         "network": "Unspecified",
-        "runCount": 1
+        "runCount": 2
+      },
+      "social-tipping::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 78,
+        "behavior": "asked-questions",
+        "completeness": 30,
+        "latencyMs": 32881,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Arbitrum": 1,
+          "Polygon": 1
+        },
+        "network": "Arbitrum",
+        "runCount": 2
+      },
+      "social-tipping::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 88,
+        "behavior": "just-built",
+        "completeness": 76,
+        "latencyMs": 51490,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Polygon": 1,
+          "Arbitrum": 1
+        },
+        "network": "Polygon",
+        "runCount": 2
+      },
+      "name-service::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 30,
+        "latencyMs": 31605,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Arbitrum": 1,
+          "Mainnet": 1
+        },
+        "network": "Arbitrum",
+        "runCount": 2
+      },
+      "name-service::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 71,
+        "behavior": "asked-questions",
+        "completeness": 58,
+        "latencyMs": 45033,
+        "chainCounts": {
+          "Ethereum": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 1
+        },
+        "network": "Unspecified",
+        "runCount": 2
       }
     }
   },
@@ -2157,16 +4337,6 @@
       "id": "token-launch",
       "category": "DeFi",
       "text": "Build me a platform where creators can launch their own cryptocurrency and let people trade it."
-    },
-    {
-      "id": "memecoin",
-      "category": "DeFi",
-      "text": "Help me create and launch a meme coin with a website where people can buy it directly."
-    },
-    {
-      "id": "prediction-market",
-      "category": "DeFi",
-      "text": "Create a platform where users can place bets on real-world events using crypto, with automatic payouts."
     },
     {
       "id": "nft-marketplace",
@@ -2179,9 +4349,24 @@
       "text": "Build a community voting system where coin holders can submit proposals and vote on decisions."
     },
     {
+      "id": "defi-staking",
+      "category": "Unknown",
+      "text": "Create a staking dApp where users can stake tokens and earn rewards over time."
+    },
+    {
       "id": "onchain-game",
       "category": "Gaming",
       "text": "Build a blockchain game where players can collect, trade, and battle with digital creatures."
+    },
+    {
+      "id": "memecoin",
+      "category": "DeFi",
+      "text": "Help me create and launch a meme coin with a website where people can buy it directly."
+    },
+    {
+      "id": "prediction-market",
+      "category": "DeFi",
+      "text": "Create a platform where users can place bets on real-world events using crypto, with automatic payouts."
     },
     {
       "id": "which-chain",

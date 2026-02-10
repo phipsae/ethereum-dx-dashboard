@@ -1,5 +1,61 @@
 [
   {
+    "timestamp": "2026-02-10T21:43:03.761Z",
+    "runId": "run-1770758388351-0",
+    "filename": "run-2026-02-10T21-43-03.json",
+    "modelCount": 6,
+    "promptCount": 12,
+    "resultCount": 72
+  },
+  {
+    "timestamp": "2026-02-10T21:43:03.751Z",
+    "runId": "run-1770757203773-0",
+    "filename": "run-2026-02-10T21-43-03.json",
+    "modelCount": 6,
+    "promptCount": 12,
+    "resultCount": 72
+  },
+  {
+    "timestamp": "2026-02-10T21:43:03.743Z",
+    "runId": "run-1770732192666-0",
+    "filename": "run-2026-02-10T21-43-03.json",
+    "modelCount": 6,
+    "promptCount": 5,
+    "resultCount": 26
+  },
+  {
+    "timestamp": "2026-02-10T21:43:03.736Z",
+    "runId": "run-1770731444842-0",
+    "filename": "run-2026-02-10T21-43-03.json",
+    "modelCount": 6,
+    "promptCount": 5,
+    "resultCount": 28
+  },
+  {
+    "timestamp": "2026-02-10T21:43:03.727Z",
+    "runId": "run-1770727854301-0",
+    "filename": "run-2026-02-10T21-43-03.json",
+    "modelCount": 2,
+    "promptCount": 1,
+    "resultCount": 2
+  },
+  {
+    "timestamp": "2026-02-10T21:43:03.718Z",
+    "runId": "run-1770689171471-0",
+    "filename": "run-2026-02-10T21-43-03.json",
+    "modelCount": 2,
+    "promptCount": 5,
+    "resultCount": 10
+  },
+  {
+    "timestamp": "2026-02-10T21:43:03.700Z",
+    "runId": "run-1770688557885-0",
+    "filename": "run-2026-02-10T21-43-03.json",
+    "modelCount": 2,
+    "promptCount": 5,
+    "resultCount": 10
+  },
+  {
     "timestamp": "2026-02-10T21:37:37.238Z",
     "runId": "run-1770758388351-0",
     "filename": "run-2026-02-10T21-37-37.json",
