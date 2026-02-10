@@ -28,7 +28,9 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
     const cells = models.map((m) => {
       const cell = getCell(grid, promptId, m.id);
       if (!cell) return "—";
-      return `**${cell.chain}** (${cell.confidence}%) ${(cell.latencyMs / 1000).toFixed(1)}s`;
+      const net = cell.network && cell.network !== "N/A" && cell.network !== "Unspecified"
+        ? ` → ${cell.network}` : "";
+      return `**${cell.chain}${net}** (${cell.confidence}%) ${(cell.latencyMs / 1000).toFixed(1)}s`;
     });
     lines.push(`| ${promptId} | ${cells.join(" | ")} |`);
   }
@@ -72,6 +74,53 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
     }
   }
   lines.push("");
+
+  // EVM Network Summary
+  const hasNetworkData = models.some((m) =>
+    promptIds.some((pid) => {
+      const cell = getCell(grid, pid, m.id);
+      return cell?.network && cell.network !== "N/A" && cell.network !== "Unspecified";
+    })
+  );
+
+  if (hasNetworkData) {
+    lines.push("## EVM Network Summary");
+    lines.push("");
+
+    // Collect all networks across all models
+    const allNetworks = new Set<string>();
+    for (const m of models) {
+      for (const pid of promptIds) {
+        const cell = getCell(grid, pid, m.id);
+        if (cell?.networkCounts) {
+          for (const net of Object.keys(cell.networkCounts)) {
+            if (net !== "N/A") allNetworks.add(net);
+          }
+        }
+      }
+    }
+    const networkList = [...allNetworks].sort();
+
+    lines.push(`| Model | ${networkList.join(" | ")} |`);
+    lines.push(`| --- | ${networkList.map(() => "---").join(" | ")} |`);
+
+    for (const m of models) {
+      const counts: Record<string, number> = {};
+      for (const pid of promptIds) {
+        const cell = getCell(grid, pid, m.id);
+        if (cell?.networkCounts) {
+          for (const [net, cnt] of Object.entries(cell.networkCounts)) {
+            if (net !== "N/A") {
+              counts[net] = (counts[net] ?? 0) + cnt;
+            }
+          }
+        }
+      }
+      const row = networkList.map((net) => String(counts[net] ?? 0));
+      lines.push(`| ${m.displayName} | ${row.join(" | ")} |`);
+    }
+    lines.push("");
+  }
 
   // Provider comparison
   lines.push("## Provider Comparison (Flagship vs Mid-tier)");

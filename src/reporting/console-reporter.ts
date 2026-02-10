@@ -10,7 +10,7 @@ export function printGrid(grid: Grid): void {
 
   // Header
   const promptColWidth = 18;
-  const cellWidth = 22;
+  const cellWidth = 28;
 
   const header =
     pad("Prompt", promptColWidth) +
@@ -30,9 +30,12 @@ export function printGrid(grid: Grid): void {
       if (!cell) return pad("—", cellWidth);
 
       const chain = cell.chain.slice(0, 10);
+      const net = cell.network && cell.network !== "N/A" && cell.network !== "Unspecified"
+        ? `→${cell.network}` : "";
+      const chainNet = net ? `${chain}${net}` : chain;
       const conf = `${cell.confidence}%`;
       const time = `${(cell.latencyMs / 1000).toFixed(1)}s`;
-      return pad(`${chain} ${conf} ${time}`, cellWidth);
+      return pad(`${chainNet} ${conf} ${time}`, cellWidth);
     });
 
     console.log(pad(promptId, promptColWidth) + " | " + cells.join(" | "));

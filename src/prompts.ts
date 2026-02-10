@@ -5,29 +5,81 @@ export interface Prompt {
 }
 
 export const PROMPTS: Prompt[] = [
+  // DeFi (3)
   {
     id: "token-launch",
-    text: "Build me a token launch platform where creators can deploy their own tokens and set up liquidity pools.",
+    text: "Build me a platform where creators can launch their own cryptocurrency and let people trade it.",
     category: "DeFi",
   },
+  {
+    id: "memecoin",
+    text: "Help me create and launch a meme coin with a website where people can buy it directly.",
+    category: "DeFi",
+  },
+  {
+    id: "prediction-market",
+    text: "Create a platform where users can place bets on real-world events using crypto, with automatic payouts.",
+    category: "DeFi",
+  },
+
+  // NFT (1)
   {
     id: "nft-marketplace",
-    text: "Create an NFT marketplace where users can mint, buy, and sell digital art with royalty support.",
+    text: "Create a marketplace for digital collectibles where artists can sell their work and earn on resales.",
     category: "NFT",
   },
+
+  // Governance (1)
   {
     id: "dao-voting",
-    text: "Build a DAO voting system where token holders can create proposals and vote on them.",
+    text: "Build a community voting system where coin holders can submit proposals and vote on decisions.",
     category: "Governance",
   },
-  {
-    id: "defi-staking",
-    text: "Create a staking dApp where users can stake tokens and earn rewards over time.",
-    category: "DeFi",
-  },
+
+  // Gaming (1)
   {
     id: "onchain-game",
-    text: "Build an on-chain game where players can collect, trade, and battle with digital creatures.",
+    text: "Build a blockchain game where players can collect, trade, and battle with digital creatures.",
     category: "Gaming",
+  },
+
+  // Advisory (1)
+  {
+    id: "which-chain",
+    text: "I want to build a crypto app. Which blockchain should I build on and why?",
+    category: "Advisory",
+  },
+
+  // Agent (1)
+  {
+    id: "ai-agent",
+    text: "Build me an AI agent that can autonomously trade crypto and manage a wallet.",
+    category: "Agent",
+  },
+
+  // Infrastructure (2)
+  {
+    id: "token-bridge",
+    text: "Build a way for users to move their crypto between two different blockchains.",
+    category: "Infrastructure",
+  },
+  {
+    id: "block-explorer",
+    text: "Create a website that lets people look up transactions, wallet balances, and activity on a blockchain.",
+    category: "Infrastructure",
+  },
+
+  // Social (1)
+  {
+    id: "social-tipping",
+    text: "Build a platform where fans can send crypto tips to their favorite content creators.",
+    category: "Social",
+  },
+
+  // Identity (1)
+  {
+    id: "name-service",
+    text: "Create a service where people can register a readable name for their crypto wallet instead of a long address.",
+    category: "Identity",
   },
 ];

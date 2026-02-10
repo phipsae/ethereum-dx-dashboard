@@ -18,10 +18,18 @@ export interface ModelConfig {
   displayName: string;
 }
 
+export interface NetworkDetection {
+  primary: string;
+  confidence: number;
+  evidence: string[];
+  all: Record<string, number>;
+}
+
 export interface ChainDetection {
   chain: string;
   confidence: number;
   evidence: string[];
+  network?: NetworkDetection;
 }
 
 export interface BehaviorClassification {

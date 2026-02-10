@@ -11,6 +11,8 @@ export interface GridCell {
   avgCompleteness?: number;
   avgLatencyMs?: number;
   runCount: number;
+  networkCounts?: Record<string, number>;
+  network?: string;
 }
 
 export interface Grid {
@@ -47,11 +49,16 @@ export function buildGrid(results: BenchmarkResult[]): Grid {
     let totalCompleteness = 0;
     let totalLatency = 0;
 
+    const networkCounts: Record<string, number> = {};
+
     for (const r of group) {
       const chain = r.analysis.chain.chain;
       chainCounts[chain] = (chainCounts[chain] ?? 0) + 1;
       totalCompleteness += r.analysis.completeness.score;
       totalLatency += r.response.latencyMs;
+
+      const net = r.analysis.chain.network?.primary ?? "N/A";
+      networkCounts[net] = (networkCounts[net] ?? 0) + 1;
     }
 
     // Most common chain
@@ -67,6 +74,8 @@ export function buildGrid(results: BenchmarkResult[]): Grid {
     // Use the latest result's confidence
     const latestResult = group[group.length - 1];
 
+    const topNetwork = Object.entries(networkCounts).sort((a, b) => b[1] - a[1])[0];
+
     cells.set(key, {
       chain: topChain[0],
       confidence: latestResult.analysis.chain.confidence,
@@ -77,6 +86,8 @@ export function buildGrid(results: BenchmarkResult[]): Grid {
       avgCompleteness: Math.round(totalCompleteness / group.length),
       avgLatencyMs: Math.round(totalLatency / group.length),
       runCount: group.length,
+      networkCounts,
+      network: topNetwork[0],
     });
   }
 

@@ -19,6 +19,21 @@ const CHAIN_COLORS: Record<string, string> = {
   Unknown: "#888888",
 };
 
+const NETWORK_COLORS: Record<string, string> = {
+  Mainnet: "#627eea",
+  Base: "#0052ff",
+  Arbitrum: "#28a0f0",
+  Optimism: "#ff0420",
+  Polygon: "#8247e5",
+  BSC: "#f0b90b",
+  Avalanche: "#e84142",
+  zkSync: "#8c8dfc",
+  Scroll: "#ffeeda",
+  Linea: "#61dfff",
+  Unspecified: "#888888",
+  "N/A": "#555555",
+};
+
 const BEHAVIOR_COLORS: Record<string, string> = {
   "just-built": "#4bc0c0",
   "asked-questions": "#ff6384",
@@ -75,6 +90,10 @@ function getChainColor(chain: string): string {
   return CHAIN_COLORS[chain] ?? `hsl(${Math.abs(hashCode(chain)) % 360}, 60%, 55%)`;
 }
 
+function getNetworkColor(network: string): string {
+  return NETWORK_COLORS[network] ?? `hsl(${Math.abs(hashCode(network)) % 360}, 60%, 55%)`;
+}
+
 function hashCode(s: string): number {
   let h = 0;
   for (let i = 0; i < s.length; i++) {
@@ -97,6 +116,7 @@ interface ChartData {
       latency: string;
       behavior: string;
       completeness: number;
+      network?: string;
     } | null>;
   }>;
   defaultChainRows: Array<{
@@ -108,6 +128,8 @@ interface ChartData {
   modelHeaders: string[];
   toolFrequencyOverall: Record<string, number>;
   toolFrequencyPerModel: Array<{ model: string; tools: Record<string, number> }>;
+  networkPerModel: Array<{ model: string; networks: Record<string, number> }>;
+  overallNetworks: Record<string, number>;
 }
 
 function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
@@ -118,10 +140,13 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
   const behaviorPerModel: ChartData["behaviorPerModel"] = [];
   const completenessPerModel: ChartData["completenessPerModel"] = [];
   const latencyPerModel: ChartData["latencyPerModel"] = [];
+  const networkPerModel: ChartData["networkPerModel"] = [];
+  const overallNetworks: Record<string, number> = {};
 
   for (const m of models) {
     const chains: Record<string, number> = {};
     const behaviors: Record<string, number> = {};
+    const networks: Record<string, number> = {};
     let totalCompleteness = 0;
     let totalLatency = 0;
     let count = 0;
@@ -141,6 +166,16 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
         overallChains[cell.chain] = (overallChains[cell.chain] ?? 0) + 1;
       }
 
+      // Network counts
+      if (cell.networkCounts) {
+        for (const [net, cnt] of Object.entries(cell.networkCounts)) {
+          if (net !== "N/A") {
+            networks[net] = (networks[net] ?? 0) + cnt;
+            overallNetworks[net] = (overallNetworks[net] ?? 0) + cnt;
+          }
+        }
+      }
+
       behaviors[cell.behavior] = (behaviors[cell.behavior] ?? 0) + 1;
       totalCompleteness += cell.completeness;
       totalLatency += cell.latencyMs;
@@ -148,6 +183,7 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
     }
 
     perModelChains.push({ model: m.displayName, chains });
+    networkPerModel.push({ model: m.displayName, networks });
     behaviorPerModel.push({ model: m.displayName, behaviors });
     completenessPerModel.push({
       model: m.displayName,
@@ -171,6 +207,7 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
         latency: (cell.latencyMs / 1000).toFixed(1),
         behavior: cell.behavior,
         completeness: cell.completeness,
+        network: cell.network,
       };
     });
     summaryRows.push({ prompt: pid, cells });
@@ -232,6 +269,8 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
     modelHeaders,
     toolFrequencyOverall,
     toolFrequencyPerModel,
+    networkPerModel,
+    overallNetworks,
   };
 }
 
@@ -254,6 +293,22 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
     chainColorMap[chain] = getChainColor(chain);
   }
 
+  // Build network color map
+  const allNetworks = new Set<string>();
+  for (const entry of data.networkPerModel) {
+    for (const net of Object.keys(entry.networks)) allNetworks.add(net);
+  }
+  for (const net of Object.keys(data.overallNetworks)) allNetworks.add(net);
+
+  const networkColorMap: Record<string, string> = {};
+  for (const net of allNetworks) {
+    networkColorMap[net] = getNetworkColor(net);
+  }
+
+  const hasNetworkData = Object.keys(data.overallNetworks).some(
+    (n) => n !== "Unspecified" && data.overallNetworks[n] > 0
+  );
+
   // Build the summary table HTML
   const tableHeaderCells = data.modelHeaders.map((h) => `<th>${escapeHtml(h)}</th>`).join("");
   const tableRows = data.summaryRows
@@ -261,7 +316,9 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
       const cells = row.cells
         .map((c) => {
           if (!c) return "<td>—</td>";
-          return `<td><strong>${escapeHtml(c.chain)}</strong> (${c.confidence}%)<br><span class="detail">${c.latency}s &middot; ${escapeHtml(c.behavior)} &middot; score: ${c.completeness}</span></td>`;
+          const netBadge = c.network && c.network !== "N/A" && c.network !== "Unspecified"
+            ? ` <span style="color:${escapeHtml(getNetworkColor(c.network))}">→ ${escapeHtml(c.network)}</span>` : "";
+          return `<td><strong>${escapeHtml(c.chain)}</strong>${netBadge} (${c.confidence}%)<br><span class="detail">${c.latency}s &middot; ${escapeHtml(c.behavior)} &middot; score: ${c.completeness}</span></td>`;
         })
         .join("");
       return `<tr><td class="prompt-cell">${escapeHtml(row.prompt)}</td>${cells}</tr>`;
@@ -425,6 +482,16 @@ ${data.perModelChains.map((_, i) => `  <div class="chart-card"><h3>${escapeHtml(
   <canvas id="behaviorChart"></canvas>
 </div>
 
+${hasNetworkData ? `<h2>EVM Network Distribution (Overall)</h2>
+<div class="chart-wide">
+  <canvas id="networkOverallPie"></canvas>
+</div>
+
+<h2>EVM Network Distribution (Per Model)</h2>
+<div class="chart-wide">
+  <canvas id="networkPerModelChart"></canvas>
+</div>` : '<!-- No EVM network data -->'}
+
 ${toolCount > 0 ? `<h2>Tool/Framework Frequency (Overall)</h2>
 <div class="chart-wide" style="height: ${toolChartHeight}px;">
   <canvas id="toolOverallChart"></canvas>
@@ -470,6 +537,9 @@ const chartData = ${JSON.stringify({
     toolFrequencyOverall: data.toolFrequencyOverall,
     toolFrequencyPerModel: data.toolFrequencyPerModel,
     toolColors: TOOL_COLORS,
+    networkPerModel: data.networkPerModel,
+    overallNetworks: data.overallNetworks,
+    networkColorMap,
   })};
 
 Chart.defaults.color = '#a0a0b0';
@@ -651,6 +721,61 @@ if (Object.keys(chartData.toolFrequencyOverall).length > 0) {
         scales: {
           x: { beginAtZero: true, title: { display: true, text: 'Mentions' } },
           y: { ticks: { font: { size: 12 } } }
+        },
+        plugins: { legend: { position: 'top' } }
+      }
+    });
+  }
+}
+
+// EVM Network charts
+if (chartData.overallNetworks && Object.keys(chartData.overallNetworks).some(n => n !== 'Unspecified' && chartData.overallNetworks[n] > 0)) {
+  // Overall network pie
+  {
+    const labels = Object.keys(chartData.overallNetworks);
+    const values = Object.values(chartData.overallNetworks);
+    const colors = labels.map(l => chartData.networkColorMap[l] || '#888');
+    new Chart(document.getElementById('networkOverallPie'), {
+      type: 'pie',
+      data: {
+        labels,
+        datasets: [{ data: values, backgroundColor: colors, borderWidth: 1, borderColor: '#1a1a2e' }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'right' },
+          tooltip: {
+            callbacks: {
+              label: ctx => {
+                const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                const pct = ((ctx.parsed / total) * 100).toFixed(1);
+                return ctx.label + ': ' + ctx.parsed + ' (' + pct + '%)';
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Per-model network stacked bar
+  {
+    const models = chartData.networkPerModel.map(e => e.model);
+    const allNets = [...new Set(chartData.networkPerModel.flatMap(e => Object.keys(e.networks)))];
+    const datasets = allNets.map(net => ({
+      label: net,
+      data: chartData.networkPerModel.map(e => e.networks[net] || 0),
+      backgroundColor: chartData.networkColorMap[net] || '#888',
+    }));
+    new Chart(document.getElementById('networkPerModelChart'), {
+      type: 'bar',
+      data: { labels: models, datasets },
+      options: {
+        responsive: true,
+        scales: {
+          x: { stacked: true },
+          y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Prompts' } }
         },
         plugins: { legend: { position: 'top' } }
       }

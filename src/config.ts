@@ -40,7 +40,7 @@ export const MODELS: ModelConfig[] = [
   },
 ];
 
-export const MAX_TOKENS = 16384;
+export const MAX_TOKENS = 4096;
 
 export const API_KEYS = {
   anthropic: process.env.ANTHROPIC_API_KEY,
