@@ -56,6 +56,7 @@ export interface AnalysisResult {
 export interface BenchmarkResult {
   promptId: string;
   promptText: string;
+  promptCategory: string;
   model: ModelConfig;
   response: ProviderResponse;
   analysis: AnalysisResult;

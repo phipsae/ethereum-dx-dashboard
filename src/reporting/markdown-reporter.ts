@@ -14,6 +14,19 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
   lines.push(`Total results: ${results.length}`);
   lines.push("");
 
+  // Prompts used
+  lines.push("## Prompts");
+  lines.push("");
+  lines.push("| # | ID | Category | Prompt |");
+  lines.push("| --- | --- | --- | --- |");
+  for (let i = 0; i < promptIds.length; i++) {
+    const pid = promptIds[i];
+    const cat = grid.promptCategories.get(pid) ?? "—";
+    const text = grid.promptTexts.get(pid) ?? "—";
+    lines.push(`| ${i + 1} | ${pid} | ${cat} | ${text} |`);
+  }
+  lines.push("");
+
   // Main grid table
   lines.push("## Results Grid");
   lines.push("");
@@ -31,22 +44,6 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
       const net = cell.network && cell.network !== "N/A" && cell.network !== "Unspecified"
         ? ` → ${cell.network}` : "";
       return `**${cell.chain}${net}** (${cell.confidence}%) ${(cell.latencyMs / 1000).toFixed(1)}s`;
-    });
-    lines.push(`| ${promptId} | ${cells.join(" | ")} |`);
-  }
-  lines.push("");
-
-  // Behavior grid
-  lines.push("## Behavior Grid");
-  lines.push("");
-  lines.push(`| Prompt | ${modelHeaders.join(" | ")} |`);
-  lines.push(`| --- | ${models.map(() => "---").join(" | ")} |`);
-
-  for (const promptId of promptIds) {
-    const cells = models.map((m) => {
-      const cell = getCell(grid, promptId, m.id);
-      if (!cell) return "—";
-      return `${cell.behavior} (score: ${cell.completeness})`;
     });
     lines.push(`| ${promptId} | ${cells.join(" | ")} |`);
   }
@@ -118,6 +115,33 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
       }
       const row = networkList.map((net) => String(counts[net] ?? 0));
       lines.push(`| ${m.displayName} | ${row.join(" | ")} |`);
+    }
+    lines.push("");
+  }
+
+  // Chain choice by category
+  const categories = [...new Set([...grid.promptCategories.values()])];
+  if (categories.length > 1) {
+    lines.push("## Chain Choice by Category");
+    lines.push("");
+    lines.push(`| Category | ${models.map((m) => m.displayName).join(" | ")} |`);
+    lines.push(`| --- | ${models.map(() => "---").join(" | ")} |`);
+
+    for (const cat of categories) {
+      const catPrompts = promptIds.filter((pid) => grid.promptCategories.get(pid) === cat);
+      const row = models.map((m) => {
+        const chains: Record<string, number> = {};
+        for (const pid of catPrompts) {
+          const cell = getCell(grid, pid, m.id);
+          if (cell) {
+            chains[cell.chain] = (chains[cell.chain] ?? 0) + 1;
+          }
+        }
+        const sorted = Object.entries(chains).sort((a, b) => b[1] - a[1]);
+        if (sorted.length === 0) return "—";
+        return sorted.map(([c, n]) => `${c} (${n})`).join(", ");
+      });
+      lines.push(`| ${cat} | ${row.join(" | ")} |`);
     }
     lines.push("");
   }

@@ -101,6 +101,7 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
               const result: BenchmarkResult = {
                 promptId: prompt.id,
                 promptText: prompt.text,
+                promptCategory: prompt.category,
                 model,
                 response,
                 analysis,
@@ -115,8 +116,6 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
                 ? ` [${analysis.chain.network.primary}]` : "";
               console.log(
                 `       → ${analysis.chain.chain}${netSuffix} (${analysis.chain.confidence}% confidence) | ` +
-                `${analysis.behavior.behavior} | ` +
-                `completeness: ${analysis.completeness.score} | ` +
                 `${(response.latencyMs / 1000).toFixed(1)}s`
               );
             } catch (err) {

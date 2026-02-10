@@ -318,7 +318,7 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
           if (!c) return "<td>—</td>";
           const netBadge = c.network && c.network !== "N/A" && c.network !== "Unspecified"
             ? ` <span style="color:${escapeHtml(getNetworkColor(c.network))}">→ ${escapeHtml(c.network)}</span>` : "";
-          return `<td><strong>${escapeHtml(c.chain)}</strong>${netBadge} (${c.confidence}%)<br><span class="detail">${c.latency}s &middot; ${escapeHtml(c.behavior)} &middot; score: ${c.completeness}</span></td>`;
+          return `<td><strong>${escapeHtml(c.chain)}</strong>${netBadge} (${c.confidence}%)<br><span class="detail">${c.latency}s</span></td>`;
         })
         .join("");
       return `<tr><td class="prompt-cell">${escapeHtml(row.prompt)}</td>${cells}</tr>`;
@@ -467,6 +467,16 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
 <h1>Chain Bias Benchmark Report</h1>
 <p class="subtitle">Generated: ${new Date().toISOString()} &middot; ${results.length} results</p>
 
+<h2>Prompts Used</h2>
+<table>
+  <thead><tr><th>#</th><th>ID</th><th>Category</th><th>Prompt</th></tr></thead>
+  <tbody>${grid.promptIds.map((pid, i) => {
+    const cat = grid.promptCategories.get(pid) ?? "—";
+    const text = grid.promptTexts.get(pid) ?? "—";
+    return `<tr><td>${i + 1}</td><td class="prompt-cell">${escapeHtml(pid)}</td><td>${escapeHtml(cat)}</td><td>${escapeHtml(text)}</td></tr>`;
+  }).join("\n")}</tbody>
+</table>
+
 <h2>Chain Distribution (Overall)</h2>
 <div class="chart-wide">
   <canvas id="overallPie"></canvas>
@@ -475,11 +485,6 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
 <h2>Chain Distribution (Per Model)</h2>
 <div class="chart-grid">
 ${data.perModelChains.map((_, i) => `  <div class="chart-card"><h3>${escapeHtml(data.perModelChains[i].model)}</h3><canvas id="modelPie${i}"></canvas></div>`).join("\n")}
-</div>
-
-<h2>Behavior Distribution</h2>
-<div class="chart-wide">
-  <canvas id="behaviorChart"></canvas>
 </div>
 
 ${hasNetworkData ? `<h2>EVM Network Distribution (Overall)</h2>
@@ -502,15 +507,9 @@ ${toolCount > 0 ? `<h2>Tool/Framework Frequency (Overall)</h2>
   <canvas id="toolPerModelChart"></canvas>
 </div>` : '<!-- No tool data detected -->'}
 
-<div class="bar-row">
-  <div class="chart-wide">
-    <h3>Average Completeness Score</h3>
-    <canvas id="completenessChart"></canvas>
-  </div>
-  <div class="chart-wide">
-    <h3>Average Latency (seconds)</h3>
-    <canvas id="latencyChart"></canvas>
-  </div>
+<div class="chart-wide">
+  <h3>Average Latency (seconds)</h3>
+  <canvas id="latencyChart"></canvas>
 </div>
 
 <h2>Results Grid</h2>
@@ -524,6 +523,33 @@ ${toolCount > 0 ? `<h2>Tool/Framework Frequency (Overall)</h2>
   <thead><tr><th>Model</th><th>Tier</th><th>Default Chain</th><th>Times Chosen</th></tr></thead>
   <tbody>${defaultChainTableRows}</tbody>
 </table>
+
+${(() => {
+  const categories = [...new Set([...grid.promptCategories.values()])];
+  if (categories.length <= 1) return "<!-- No category breakdown -->";
+  const { promptIds: pids, models: mods } = grid;
+  const modelNames = mods.map((m) => m.displayName);
+  const headerCells = modelNames.map((n) => `<th>${escapeHtml(n)}</th>`).join("");
+  const rows = categories.map((cat) => {
+    const catPrompts = pids.filter((pid) => grid.promptCategories.get(pid) === cat);
+    const cells = mods.map((m) => {
+      const chains: Record<string, number> = {};
+      for (const pid of catPrompts) {
+        const cell = getCell(grid, pid, m.id);
+        if (cell) chains[cell.chain] = (chains[cell.chain] ?? 0) + 1;
+      }
+      const sorted = Object.entries(chains).sort((a, b) => b[1] - a[1]);
+      if (sorted.length === 0) return "<td>—</td>";
+      return `<td>${sorted.map(([c, n]) => `<strong>${escapeHtml(c)}</strong> (${n})`).join(", ")}</td>`;
+    }).join("");
+    return `<tr><td>${escapeHtml(cat)}</td>${cells}</tr>`;
+  }).join("\n");
+  return `<h2>Chain Choice by Category</h2>
+<table>
+  <thead><tr><th>Category</th>${headerCells}</tr></thead>
+  <tbody>${rows}</tbody>
+</table>`;
+})()}
 
 <script>
 const chartData = ${JSON.stringify({
@@ -593,54 +619,6 @@ chartData.perModelChains.forEach((entry, i) => {
     }
   });
 });
-
-// Behavior bar chart
-{
-  const models = chartData.behaviorPerModel.map(e => e.model);
-  const allBehaviors = [...new Set(chartData.behaviorPerModel.flatMap(e => Object.keys(e.behaviors)))];
-  const datasets = allBehaviors.map(beh => ({
-    label: beh,
-    data: chartData.behaviorPerModel.map(e => e.behaviors[beh] || 0),
-    backgroundColor: chartData.behaviorColors[beh] || '#888',
-  }));
-  new Chart(document.getElementById('behaviorChart'), {
-    type: 'bar',
-    data: { labels: models, datasets },
-    options: {
-      responsive: true,
-      scales: {
-        x: { stacked: true },
-        y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Prompts' } }
-      },
-      plugins: { legend: { position: 'top' } }
-    }
-  });
-}
-
-// Completeness bar chart
-{
-  const models = chartData.completenessPerModel.map(e => e.model);
-  const values = chartData.completenessPerModel.map(e => e.avg);
-  new Chart(document.getElementById('completenessChart'), {
-    type: 'bar',
-    data: {
-      labels: models,
-      datasets: [{
-        label: 'Avg Completeness',
-        data: values,
-        backgroundColor: '#4bc0c0',
-        borderRadius: 4,
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: { beginAtZero: true, max: 100, title: { display: true, text: 'Score' } }
-      },
-      plugins: { legend: { display: false } }
-    }
-  });
-}
 
 // Latency bar chart
 {

@@ -60,20 +60,5 @@ export function printGrid(grid: Grid): void {
   console.log(pad("DEFAULT CHAIN", promptColWidth) + " | " + summaryRow.join(" | "));
   console.log(separator);
 
-  // Behavior summary
-  console.log("\nBehavior Summary:");
-  for (const m of models) {
-    const behaviors: Record<string, number> = {};
-    for (const pid of promptIds) {
-      const cell = getCell(grid, pid, m.id);
-      if (cell) {
-        behaviors[cell.behavior] = (behaviors[cell.behavior] ?? 0) + 1;
-      }
-    }
-    const behaviorStr = Object.entries(behaviors)
-      .map(([b, c]) => `${b}: ${c}`)
-      .join(", ");
-    console.log(`  ${m.displayName}: ${behaviorStr}`);
-  }
   console.log();
 }

@@ -19,6 +19,8 @@ export interface Grid {
   promptIds: string[];
   models: ModelConfig[];
   cells: Map<string, GridCell>; // key: `${promptId}::${modelId}`
+  promptCategories: Map<string, string>; // promptId → category
+  promptTexts: Map<string, string>; // promptId → text
 }
 
 function cellKey(promptId: string, modelId: string): string {
@@ -28,8 +30,12 @@ function cellKey(promptId: string, modelId: string): string {
 export function buildGrid(results: BenchmarkResult[]): Grid {
   const promptIds = [...new Set(results.map((r) => r.promptId))];
   const modelMap = new Map<string, ModelConfig>();
+  const promptCategories = new Map<string, string>();
+  const promptTexts = new Map<string, string>();
   for (const r of results) {
     modelMap.set(r.model.id, r.model);
+    if (r.promptCategory) promptCategories.set(r.promptId, r.promptCategory);
+    if (r.promptText) promptTexts.set(r.promptId, r.promptText);
   }
   const models = [...modelMap.values()];
 
@@ -91,7 +97,7 @@ export function buildGrid(results: BenchmarkResult[]): Grid {
     });
   }
 
-  return { promptIds, models, cells };
+  return { promptIds, models, cells, promptCategories, promptTexts };
 }
 
 export function getCell(grid: Grid, promptId: string, modelId: string): GridCell | undefined {
