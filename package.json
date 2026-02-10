@@ -1,0 +1,23 @@
+{
+  "name": "chain-bias-benchmark",
+  "version": "1.0.0",
+  "description": "Measure which blockchain ecosystem AI models default to when given vague crypto prompts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@google/generative-ai": "^0.24.0",
+    "dotenv": "^16.4.7",
+    "openai": "^4.85.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
