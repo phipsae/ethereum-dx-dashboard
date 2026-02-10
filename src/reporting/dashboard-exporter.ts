@@ -3,12 +3,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { BenchmarkResult } from "../providers/types.js";
 import type { Grid } from "./summary-grid.js";
-import { getCell, buildGrid } from "./summary-grid.js";
-import { loadResults } from "../storage/json-store.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DASHBOARD_DATA_DIR = path.resolve(__dirname, "../../dashboard/public/data");
-const RESULTS_DIR = path.resolve(__dirname, "../../results");
 
 interface DashboardRunMeta {
   timestamp: string;
@@ -153,6 +150,10 @@ export function exportDashboardData(
   const runFilePath = path.join(DASHBOARD_DATA_DIR, filename);
   fs.writeFileSync(runFilePath, JSON.stringify(runData, null, 2));
 
+  // Write latest.json (always the data that was passed in)
+  const latestPath = path.join(DASHBOARD_DATA_DIR, "latest.json");
+  fs.writeFileSync(latestPath, JSON.stringify(runData, null, 2));
+
   // Update runs.json index
   const runsIndexPath = path.join(DASHBOARD_DATA_DIR, "runs.json");
   let runsIndex: RunIndexEntry[] = [];
@@ -178,46 +179,5 @@ export function exportDashboardData(
 
   fs.writeFileSync(runsIndexPath, JSON.stringify(runsIndex, null, 2));
 
-  // Rebuild latest.json from ALL result directories combined
-  rebuildLatest();
-
   return runFilePath;
-}
-
-function rebuildLatest(): void {
-  // Find all result directories
-  if (!fs.existsSync(RESULTS_DIR)) return;
-
-  const dirs = fs.readdirSync(RESULTS_DIR)
-    .filter((d) => d.startsWith("run-"))
-    .map((d) => path.join(RESULTS_DIR, d));
-
-  const allResults = loadResults(dirs);
-  if (allResults.length === 0) return;
-
-  const grid = buildGrid(allResults);
-
-  const prompts: DashboardPrompt[] = grid.promptIds.map((id) => ({
-    id,
-    category: grid.promptCategories.get(id) ?? "Unknown",
-    text: grid.promptTexts.get(id) ?? "",
-  }));
-
-  const runIds = [...new Set(allResults.map((r) => r.runId))];
-
-  const latestData: DashboardRunData = {
-    meta: {
-      timestamp: new Date().toISOString(),
-      runId: `combined-${runIds.length}-runs`,
-      modelCount: grid.models.length,
-      promptCount: grid.promptIds.length,
-      resultCount: allResults.length,
-    },
-    results: allResults.map(toSlimResult),
-    grid: serializeGrid(grid),
-    prompts,
-  };
-
-  const latestPath = path.join(DASHBOARD_DATA_DIR, "latest.json");
-  fs.writeFileSync(latestPath, JSON.stringify(latestData, null, 2));
 }
