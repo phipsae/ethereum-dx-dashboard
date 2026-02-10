@@ -5,7 +5,7 @@ import type { Grid } from "./summary-grid.js";
 import { getCell } from "./summary-grid.js";
 
 const CHAIN_COLORS: Record<string, string> = {
-  Ethereum: "#627eea",
+  "Ethereum Ecosystem": "#627eea",
   Solana: "#9945ff",
   Sui: "#4da2ff",
   Aptos: "#2dd8a3",
@@ -103,26 +103,26 @@ function hashCode(s: string): number {
 }
 
 interface ChartData {
-  perModelChains: Array<{ model: string; chains: Record<string, number> }>;
-  overallChains: Record<string, number>;
+  perModelEcosystems: Array<{ model: string; ecosystems: Record<string, number> }>;
+  overallEcosystems: Record<string, number>;
   behaviorPerModel: Array<{ model: string; behaviors: Record<string, number> }>;
   completenessPerModel: Array<{ model: string; avg: number }>;
   latencyPerModel: Array<{ model: string; avg: number }>;
   summaryRows: Array<{
     prompt: string;
     cells: Array<{
-      chain: string;
+      ecosystem: string;
+      network: string;
       confidence: number;
       latency: string;
       behavior: string;
       completeness: number;
-      network?: string;
     } | null>;
   }>;
-  defaultChainRows: Array<{
+  defaultEcosystemRows: Array<{
     model: string;
     tier: string;
-    defaultChain: string;
+    defaultEcosystem: string;
     timesChosen: string;
   }>;
   modelHeaders: string[];
@@ -135,8 +135,8 @@ interface ChartData {
 function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
   const { promptIds, models } = grid;
 
-  const perModelChains: ChartData["perModelChains"] = [];
-  const overallChains: Record<string, number> = {};
+  const perModelEcosystems: ChartData["perModelEcosystems"] = [];
+  const overallEcosystems: Record<string, number> = {};
   const behaviorPerModel: ChartData["behaviorPerModel"] = [];
   const completenessPerModel: ChartData["completenessPerModel"] = [];
   const latencyPerModel: ChartData["latencyPerModel"] = [];
@@ -144,7 +144,7 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
   const overallNetworks: Record<string, number> = {};
 
   for (const m of models) {
-    const chains: Record<string, number> = {};
+    const ecosystems: Record<string, number> = {};
     const behaviors: Record<string, number> = {};
     const networks: Record<string, number> = {};
     let totalCompleteness = 0;
@@ -155,24 +155,22 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
       const cell = getCell(grid, pid, m.id);
       if (!cell) continue;
 
-      // Chain counts (use aggregated if available)
-      if (cell.chainCounts) {
-        for (const [chain, cnt] of Object.entries(cell.chainCounts)) {
-          chains[chain] = (chains[chain] ?? 0) + cnt;
-          overallChains[chain] = (overallChains[chain] ?? 0) + cnt;
+      // Ecosystem counts (use aggregated if available)
+      if (cell.ecosystemCounts) {
+        for (const [eco, cnt] of Object.entries(cell.ecosystemCounts)) {
+          ecosystems[eco] = (ecosystems[eco] ?? 0) + cnt;
+          overallEcosystems[eco] = (overallEcosystems[eco] ?? 0) + cnt;
         }
       } else {
-        chains[cell.chain] = (chains[cell.chain] ?? 0) + 1;
-        overallChains[cell.chain] = (overallChains[cell.chain] ?? 0) + 1;
+        ecosystems[cell.ecosystem] = (ecosystems[cell.ecosystem] ?? 0) + 1;
+        overallEcosystems[cell.ecosystem] = (overallEcosystems[cell.ecosystem] ?? 0) + 1;
       }
 
       // Network counts
       if (cell.networkCounts) {
         for (const [net, cnt] of Object.entries(cell.networkCounts)) {
-          if (net !== "N/A") {
-            networks[net] = (networks[net] ?? 0) + cnt;
-            overallNetworks[net] = (overallNetworks[net] ?? 0) + cnt;
-          }
+          networks[net] = (networks[net] ?? 0) + cnt;
+          overallNetworks[net] = (overallNetworks[net] ?? 0) + cnt;
         }
       }
 
@@ -182,7 +180,7 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
       count++;
     }
 
-    perModelChains.push({ model: m.displayName, chains });
+    perModelEcosystems.push({ model: m.displayName, ecosystems });
     networkPerModel.push({ model: m.displayName, networks });
     behaviorPerModel.push({ model: m.displayName, behaviors });
     completenessPerModel.push({
@@ -202,33 +200,33 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
       const cell = getCell(grid, pid, m.id);
       if (!cell) return null;
       return {
-        chain: cell.chain,
+        ecosystem: cell.ecosystem,
+        network: cell.network,
         confidence: cell.confidence,
         latency: (cell.latencyMs / 1000).toFixed(1),
         behavior: cell.behavior,
         completeness: cell.completeness,
-        network: cell.network,
       };
     });
     summaryRows.push({ prompt: pid, cells });
   }
 
-  // Default chain rows
-  const defaultChainRows: ChartData["defaultChainRows"] = [];
+  // Default ecosystem rows
+  const defaultEcosystemRows: ChartData["defaultEcosystemRows"] = [];
   for (const m of models) {
-    const chainCounts: Record<string, number> = {};
+    const ecoCounts: Record<string, number> = {};
     for (const pid of promptIds) {
       const cell = getCell(grid, pid, m.id);
       if (cell) {
-        chainCounts[cell.chain] = (chainCounts[cell.chain] ?? 0) + 1;
+        ecoCounts[cell.ecosystem] = (ecoCounts[cell.ecosystem] ?? 0) + 1;
       }
     }
-    const sorted = Object.entries(chainCounts).sort((a, b) => b[1] - a[1]);
+    const sorted = Object.entries(ecoCounts).sort((a, b) => b[1] - a[1]);
     if (sorted.length > 0) {
-      defaultChainRows.push({
+      defaultEcosystemRows.push({
         model: m.displayName,
         tier: m.tier,
-        defaultChain: sorted[0][0],
+        defaultEcosystem: sorted[0][0],
         timesChosen: `${sorted[0][1]}/${promptIds.length}`,
       });
     }
@@ -241,7 +239,7 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
   const toolFrequencyPerModelMap: Record<string, Record<string, number>> = {};
 
   for (const r of results) {
-    const tools = parseEvidence(r.analysis.chain.evidence);
+    const tools = parseEvidence(r.analysis.detection.evidence);
     const modelName = r.model.displayName;
     if (!toolFrequencyPerModelMap[modelName]) {
       toolFrequencyPerModelMap[modelName] = {};
@@ -259,13 +257,13 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
   }));
 
   return {
-    perModelChains,
-    overallChains,
+    perModelEcosystems,
+    overallEcosystems,
     behaviorPerModel,
     completenessPerModel,
     latencyPerModel,
     summaryRows,
-    defaultChainRows,
+    defaultEcosystemRows,
     modelHeaders,
     toolFrequencyOverall,
     toolFrequencyPerModel,
@@ -281,16 +279,16 @@ function escapeHtml(s: string): string {
 export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
   const data = extractChartData(grid, results);
 
-  // Build all unique chains for consistent coloring
-  const allChains = new Set<string>();
-  for (const entry of data.perModelChains) {
-    for (const chain of Object.keys(entry.chains)) allChains.add(chain);
+  // Build all unique ecosystems for consistent coloring
+  const allEcosystems = new Set<string>();
+  for (const entry of data.perModelEcosystems) {
+    for (const eco of Object.keys(entry.ecosystems)) allEcosystems.add(eco);
   }
-  for (const chain of Object.keys(data.overallChains)) allChains.add(chain);
+  for (const eco of Object.keys(data.overallEcosystems)) allEcosystems.add(eco);
 
   const chainColorMap: Record<string, string> = {};
-  for (const chain of allChains) {
-    chainColorMap[chain] = getChainColor(chain);
+  for (const eco of allEcosystems) {
+    chainColorMap[eco] = getChainColor(eco);
   }
 
   // Build network color map
@@ -316,24 +314,24 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
       const cells = row.cells
         .map((c) => {
           if (!c) return "<td>—</td>";
-          const netBadge = c.network && c.network !== "N/A" && c.network !== "Unspecified"
+          const netBadge = c.network && c.network !== "Unspecified" && c.network !== "Unknown"
             ? ` <span style="color:${escapeHtml(getNetworkColor(c.network))}">→ ${escapeHtml(c.network)}</span>` : "";
-          return `<td><strong>${escapeHtml(c.chain)}</strong>${netBadge} (${c.confidence}%)<br><span class="detail">${c.latency}s</span></td>`;
+          return `<td><strong>${escapeHtml(c.ecosystem)}</strong>${netBadge} (${c.confidence}%)<br><span class="detail">${c.latency}s</span></td>`;
         })
         .join("");
       return `<tr><td class="prompt-cell">${escapeHtml(row.prompt)}</td>${cells}</tr>`;
     })
     .join("\n");
 
-  const defaultChainTableRows = data.defaultChainRows
+  const defaultEcosystemTableRows = data.defaultEcosystemRows
     .map(
       (r) =>
-        `<tr><td>${escapeHtml(r.model)}</td><td>${escapeHtml(r.tier)}</td><td><strong>${escapeHtml(r.defaultChain)}</strong></td><td>${escapeHtml(r.timesChosen)}</td></tr>`
+        `<tr><td>${escapeHtml(r.model)}</td><td>${escapeHtml(r.tier)}</td><td><strong>${escapeHtml(r.defaultEcosystem)}</strong></td><td>${escapeHtml(r.timesChosen)}</td></tr>`
     )
     .join("\n");
 
   // Number of per-model pie charts to determine grid layout
-  const pieCount = data.perModelChains.length;
+  const pieCount = data.perModelEcosystems.length;
   const pieCols = pieCount <= 2 ? pieCount : pieCount <= 4 ? 2 : 3;
 
   // Tool chart dimensions
@@ -484,7 +482,7 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
 
 <h2>Chain Distribution (Per Model)</h2>
 <div class="chart-grid">
-${data.perModelChains.map((_, i) => `  <div class="chart-card"><h3>${escapeHtml(data.perModelChains[i].model)}</h3><canvas id="modelPie${i}"></canvas></div>`).join("\n")}
+${data.perModelEcosystems.map((_, i) => `  <div class="chart-card"><h3>${escapeHtml(data.perModelEcosystems[i].model)}</h3><canvas id="modelPie${i}"></canvas></div>`).join("\n")}
 </div>
 
 ${hasNetworkData ? `<h2>EVM Network Distribution (Overall)</h2>
@@ -518,10 +516,10 @@ ${toolCount > 0 ? `<h2>Tool/Framework Frequency (Overall)</h2>
   <tbody>${tableRows}</tbody>
 </table>
 
-<h2>Default Chain Summary</h2>
+<h2>Default Ecosystem Summary</h2>
 <table>
-  <thead><tr><th>Model</th><th>Tier</th><th>Default Chain</th><th>Times Chosen</th></tr></thead>
-  <tbody>${defaultChainTableRows}</tbody>
+  <thead><tr><th>Model</th><th>Tier</th><th>Default Ecosystem</th><th>Times Chosen</th></tr></thead>
+  <tbody>${defaultEcosystemTableRows}</tbody>
 </table>
 
 ${(() => {
@@ -536,7 +534,7 @@ ${(() => {
       const chains: Record<string, number> = {};
       for (const pid of catPrompts) {
         const cell = getCell(grid, pid, m.id);
-        if (cell) chains[cell.chain] = (chains[cell.chain] ?? 0) + 1;
+        if (cell) chains[cell.ecosystem] = (chains[cell.ecosystem] ?? 0) + 1;
       }
       const sorted = Object.entries(chains).sort((a, b) => b[1] - a[1]);
       if (sorted.length === 0) return "<td>—</td>";
@@ -544,7 +542,7 @@ ${(() => {
     }).join("");
     return `<tr><td>${escapeHtml(cat)}</td>${cells}</tr>`;
   }).join("\n");
-  return `<h2>Chain Choice by Category</h2>
+  return `<h2>Ecosystem Choice by Category</h2>
 <table>
   <thead><tr><th>Category</th>${headerCells}</tr></thead>
   <tbody>${rows}</tbody>
@@ -553,8 +551,8 @@ ${(() => {
 
 <script>
 const chartData = ${JSON.stringify({
-    perModelChains: data.perModelChains,
-    overallChains: data.overallChains,
+    perModelEcosystems: data.perModelEcosystems,
+    overallEcosystems: data.overallEcosystems,
     behaviorPerModel: data.behaviorPerModel,
     completenessPerModel: data.completenessPerModel,
     latencyPerModel: data.latencyPerModel,
@@ -573,8 +571,8 @@ Chart.defaults.borderColor = '#0f3460';
 
 // Overall pie chart
 {
-  const labels = Object.keys(chartData.overallChains);
-  const values = Object.values(chartData.overallChains);
+  const labels = Object.keys(chartData.overallEcosystems);
+  const values = Object.values(chartData.overallEcosystems);
   const colors = labels.map(l => chartData.chainColorMap[l] || '#888');
   new Chart(document.getElementById('overallPie'), {
     type: 'pie',
@@ -601,9 +599,9 @@ Chart.defaults.borderColor = '#0f3460';
 }
 
 // Per-model pie charts
-chartData.perModelChains.forEach((entry, i) => {
-  const labels = Object.keys(entry.chains);
-  const values = Object.values(entry.chains);
+chartData.perModelEcosystems.forEach((entry, i) => {
+  const labels = Object.keys(entry.ecosystems);
+  const values = Object.values(entry.ecosystems);
   const colors = labels.map(l => chartData.chainColorMap[l] || '#888');
   new Chart(document.getElementById('modelPie' + i), {
     type: 'pie',

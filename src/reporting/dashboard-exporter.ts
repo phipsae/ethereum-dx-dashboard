@@ -21,24 +21,25 @@ interface SlimResult {
   model: string;
   modelDisplayName: string;
   modelTier: string;
-  chain: string;
-  chainConfidence: number;
-  network: string | null;
-  behavior: string;
-  completeness: number;
-  latencyMs: number;
-  tokensUsed: number;
-}
-
-interface SerializedGridCell {
-  chain: string;
+  ecosystem: string;
+  network: string;
   confidence: number;
   behavior: string;
   completeness: number;
   latencyMs: number;
-  chainCounts: Record<string, number>;
+  tokensUsed: number;
+  evidence: string[];
+}
+
+interface SerializedGridCell {
+  ecosystem: string;
+  network: string;
+  confidence: number;
+  behavior: string;
+  completeness: number;
+  latencyMs: number;
+  ecosystemCounts: Record<string, number>;
   networkCounts: Record<string, number>;
-  network: string | null;
   runCount: number;
 }
 
@@ -75,13 +76,14 @@ function toSlimResult(r: BenchmarkResult): SlimResult {
     model: r.model.id,
     modelDisplayName: r.model.displayName,
     modelTier: r.model.tier,
-    chain: r.analysis.chain.chain,
-    chainConfidence: r.analysis.chain.confidence,
-    network: r.analysis.chain.network?.primary ?? null,
+    ecosystem: r.analysis.detection.ecosystem,
+    network: r.analysis.detection.network,
+    confidence: r.analysis.detection.confidence,
     behavior: r.analysis.behavior.behavior,
     completeness: r.analysis.completeness.score,
     latencyMs: r.response.latencyMs,
     tokensUsed: r.response.tokensUsed,
+    evidence: r.analysis.detection.evidence,
   };
 }
 
@@ -89,14 +91,14 @@ function serializeGrid(grid: Grid): DashboardRunData["grid"] {
   const cells: Record<string, SerializedGridCell> = {};
   for (const [key, cell] of grid.cells) {
     cells[key] = {
-      chain: cell.chain,
+      ecosystem: cell.ecosystem,
+      network: cell.network,
       confidence: cell.confidence,
       behavior: cell.behavior,
       completeness: cell.completeness,
       latencyMs: cell.latencyMs,
-      chainCounts: cell.chainCounts ?? { [cell.chain]: 1 },
+      ecosystemCounts: cell.ecosystemCounts ?? { [cell.ecosystem]: 1 },
       networkCounts: cell.networkCounts ?? {},
-      network: cell.network ?? null,
       runCount: cell.runCount,
     };
   }

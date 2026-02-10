@@ -41,29 +41,29 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
     const cells = models.map((m) => {
       const cell = getCell(grid, promptId, m.id);
       if (!cell) return "—";
-      const net = cell.network && cell.network !== "N/A" && cell.network !== "Unspecified"
+      const net = cell.network && cell.network !== "Unspecified" && cell.network !== "Unknown"
         ? ` → ${cell.network}` : "";
-      return `**${cell.chain}${net}** (${cell.confidence}%) ${(cell.latencyMs / 1000).toFixed(1)}s`;
+      return `**${cell.ecosystem}${net}** (${cell.confidence}%) ${(cell.latencyMs / 1000).toFixed(1)}s`;
     });
     lines.push(`| ${promptId} | ${cells.join(" | ")} |`);
   }
   lines.push("");
 
-  // Chain summary per model
-  lines.push("## Default Chain Summary");
+  // Ecosystem summary per model
+  lines.push("## Default Ecosystem Summary");
   lines.push("");
-  lines.push("| Model | Tier | Default Chain | Times Chosen |");
+  lines.push("| Model | Tier | Default Ecosystem | Times Chosen |");
   lines.push("| --- | --- | --- | --- |");
 
   for (const m of models) {
-    const chainCounts: Record<string, number> = {};
+    const ecoCounts: Record<string, number> = {};
     for (const pid of promptIds) {
       const cell = getCell(grid, pid, m.id);
       if (cell) {
-        chainCounts[cell.chain] = (chainCounts[cell.chain] ?? 0) + 1;
+        ecoCounts[cell.ecosystem] = (ecoCounts[cell.ecosystem] ?? 0) + 1;
       }
     }
-    const sorted = Object.entries(chainCounts).sort((a, b) => b[1] - a[1]);
+    const sorted = Object.entries(ecoCounts).sort((a, b) => b[1] - a[1]);
     if (sorted.length > 0) {
       lines.push(
         `| ${m.displayName} | ${m.tier} | **${sorted[0][0]}** | ${sorted[0][1]}/${promptIds.length} |`
@@ -76,7 +76,7 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
   const hasNetworkData = models.some((m) =>
     promptIds.some((pid) => {
       const cell = getCell(grid, pid, m.id);
-      return cell?.network && cell.network !== "N/A" && cell.network !== "Unspecified";
+      return cell?.network && cell.network !== "Unspecified" && cell.network !== "Unknown";
     })
   );
 
@@ -91,7 +91,7 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
         const cell = getCell(grid, pid, m.id);
         if (cell?.networkCounts) {
           for (const net of Object.keys(cell.networkCounts)) {
-            if (net !== "N/A") allNetworks.add(net);
+            allNetworks.add(net);
           }
         }
       }
@@ -107,9 +107,7 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
         const cell = getCell(grid, pid, m.id);
         if (cell?.networkCounts) {
           for (const [net, cnt] of Object.entries(cell.networkCounts)) {
-            if (net !== "N/A") {
-              counts[net] = (counts[net] ?? 0) + cnt;
-            }
+            counts[net] = (counts[net] ?? 0) + cnt;
           }
         }
       }
@@ -119,10 +117,10 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
     lines.push("");
   }
 
-  // Chain choice by category
+  // Ecosystem choice by category
   const categories = [...new Set([...grid.promptCategories.values()])];
   if (categories.length > 1) {
-    lines.push("## Chain Choice by Category");
+    lines.push("## Ecosystem Choice by Category");
     lines.push("");
     lines.push(`| Category | ${models.map((m) => m.displayName).join(" | ")} |`);
     lines.push(`| --- | ${models.map(() => "---").join(" | ")} |`);
@@ -130,14 +128,14 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
     for (const cat of categories) {
       const catPrompts = promptIds.filter((pid) => grid.promptCategories.get(pid) === cat);
       const row = models.map((m) => {
-        const chains: Record<string, number> = {};
+        const ecosystems: Record<string, number> = {};
         for (const pid of catPrompts) {
           const cell = getCell(grid, pid, m.id);
           if (cell) {
-            chains[cell.chain] = (chains[cell.chain] ?? 0) + 1;
+            ecosystems[cell.ecosystem] = (ecosystems[cell.ecosystem] ?? 0) + 1;
           }
         }
-        const sorted = Object.entries(chains).sort((a, b) => b[1] - a[1]);
+        const sorted = Object.entries(ecosystems).sort((a, b) => b[1] - a[1]);
         if (sorted.length === 0) return "—";
         return sorted.map(([c, n]) => `${c} (${n})`).join(", ");
       });
@@ -156,12 +154,12 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
     lines.push(`### ${provider}`);
     lines.push("");
     for (const m of providerModels) {
-      const chains: string[] = [];
+      const ecosystems: string[] = [];
       for (const pid of promptIds) {
         const cell = getCell(grid, pid, m.id);
-        if (cell) chains.push(cell.chain);
+        if (cell) ecosystems.push(cell.ecosystem);
       }
-      lines.push(`- **${m.displayName}** (${m.tier}): ${chains.join(", ")}`);
+      lines.push(`- **${m.displayName}** (${m.tier}): ${ecosystems.join(", ")}`);
     }
     lines.push("");
   }

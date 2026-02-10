@@ -5,7 +5,7 @@ import type { DashboardRunData, RunIndexEntry } from "@/lib/types";
 import { fetchRunsIndex, fetchRun } from "@/lib/data";
 import RunSelector from "@/components/RunSelector";
 import ChainPieChart from "@/components/charts/ChainPieChart";
-import { computeOverallChains, computeDefaultChains } from "@/lib/data";
+import { computeOverallEcosystems, computeDefaultEcosystems } from "@/lib/data";
 import { getChainColor } from "@/lib/types";
 
 export default function HistoryPage() {
@@ -119,13 +119,13 @@ export default function HistoryPage() {
                 <h3 className="mb-2 text-sm font-medium text-[#a0a0b0]">
                   Run A: {new Date(runDataA.meta.timestamp).toLocaleString()}
                 </h3>
-                <ChainPieChart data={computeOverallChains(runDataA)} height={280} />
+                <ChainPieChart data={computeOverallEcosystems(runDataA)} height={280} />
                 <div className="mt-4 space-y-1">
-                  {computeDefaultChains(runDataA).map((row) => (
+                  {computeDefaultEcosystems(runDataA).map((row) => (
                     <div key={row.model} className="flex items-center justify-between rounded bg-[#16213e] px-3 py-1.5 text-sm">
                       <span className="text-[#e0e0e0]">{row.model}</span>
-                      <span style={{ color: getChainColor(row.defaultChain) }} className="font-semibold">
-                        {row.defaultChain} <span className="text-[#a0a0b0] font-normal">({row.timesChosen})</span>
+                      <span style={{ color: getChainColor(row.defaultEcosystem) }} className="font-semibold">
+                        {row.defaultEcosystem} <span className="text-[#a0a0b0] font-normal">({row.timesChosen})</span>
                       </span>
                     </div>
                   ))}
@@ -137,13 +137,13 @@ export default function HistoryPage() {
                 <h3 className="mb-2 text-sm font-medium text-[#a0a0b0]">
                   Run B: {new Date(runDataB.meta.timestamp).toLocaleString()}
                 </h3>
-                <ChainPieChart data={computeOverallChains(runDataB)} height={280} />
+                <ChainPieChart data={computeOverallEcosystems(runDataB)} height={280} />
                 <div className="mt-4 space-y-1">
-                  {computeDefaultChains(runDataB).map((row) => (
+                  {computeDefaultEcosystems(runDataB).map((row) => (
                     <div key={row.model} className="flex items-center justify-between rounded bg-[#16213e] px-3 py-1.5 text-sm">
                       <span className="text-[#e0e0e0]">{row.model}</span>
-                      <span style={{ color: getChainColor(row.defaultChain) }} className="font-semibold">
-                        {row.defaultChain} <span className="text-[#a0a0b0] font-normal">({row.timesChosen})</span>
+                      <span style={{ color: getChainColor(row.defaultEcosystem) }} className="font-semibold">
+                        {row.defaultEcosystem} <span className="text-[#a0a0b0] font-normal">({row.timesChosen})</span>
                       </span>
                     </div>
                   ))}

@@ -1,17 +1,19 @@
 import { loadRunDataFromFile } from "@/lib/server-data";
 import {
-  computeOverallChains,
-  computePerModelChains,
+  computeOverallEcosystems,
+  computePerModelEcosystems,
   computeOverallNetworks,
   computePerModelNetworks,
   computeLatencyPerModel,
-  computeDefaultChains,
+  computeDefaultEcosystems,
   computeCategoryBreakdown,
+  computeToolFrequency,
 } from "@/lib/data";
 import ChainPieChart from "@/components/charts/ChainPieChart";
 import NetworkDistribution from "@/components/charts/NetworkDistribution";
 import LatencyBar from "@/components/charts/LatencyBar";
 import CategoryBreakdown from "@/components/charts/CategoryBreakdown";
+import ToolFrequencyBar from "@/components/charts/ToolFrequencyBar";
 import ResultsGrid from "@/components/tables/ResultsGrid";
 import PromptsTable from "@/components/tables/PromptsTable";
 import DefaultChainSummary from "@/components/tables/DefaultChainSummary";
@@ -35,13 +37,14 @@ export default function DashboardPage() {
     );
   }
 
-  const overallChains = computeOverallChains(data);
-  const perModelChains = computePerModelChains(data);
+  const overallEcosystems = computeOverallEcosystems(data);
+  const perModelEcosystems = computePerModelEcosystems(data);
   const overallNetworks = computeOverallNetworks(data);
   const perModelNetworks = computePerModelNetworks(data);
   const latencyData = computeLatencyPerModel(data);
-  const defaultChains = computeDefaultChains(data);
+  const defaultEcosystems = computeDefaultEcosystems(data);
   const categoryBreakdown = computeCategoryBreakdown(data);
+  const toolFrequency = computeToolFrequency(data);
   const modelNames = data.grid.models.map((m) => m.displayName);
 
   return (
@@ -61,7 +64,7 @@ export default function DashboardPage() {
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
           Chain Distribution (Overall)
         </h2>
-        <ChainPieChart data={overallChains} />
+        <ChainPieChart data={overallEcosystems} />
       </section>
 
       {/* Per-model Chain Distribution */}
@@ -70,10 +73,10 @@ export default function DashboardPage() {
           Chain Distribution (Per Model)
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {perModelChains.map((entry) => (
+          {perModelEcosystems.map((entry) => (
             <ChainPieChart
               key={entry.model}
-              data={entry.chains}
+              data={entry.ecosystems}
               title={entry.model}
               height={250}
             />
@@ -81,12 +84,20 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* EVM Network Distribution */}
+      {/* Ethereum Ecosystem Breakdown */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          EVM Network Distribution
+          Ethereum Ecosystem Breakdown
         </h2>
         <NetworkDistribution overall={overallNetworks} perModel={perModelNetworks} />
+      </section>
+
+      {/* Tool / Framework Frequency */}
+      <section>
+        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+          Tool / Framework Frequency
+        </h2>
+        <ToolFrequencyBar data={toolFrequency} />
       </section>
 
       {/* Latency */}
@@ -116,15 +127,15 @@ export default function DashboardPage() {
       {/* Default Chain Summary */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Default Chain Summary
+          Default Ecosystem Summary
         </h2>
-        <DefaultChainSummary data={defaultChains} />
+        <DefaultChainSummary data={defaultEcosystems} />
       </section>
 
       {/* Category Breakdown */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Chain Choice by Category
+          Ecosystem Choice by Category
         </h2>
         <CategoryBreakdown data={categoryBreakdown} modelNames={modelNames} />
       </section>

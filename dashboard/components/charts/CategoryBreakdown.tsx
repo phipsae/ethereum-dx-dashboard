@@ -5,7 +5,7 @@ import { getChainColor } from "@/lib/types";
 interface CategoryBreakdownProps {
   data: Array<{
     category: string;
-    models: Array<{ model: string; chains: Record<string, number> }>;
+    models: Array<{ model: string; ecosystems: Record<string, number> }>;
   }>;
   modelNames: string[];
 }
@@ -36,18 +36,18 @@ export default function CategoryBreakdown({ data, modelNames }: CategoryBreakdow
             <tr key={row.category} className="border-b border-[#0f3460] hover:bg-[#1a2a4e]">
               <td className="px-3 py-2 text-sm text-[#e0e0e0]">{row.category}</td>
               {row.models.map((m, i) => {
-                const sorted = Object.entries(m.chains).sort((a, b) => b[1] - a[1]);
+                const sorted = Object.entries(m.ecosystems).sort((a, b) => b[1] - a[1]);
                 return (
                   <td key={i} className="px-3 py-2 text-sm">
                     {sorted.length === 0
                       ? <span className="text-[#555]">&mdash;</span>
-                      : sorted.map(([chain, count]) => (
-                          <span key={chain} className="mr-2">
+                      : sorted.map(([eco, count]) => (
+                          <span key={eco} className="mr-2">
                             <span
                               className="font-semibold"
-                              style={{ color: getChainColor(chain) }}
+                              style={{ color: getChainColor(eco) }}
                             >
-                              {chain}
+                              {eco}
                             </span>
                             <span className="text-[#a0a0b0]"> ({count})</span>
                           </span>

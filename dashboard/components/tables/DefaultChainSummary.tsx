@@ -4,7 +4,7 @@ interface DefaultChainSummaryProps {
   data: Array<{
     model: string;
     tier: string;
-    defaultChain: string;
+    defaultEcosystem: string;
     timesChosen: string;
   }>;
 }
@@ -22,7 +22,7 @@ export default function DefaultChainSummary({ data }: DefaultChainSummaryProps) 
               Tier
             </th>
             <th className="border-b border-[#0f3460] px-3 py-2 text-left text-sm font-semibold text-white">
-              Default Chain
+              Default Ecosystem
             </th>
             <th className="border-b border-[#0f3460] px-3 py-2 text-left text-sm font-semibold text-white">
               Times Chosen
@@ -41,9 +41,9 @@ export default function DefaultChainSummary({ data }: DefaultChainSummaryProps) 
               <td className="px-3 py-2 text-sm">
                 <span
                   className="font-semibold"
-                  style={{ color: getChainColor(row.defaultChain) }}
+                  style={{ color: getChainColor(row.defaultEcosystem) }}
                 >
-                  {row.defaultChain}
+                  {row.defaultEcosystem}
                 </span>
               </td>
               <td className="px-3 py-2 text-sm text-[#a0a0b0]">{row.timesChosen}</td>

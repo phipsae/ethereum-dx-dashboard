@@ -112,10 +112,10 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
               results.push(result);
               saveResult(outputDir, result);
 
-              const netSuffix = analysis.chain.network && analysis.chain.network.primary !== "Unspecified"
-                ? ` [${analysis.chain.network.primary}]` : "";
+              const netSuffix = analysis.detection.network !== "Unspecified" && analysis.detection.network !== "Unknown"
+                ? ` [${analysis.detection.network}]` : "";
               console.log(
-                `       → ${analysis.chain.chain}${netSuffix} (${analysis.chain.confidence}% confidence) | ` +
+                `       → ${analysis.detection.ecosystem}${netSuffix} (${analysis.detection.confidence}% confidence) | ` +
                 `${(response.latencyMs / 1000).toFixed(1)}s`
               );
             } catch (err) {

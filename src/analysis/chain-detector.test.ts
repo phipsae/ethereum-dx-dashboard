@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { detectChain } from "./chain-detector.js";
+import { detect } from "./detector.js";
 
-describe("chain-detector", () => {
-  it("detects Ethereum from Solidity code", () => {
+describe("detector", () => {
+  it("detects Ethereum Ecosystem from generic Solidity code", () => {
     const text = `
 Here's a token contract:
 \`\`\`solidity
@@ -23,8 +23,9 @@ Deploy with Hardhat:
 npx hardhat deploy
 \`\`\`
     `;
-    const result = detectChain(text);
-    expect(result.chain).toBe("Ethereum");
+    const result = detect(text);
+    expect(result.ecosystem).toBe("Ethereum Ecosystem");
+    expect(result.network).toBe("Unspecified");
     expect(result.confidence).toBeGreaterThan(80);
     expect(result.evidence.length).toBeGreaterThan(0);
   });
@@ -47,8 +48,9 @@ pub mod my_program {
 
 Install @solana/web3.js for the frontend.
     `;
-    const result = detectChain(text);
-    expect(result.chain).toBe("Solana");
+    const result = detect(text);
+    expect(result.network).toBe("Solana");
+    expect(result.ecosystem).toBe("Solana");
     expect(result.confidence).toBeGreaterThan(70);
   });
 
@@ -75,19 +77,21 @@ module my_game::creature {
 }
 \`\`\`
     `;
-    const result = detectChain(text);
-    expect(result.chain).toBe("Sui");
+    const result = detect(text);
+    expect(result.network).toBe("Sui");
+    expect(result.ecosystem).toBe("Sui");
     expect(result.confidence).toBeGreaterThan(60);
   });
 
   it("returns Unknown for unrelated text", () => {
     const text = "Here is a recipe for chocolate cake. Preheat oven to 350F.";
-    const result = detectChain(text);
-    expect(result.chain).toBe("Unknown");
+    const result = detect(text);
+    expect(result.network).toBe("Unknown");
+    expect(result.ecosystem).toBe("Unknown");
     expect(result.confidence).toBe(0);
   });
 
-  it("handles mixed signals with dominant chain winning", () => {
+  it("handles mixed signals with dominant ecosystem winning", () => {
     const text = `
 I'll build this with Solidity and Hardhat on Ethereum.
 
@@ -102,8 +106,8 @@ contract Token is ERC20 {
 
 You could also deploy this on Solana but I'll use Ethereum.
     `;
-    const result = detectChain(text);
-    expect(result.chain).toBe("Ethereum");
+    const result = detect(text);
+    expect(result.ecosystem).toBe("Ethereum Ecosystem");
     expect(result.confidence).toBeGreaterThan(70);
   });
 
@@ -114,8 +118,49 @@ Let's use CosmWasm with the Cosmos SDK:
 use cosmwasm_std::{entry_point, DepsMut, Env, MessageInfo, Response};
 \`\`\`
     `;
-    const result = detectChain(text);
-    expect(result.chain).toBe("Cosmos");
+    const result = detect(text);
+    expect(result.network).toBe("Cosmos");
+    expect(result.ecosystem).toBe("Cosmos");
     expect(result.confidence).toBeGreaterThan(50);
+  });
+
+  it("detects BSC with EVM-generic boost", () => {
+    const text = `
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract BscToken is ERC20 {
+    constructor() ERC20("BscToken", "BSC") {
+        _mint(msg.sender, 1000000 * 10 ** decimals());
+    }
+}
+
+Deploy on BSC (BNB Chain) using Hardhat:
+npx hardhat deploy --network bsc
+Check on bscscan.
+    `;
+    const result = detect(text);
+    expect(result.network).toBe("BSC");
+    expect(result.ecosystem).toBe("BSC");
+  });
+
+  it("detects Base network with EVM-generic boost", () => {
+    const text = `
+pragma solidity ^0.8.20;
+
+contract HelloBase {
+    mapping(address => string) public messages;
+    function setMessage(string calldata msg_) public {
+        messages[msg.sender] = msg_;
+    }
+}
+
+Deploy on Base chain using Hardhat.
+Check on basescan.
+    `;
+    const result = detect(text);
+    expect(result.network).toBe("Base");
+    expect(result.ecosystem).toBe("Ethereum Ecosystem");
   });
 });

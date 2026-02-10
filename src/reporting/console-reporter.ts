@@ -29,10 +29,10 @@ export function printGrid(grid: Grid): void {
       const cell = getCell(grid, promptId, m.id);
       if (!cell) return pad("—", cellWidth);
 
-      const chain = cell.chain.slice(0, 10);
-      const net = cell.network && cell.network !== "N/A" && cell.network !== "Unspecified"
+      const eco = cell.ecosystem.slice(0, 10);
+      const net = cell.network && cell.network !== "Unspecified" && cell.network !== "Unknown"
         ? `→${cell.network}` : "";
-      const chainNet = net ? `${chain}${net}` : chain;
+      const chainNet = net ? `${eco}${net}` : eco;
       const conf = `${cell.confidence}%`;
       const time = `${(cell.latencyMs / 1000).toFixed(1)}s`;
       return pad(`${chainNet} ${conf} ${time}`, cellWidth);
@@ -43,21 +43,21 @@ export function printGrid(grid: Grid): void {
 
   console.log(separator);
 
-  // Summary row: most common chain per model
+  // Summary row: most common ecosystem per model
   const summaryRow = models.map((m) => {
-    const chainCounts: Record<string, number> = {};
+    const ecoCounts: Record<string, number> = {};
     for (const pid of promptIds) {
       const cell = getCell(grid, pid, m.id);
       if (cell) {
-        chainCounts[cell.chain] = (chainCounts[cell.chain] ?? 0) + 1;
+        ecoCounts[cell.ecosystem] = (ecoCounts[cell.ecosystem] ?? 0) + 1;
       }
     }
-    const sorted = Object.entries(chainCounts).sort((a, b) => b[1] - a[1]);
+    const sorted = Object.entries(ecoCounts).sort((a, b) => b[1] - a[1]);
     if (sorted.length === 0) return pad("—", cellWidth);
     return pad(`${sorted[0][0]} (${sorted[0][1]}/${promptIds.length})`, cellWidth);
   });
 
-  console.log(pad("DEFAULT CHAIN", promptColWidth) + " | " + summaryRow.join(" | "));
+  console.log(pad("DEFAULT ECO", promptColWidth) + " | " + summaryRow.join(" | "));
   console.log(separator);
 
   console.log();

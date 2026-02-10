@@ -1,18 +1,18 @@
 import type { BenchmarkResult, ModelConfig } from "../providers/types.js";
 
 export interface GridCell {
-  chain: string;
+  ecosystem: string;
+  network: string;
   confidence: number;
   behavior: string;
   completeness: number;
   latencyMs: number;
   // When multiple runs, these are aggregated
-  chainCounts?: Record<string, number>;
+  ecosystemCounts?: Record<string, number>;
+  networkCounts?: Record<string, number>;
   avgCompleteness?: number;
   avgLatencyMs?: number;
   runCount: number;
-  networkCounts?: Record<string, number>;
-  network?: string;
 }
 
 export interface Grid {
@@ -50,25 +50,24 @@ export function buildGrid(results: BenchmarkResult[]): Grid {
 
   const cells = new Map<string, GridCell>();
   for (const [key, group] of groups) {
-    // Aggregate chain results
-    const chainCounts: Record<string, number> = {};
+    const ecosystemCounts: Record<string, number> = {};
+    const networkCounts: Record<string, number> = {};
     let totalCompleteness = 0;
     let totalLatency = 0;
 
-    const networkCounts: Record<string, number> = {};
-
     for (const r of group) {
-      const chain = r.analysis.chain.chain;
-      chainCounts[chain] = (chainCounts[chain] ?? 0) + 1;
+      const eco = r.analysis.detection.ecosystem;
+      ecosystemCounts[eco] = (ecosystemCounts[eco] ?? 0) + 1;
+      const net = r.analysis.detection.network;
+      networkCounts[net] = (networkCounts[net] ?? 0) + 1;
       totalCompleteness += r.analysis.completeness.score;
       totalLatency += r.response.latencyMs;
-
-      const net = r.analysis.chain.network?.primary ?? "N/A";
-      networkCounts[net] = (networkCounts[net] ?? 0) + 1;
     }
 
-    // Most common chain
-    const topChain = Object.entries(chainCounts).sort((a, b) => b[1] - a[1])[0];
+    // Most common ecosystem
+    const topEcosystem = Object.entries(ecosystemCounts).sort((a, b) => b[1] - a[1])[0];
+    // Most common network
+    const topNetwork = Object.entries(networkCounts).sort((a, b) => b[1] - a[1])[0];
     // Most common behavior
     const behaviorCounts: Record<string, number> = {};
     for (const r of group) {
@@ -77,23 +76,20 @@ export function buildGrid(results: BenchmarkResult[]): Grid {
     }
     const topBehavior = Object.entries(behaviorCounts).sort((a, b) => b[1] - a[1])[0];
 
-    // Use the latest result's confidence
     const latestResult = group[group.length - 1];
 
-    const topNetwork = Object.entries(networkCounts).sort((a, b) => b[1] - a[1])[0];
-
     cells.set(key, {
-      chain: topChain[0],
-      confidence: latestResult.analysis.chain.confidence,
+      ecosystem: topEcosystem[0],
+      network: topNetwork[0],
+      confidence: latestResult.analysis.detection.confidence,
       behavior: topBehavior[0],
       completeness: Math.round(totalCompleteness / group.length),
       latencyMs: Math.round(totalLatency / group.length),
-      chainCounts,
+      ecosystemCounts,
+      networkCounts,
       avgCompleteness: Math.round(totalCompleteness / group.length),
       avgLatencyMs: Math.round(totalLatency / group.length),
       runCount: group.length,
-      networkCounts,
-      network: topNetwork[0],
     });
   }
 

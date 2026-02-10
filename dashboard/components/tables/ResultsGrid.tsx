@@ -41,14 +41,14 @@ export default function ResultsGrid({ data }: ResultsGridProps) {
                   );
                 }
                 const netLabel =
-                  cell.network && cell.network !== "N/A" && cell.network !== "Unspecified"
+                  cell.network && cell.network !== "Unspecified" && cell.network !== "Unknown" && cell.network !== "N/A"
                     ? cell.network
                     : null;
 
                 return (
                   <td key={m.id} className="px-3 py-2 text-sm">
-                    <span className="font-semibold" style={{ color: getChainColor(cell.chain) }}>
-                      {cell.chain}
+                    <span className="font-semibold" style={{ color: getChainColor(cell.ecosystem ?? cell.chain ?? "Unknown") }}>
+                      {cell.ecosystem ?? cell.chain ?? "Unknown"}
                     </span>
                     {netLabel && (
                       <span className="ml-1" style={{ color: getNetworkColor(netLabel) }}>
