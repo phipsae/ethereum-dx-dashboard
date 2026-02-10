@@ -7,6 +7,7 @@ import { printGrid } from "./reporting/console-reporter.js";
 import { generateMarkdown, saveMarkdownReport } from "./reporting/markdown-reporter.js";
 import { generateHtml, saveHtmlReport } from "./reporting/html-reporter.js";
 import { generateCsv, saveCsvReport } from "./reporting/csv-reporter.js";
+import { exportDashboardData } from "./reporting/dashboard-exporter.js";
 
 function parseArgs(argv: string[]) {
   const args = argv.slice(2);
@@ -75,10 +76,12 @@ async function main() {
       const htmlPath = saveHtmlReport(outputDir, html);
       const csv = generateCsv(results);
       const csvPath = saveCsvReport(outputDir, csv);
+      const dashboardPath = exportDashboardData(results, grid);
       console.log(`\nResults saved to: ${outputDir}`);
       console.log(`Markdown report: ${reportPath}`);
       console.log(`HTML report: ${htmlPath}`);
       console.log(`CSV report: ${csvPath}`);
+      console.log(`Dashboard data: ${dashboardPath}`);
     }
   } else if (command === "report") {
     if (positional.length === 0) {

@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "timestamp": "2026-02-10T20:51:44.996Z",
+    "runId": "run-1770689171471-0",
+    "modelCount": 2,
+    "promptCount": 5,
+    "resultCount": 10
+  },
+  "results": [
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 95,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 34639,
+      "tokensUsed": 1658
+    },
+    {
+      "promptId": "token-launch",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 92,
+      "network": null,
+      "behavior": "mixed",
+      "completeness": 81,
+      "latencyMs": 55739,
+      "tokensUsed": 3825
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 100,
+      "latencyMs": 37491,
+      "tokensUsed": 2137
+    },
+    {
+      "promptId": "nft-marketplace",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 55881,
+      "tokensUsed": 4253
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 74,
+      "latencyMs": 28987,
+      "tokensUsed": 1949
+    },
+    {
+      "promptId": "dao-voting",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 92,
+      "latencyMs": 50880,
+      "tokensUsed": 4084
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 49312,
+      "tokensUsed": 3204
+    },
+    {
+      "promptId": "defi-staking",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 100,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 82300,
+      "tokensUsed": 3103
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "chain": "Ethereum",
+      "chainConfidence": 97,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 39,
+      "latencyMs": 53418,
+      "tokensUsed": 2867
+    },
+    {
+      "promptId": "onchain-game",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "chain": "Ethereum",
+      "chainConfidence": 98,
+      "network": null,
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 68194,
+      "tokensUsed": 4749
+    }
+  ],
+  "grid": {
+    "promptIds": [
+      "token-launch",
+      "nft-marketplace",
+      "dao-voting",
+      "defi-staking",
+      "onchain-game"
+    ],
+    "models": [
+      {
+        "id": "gpt-5.2",
+        "displayName": "GPT-5.2",
+        "tier": "flagship",
+        "provider": "openai"
+      },
+      {
+        "id": "gpt-5-mini",
+        "displayName": "GPT-5 mini",
+        "tier": "mid-tier",
+        "provider": "openai"
+      }
+    ],
+    "cells": {
+      "token-launch::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 34639,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "token-launch::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 92,
+        "behavior": "mixed",
+        "completeness": 81,
+        "latencyMs": 55739,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "nft-marketplace::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 98,
+        "behavior": "just-built",
+        "completeness": 100,
+        "latencyMs": 37491,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "nft-marketplace::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 98,
+        "behavior": "just-built",
+        "completeness": 81,
+        "latencyMs": 55881,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "dao-voting::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 97,
+        "behavior": "just-built",
+        "completeness": 74,
+        "latencyMs": 28987,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "dao-voting::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 92,
+        "latencyMs": 50880,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "defi-staking::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 98,
+        "behavior": "just-built",
+        "completeness": 83,
+        "latencyMs": 49312,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "defi-staking::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 83,
+        "latencyMs": 82300,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "onchain-game::gpt-5.2": {
+        "chain": "Ethereum",
+        "confidence": 97,
+        "behavior": "just-built",
+        "completeness": 39,
+        "latencyMs": 53418,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      },
+      "onchain-game::gpt-5-mini": {
+        "chain": "Ethereum",
+        "confidence": 98,
+        "behavior": "just-built",
+        "completeness": 75,
+        "latencyMs": 68194,
+        "chainCounts": {
+          "Ethereum": 1
+        },
+        "networkCounts": {
+          "N/A": 1
+        },
+        "network": "N/A",
+        "runCount": 1
+      }
+    }
+  },
+  "prompts": [
+    {
+      "id": "token-launch",
+      "category": "Unknown",
+      "text": "Build me a token launch platform where creators can deploy their own tokens and set up liquidity pools."
+    },
+    {
+      "id": "nft-marketplace",
+      "category": "Unknown",
+      "text": "Create an NFT marketplace where users can mint, buy, and sell digital art with royalty support."
+    },
+    {
+      "id": "dao-voting",
+      "category": "Unknown",
+      "text": "Build a DAO voting system where token holders can create proposals and vote on them."
+    },
+    {
+      "id": "defi-staking",
+      "category": "Unknown",
+      "text": "Create a staking dApp where users can stake tokens and earn rewards over time."
+    },
+    {
+      "id": "onchain-game",
+      "category": "Unknown",
+      "text": "Build an on-chain game where players can collect, trade, and battle with digital creatures."
+    }
+  ]
+}

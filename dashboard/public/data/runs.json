@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": "2026-02-10T20:51:45.004Z",
+    "runId": "run-1770732192666-0",
+    "filename": "run-2026-02-10T20-51-45.json",
+    "modelCount": 6,
+    "promptCount": 5,
+    "resultCount": 26
+  },
+  {
+    "timestamp": "2026-02-10T20:51:45.002Z",
+    "runId": "run-1770731444842-0",
+    "filename": "run-2026-02-10T20-51-45.json",
+    "modelCount": 6,
+    "promptCount": 5,
+    "resultCount": 28
+  },
+  {
+    "timestamp": "2026-02-10T20:51:45.001Z",
+    "runId": "run-1770727854301-0",
+    "filename": "run-2026-02-10T20-51-45.json",
+    "modelCount": 2,
+    "promptCount": 1,
+    "resultCount": 2
+  },
+  {
+    "timestamp": "2026-02-10T20:51:44.996Z",
+    "runId": "run-1770689171471-0",
+    "filename": "run-2026-02-10T20-51-44.json",
+    "modelCount": 2,
+    "promptCount": 5,
+    "resultCount": 10
+  },
+  {
+    "timestamp": "2026-02-10T20:51:44.994Z",
+    "runId": "run-1770688557885-0",
+    "filename": "run-2026-02-10T20-51-44.json",
+    "modelCount": 2,
+    "promptCount": 5,
+    "resultCount": 10
+  }
+]

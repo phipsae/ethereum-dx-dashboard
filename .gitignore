@@ -3,3 +3,5 @@ dist/
 results/
 .env
 *.tsbuildinfo
+dashboard/.next/
+dashboard/out/
