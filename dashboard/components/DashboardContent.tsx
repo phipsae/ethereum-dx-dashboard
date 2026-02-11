@@ -138,6 +138,51 @@ export default function DashboardContent({ standard, webSearch }: DashboardConte
           </p>
         </div>
       </section>
+
+      {/* API vs ChatGPT */}
+      <section>
+        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+          Why API Results May Differ from ChatGPT.com
+        </h2>
+        <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
+          <p className="mb-3">
+            This benchmark uses direct API calls rather than the ChatGPT web interface. Results may
+            differ for several reasons:
+          </p>
+          <ul className="list-disc space-y-2 pl-5">
+            <li>
+              <strong className="text-white">No system prompt</strong> &mdash; ChatGPT.com injects a
+              hidden system prompt that shapes tone, safety behavior, and formatting. API calls send
+              only the raw user prompt, giving a purer read of the model&apos;s defaults.
+            </li>
+            <li>
+              <strong className="text-white">Fewer tools available</strong> &mdash; ChatGPT.com has
+              Code Interpreter, DALL-E, file upload, and canvas. The model may behave differently when
+              it knows these tools exist. Our API calls only optionally enable web search.
+            </li>
+            <li>
+              <strong className="text-white">Different moderation layers</strong> &mdash; ChatGPT.com
+              applies additional safety and moderation filtering on top of the model that can alter or
+              refuse certain outputs.
+            </li>
+            <li>
+              <strong className="text-white">Model version may differ</strong> &mdash; The model served
+              on ChatGPT.com can be a slightly different snapshot or fine-tune than what the API returns
+              for the same model name.
+            </li>
+            <li>
+              <strong className="text-white">No user memory or context</strong> &mdash; ChatGPT.com can
+              use stored user preferences and conversation history. API calls are stateless with zero
+              prior context.
+            </li>
+          </ul>
+          <p className="mt-3 text-[#a0a0b0]">
+            The API approach measures a model&apos;s inherent bias with minimal external influence,
+            while ChatGPT.com responses are shaped by multiple additional layers that could nudge the
+            model toward or away from specific chains.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
