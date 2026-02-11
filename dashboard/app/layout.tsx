@@ -3,8 +3,26 @@ import Nav from "@/components/Nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chain-bias-dashboard.vercel.app"),
   title: "Chain Bias Dashboard",
-  description: "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
+  description:
+    "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
+  openGraph: {
+    title: "Chain Bias Dashboard",
+    description:
+      "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
+    url: "https://chain-bias-dashboard.vercel.app",
+    siteName: "Chain Bias Dashboard",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chain Bias Dashboard",
+    description:
+      "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
