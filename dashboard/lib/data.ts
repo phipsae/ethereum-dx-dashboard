@@ -128,17 +128,27 @@ export function computeCategoryBreakdown(
 ): Array<{ category: string; networks: Record<string, number> }> {
   const categories = [...new Set(data.prompts.map((p) => p.category))];
   return categories.map((cat) => {
-    const catPrompts = data.prompts.filter((p) => p.category === cat).map((p) => p.id);
     const networks: Record<string, number> = {};
-    for (const m of data.grid.models) {
-      for (const pid of catPrompts) {
-        const cell = data.grid.cells[`${pid}::${m.id}`];
-        if (!cell) continue;
-        const net = cell.network || cellEcosystem(cell);
-        networks[net] = (networks[net] ?? 0) + 1;
-      }
+    for (const r of data.results) {
+      if (r.promptCategory !== cat) continue;
+      const net = r.network || r.ecosystem || "Unknown";
+      networks[net] = (networks[net] ?? 0) + 1;
     }
     return { category: cat, networks };
+  });
+}
+
+export function computePerPromptNetworks(
+  data: DashboardRunData
+): Array<{ promptId: string; networks: Record<string, number> }> {
+  return data.grid.promptIds.map((pid) => {
+    const networks: Record<string, number> = {};
+    for (const r of data.results) {
+      if (r.promptId !== pid) continue;
+      const net = r.network || r.ecosystem || "Unknown";
+      networks[net] = (networks[net] ?? 0) + 1;
+    }
+    return { promptId: pid, networks };
   });
 }
 

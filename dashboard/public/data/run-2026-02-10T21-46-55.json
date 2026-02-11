@@ -387,7 +387,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gemini-3-pro-preview",
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
@@ -415,7 +415,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gemini-3-flash-preview",
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
@@ -583,7 +583,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
@@ -597,7 +597,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
@@ -681,7 +681,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gemini-3-pro-preview",
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
@@ -695,7 +695,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gemini-3-flash-preview",
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
@@ -737,7 +737,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
@@ -765,7 +765,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
@@ -919,7 +919,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
@@ -947,7 +947,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
@@ -989,7 +989,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
@@ -1003,7 +1003,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
@@ -1409,7 +1409,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gemini-3-pro-preview",
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
@@ -1451,7 +1451,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gemini-3-flash-preview",
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
@@ -1633,7 +1633,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
@@ -1647,7 +1647,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
@@ -1661,7 +1661,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
@@ -1675,7 +1675,7 @@
     },
     {
       "promptId": "which-chain",
-      "promptCategory": "Advisory",
+      "promptCategory": "Recommendation",
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
@@ -1745,7 +1745,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gemini-3-pro-preview",
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
@@ -1871,7 +1871,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gemini-3-flash-preview",
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
@@ -1969,7 +1969,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
@@ -1983,7 +1983,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
@@ -1997,7 +1997,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
@@ -2011,7 +2011,7 @@
     },
     {
       "promptId": "name-service",
-      "promptCategory": "Identity",
+      "promptCategory": "Registry",
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
@@ -3244,7 +3244,7 @@
     },
     {
       "id": "which-chain",
-      "category": "Advisory",
+      "category": "Recommendation",
       "text": "I want to build a crypto app. Which blockchain should I build on and why?"
     },
     {
@@ -3269,7 +3269,7 @@
     },
     {
       "id": "name-service",
-      "category": "Identity",
+      "category": "Registry",
       "text": "Create a service where people can register a readable name for their crypto wallet instead of a long address."
     }
   ]

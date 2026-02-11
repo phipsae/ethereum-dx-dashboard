@@ -116,6 +116,16 @@ export default function CategoryBreakdown({ data }: CategoryBreakdownProps) {
           <div className="text-xs text-[#a0a0b0]">
             {hovered.count} of {hovered.total} ({((hovered.count / hovered.total) * 100).toFixed(0)}%)
           </div>
+          {hovered.network === "Unknown" && (
+            <div className="mt-1 text-xs text-[#a0a0b0] italic">
+              Response didn&apos;t specify a blockchain or was chain-agnostic
+            </div>
+          )}
+          {hovered.network === "Unspecified" && (
+            <div className="mt-1 text-xs text-[#a0a0b0] italic">
+              Said Ethereum but didn&apos;t name a specific L2/network
+            </div>
+          )}
         </div>
       )}
     </div>

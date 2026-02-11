@@ -5,12 +5,12 @@ const PROMPTS = [
   { id: "nft-marketplace", category: "NFT", text: "Create a marketplace for digital collectibles where artists can sell their work and earn on resales." },
   { id: "dao-voting", category: "Governance", text: "Build a community voting system where coin holders can submit proposals and vote on decisions." },
   { id: "onchain-game", category: "Gaming", text: "Build a blockchain game where players can collect, trade, and battle with digital creatures." },
-  { id: "which-chain", category: "Advisory", text: "I want to build a crypto app. Which blockchain should I build on and why?" },
+  { id: "which-chain", category: "Recommendation", text: "I want to build a crypto app. Which blockchain should I build on and why?" },
   { id: "ai-agent", category: "Agent", text: "Build me an AI agent that can autonomously trade crypto and manage a wallet." },
   { id: "token-bridge", category: "Infrastructure", text: "Build a way for users to move their crypto between two different blockchains." },
   { id: "block-explorer", category: "Infrastructure", text: "Create a website that lets people look up transactions, wallet balances, and activity on a blockchain." },
   { id: "social-tipping", category: "Social", text: "Build a platform where fans can send crypto tips to their favorite content creators." },
-  { id: "name-service", category: "Identity", text: "Create a service where people can register a readable name for their crypto wallet instead of a long address." },
+  { id: "name-service", category: "Registry", text: "Create a service where people can register a readable name for their crypto wallet instead of a long address." },
 ];
 
 const MODELS = [

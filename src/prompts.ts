@@ -43,11 +43,11 @@ export const PROMPTS: Prompt[] = [
     category: "Gaming",
   },
 
-  // Advisory (1)
+  // Recommendation (1)
   {
     id: "which-chain",
     text: "I want to build a crypto app. Which blockchain should I build on and why?",
-    category: "Advisory",
+    category: "Recommendation",
   },
 
   // Agent (1)
@@ -76,10 +76,10 @@ export const PROMPTS: Prompt[] = [
     category: "Social",
   },
 
-  // Identity (1)
+  // Registry (1)
   {
     id: "name-service",
     text: "Create a service where people can register a readable name for their crypto wallet instead of a long address.",
-    category: "Identity",
+    category: "Registry",
   },
 ];

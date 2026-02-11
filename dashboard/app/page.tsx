@@ -6,6 +6,7 @@ import {
   computePerModelNetworks,
 
   computeCategoryBreakdown,
+  computePerPromptNetworks,
   computeToolFrequency,
 } from "@/lib/data";
 import ChainPieChart from "@/components/charts/ChainPieChart";
@@ -41,6 +42,7 @@ export default function DashboardPage() {
   const perModelNetworks = computePerModelNetworks(data);
 
   const categoryBreakdown = computeCategoryBreakdown(data);
+  const perPromptNetworks = computePerPromptNetworks(data);
   const toolFrequency = computeToolFrequency(data);
 
 
@@ -97,6 +99,14 @@ export default function DashboardPage() {
         <ToolFrequencyBar data={toolFrequency} />
       </section>
 
+      {/* Network Choice by Category */}
+      <section>
+        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+          Network Choice by Category
+        </h2>
+        <CategoryBreakdown data={categoryBreakdown} />
+      </section>
+
       {/* Prompts */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
@@ -105,20 +115,29 @@ export default function DashboardPage() {
         <PromptsTable prompts={data.prompts} />
       </section>
 
-      {/* Results Grid */}
+      {/* Network Choice by Prompt */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Results Grid
+          Network Choice by Prompt
         </h2>
-        <ResultsGrid data={data} />
+        <ResultsGrid data={perPromptNetworks} />
       </section>
 
-      {/* Category Breakdown */}
+      {/* About */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Network Choice by Category
+          About this Research
         </h2>
-        <CategoryBreakdown data={categoryBreakdown} />
+        <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
+          <p>
+            This benchmark sends {data.meta.promptCount} chain-agnostic prompts (e.g. &quot;build me a DeFi
+            app&quot;) to {data.meta.modelCount} AI models without specifying a blockchain, and analyzes
+            which chain each response defaults to. Detection works by scanning responses for
+            chain-specific signals (chain names, chain IDs, block explorer URLs, SDKs) and generic
+            EVM signals (Solidity code, tooling like Hardhat/Foundry). Each signal has a weight, and
+            the chain with the highest total score wins.
+          </p>
+        </div>
       </section>
     </div>
   );
