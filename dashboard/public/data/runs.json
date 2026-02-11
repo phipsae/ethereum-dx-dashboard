@@ -1,5 +1,13 @@
 [
   {
+    "timestamp": "2026-02-11T09:11:41.285Z",
+    "runId": "run-1770798940766-0",
+    "filename": "run-2026-02-11T09-11-41.json",
+    "modelCount": 6,
+    "promptCount": 12,
+    "resultCount": 144
+  },
+  {
     "timestamp": "2026-02-10T23:20:48.929Z",
     "runId": "run-1770764627917-0",
     "filename": "run-2026-02-10T23-20-48.json",
