@@ -4,6 +4,7 @@ export interface DashboardRunMeta {
   modelCount: number;
   promptCount: number;
   resultCount: number;
+  webSearch?: boolean;
 }
 
 export interface SlimResult {
@@ -20,6 +21,7 @@ export interface SlimResult {
   latencyMs: number;
   tokensUsed: number;
   evidence?: string[];
+  webSearch?: boolean;
 }
 
 export interface SerializedGridCell {
@@ -69,7 +71,10 @@ export interface RunIndexEntry {
   modelCount: number;
   promptCount: number;
   resultCount: number;
+  webSearch?: boolean;
 }
+
+export type SearchMode = "standard" | "webSearch";
 
 export const CHAIN_COLORS: Record<string, string> = {
   "Ethereum Ecosystem": "#627eea",

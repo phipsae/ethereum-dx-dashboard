@@ -34,3 +34,28 @@ export function loadRunFromFile(filename: string): DashboardRunData | null {
     return null;
   }
 }
+
+export function loadComparisonData(): {
+  standard: DashboardRunData | null;
+  webSearch: DashboardRunData | null;
+} {
+  const index = loadRunsIndexFromFile();
+  if (index.length === 0) {
+    // No index — fall back to latest.json as standard
+    return { standard: loadRunDataFromFile(), webSearch: null };
+  }
+
+  // Find latest standard run (webSearch falsy) and latest web search run
+  const standardEntry = index.find((e) => !e.webSearch);
+  const webSearchEntry = index.find((e) => e.webSearch === true);
+
+  const standard = standardEntry ? loadRunFromFile(standardEntry.filename) : null;
+  const webSearch = webSearchEntry ? loadRunFromFile(webSearchEntry.filename) : null;
+
+  // If neither matched (old index without webSearch field), fall back to latest
+  if (!standard && !webSearch) {
+    return { standard: loadRunDataFromFile(), webSearch: null };
+  }
+
+  return { standard, webSearch };
+}

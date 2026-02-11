@@ -13,6 +13,7 @@ interface DashboardRunMeta {
   modelCount: number;
   promptCount: number;
   resultCount: number;
+  webSearch: boolean;
 }
 
 interface SlimResult {
@@ -29,6 +30,7 @@ interface SlimResult {
   latencyMs: number;
   tokensUsed: number;
   evidence: string[];
+  webSearch: boolean;
 }
 
 interface SerializedGridCell {
@@ -67,6 +69,7 @@ interface RunIndexEntry {
   modelCount: number;
   promptCount: number;
   resultCount: number;
+  webSearch: boolean;
 }
 
 function toSlimResult(r: BenchmarkResult): SlimResult {
@@ -84,6 +87,7 @@ function toSlimResult(r: BenchmarkResult): SlimResult {
     latencyMs: r.response.latencyMs,
     tokensUsed: r.response.tokensUsed,
     evidence: r.analysis.detection.evidence,
+    webSearch: r.webSearch ?? false,
   };
 }
 
@@ -142,6 +146,7 @@ export function exportDashboardData(
       modelCount: grid.models.length,
       promptCount: grid.promptIds.length,
       resultCount: results.length,
+      webSearch: results.some((r) => r.webSearch === true),
     },
     results: results.map(toSlimResult),
     grid: serializeGrid(grid),
@@ -174,6 +179,7 @@ export function exportDashboardData(
     modelCount: grid.models.length,
     promptCount: grid.promptIds.length,
     resultCount: results.length,
+    webSearch: results.some((r) => r.webSearch === true),
   });
 
   // Sort by timestamp descending (newest first)
