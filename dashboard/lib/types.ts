@@ -73,7 +73,7 @@ export interface RunIndexEntry {
 
 export const CHAIN_COLORS: Record<string, string> = {
   "Ethereum Ecosystem": "#627eea",
-  Solana: "#9945ff",
+  Solana: "#14f195",
   Sui: "#4da2ff",
   Aptos: "#2dd8a3",
   Cosmos: "#2e3148",
