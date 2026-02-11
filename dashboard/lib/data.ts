@@ -125,22 +125,20 @@ export function computeDefaultEcosystems(
 
 export function computeCategoryBreakdown(
   data: DashboardRunData
-): Array<{ category: string; models: Array<{ model: string; ecosystems: Record<string, number> }> }> {
+): Array<{ category: string; networks: Record<string, number> }> {
   const categories = [...new Set(data.prompts.map((p) => p.category))];
   return categories.map((cat) => {
     const catPrompts = data.prompts.filter((p) => p.category === cat).map((p) => p.id);
-    const models = data.grid.models.map((m) => {
-      const ecosystems: Record<string, number> = {};
+    const networks: Record<string, number> = {};
+    for (const m of data.grid.models) {
       for (const pid of catPrompts) {
         const cell = data.grid.cells[`${pid}::${m.id}`];
-        if (cell) {
-          const eco = cellEcosystem(cell);
-          ecosystems[eco] = (ecosystems[eco] ?? 0) + 1;
-        }
+        if (!cell) continue;
+        const net = cell.network || cellEcosystem(cell);
+        networks[net] = (networks[net] ?? 0) + 1;
       }
-      return { model: m.displayName, ecosystems };
-    });
-    return { category: cat, models };
+    }
+    return { category: cat, networks };
   });
 }
 

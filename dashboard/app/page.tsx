@@ -4,7 +4,7 @@ import {
   computePerModelEcosystems,
   computeOverallNetworks,
   computePerModelNetworks,
-  computeDefaultEcosystems,
+
   computeCategoryBreakdown,
   computeToolFrequency,
 } from "@/lib/data";
@@ -14,7 +14,7 @@ import CategoryBreakdown from "@/components/charts/CategoryBreakdown";
 import ToolFrequencyBar from "@/components/charts/ToolFrequencyBar";
 import ResultsGrid from "@/components/tables/ResultsGrid";
 import PromptsTable from "@/components/tables/PromptsTable";
-import DefaultChainSummary from "@/components/tables/DefaultChainSummary";
+
 
 export default function DashboardPage() {
   const data = loadRunDataFromFile();
@@ -39,10 +39,10 @@ export default function DashboardPage() {
   const perModelEcosystems = computePerModelEcosystems(data);
   const overallNetworks = computeOverallNetworks(data);
   const perModelNetworks = computePerModelNetworks(data);
-  const defaultEcosystems = computeDefaultEcosystems(data);
+
   const categoryBreakdown = computeCategoryBreakdown(data);
   const toolFrequency = computeToolFrequency(data);
-  const modelNames = data.grid.models.map((m) => m.displayName);
+
 
   return (
     <div className="space-y-8">
@@ -113,20 +113,12 @@ export default function DashboardPage() {
         <ResultsGrid data={data} />
       </section>
 
-      {/* Default Chain Summary */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Default Ecosystem Summary
-        </h2>
-        <DefaultChainSummary data={defaultEcosystems} />
-      </section>
-
       {/* Category Breakdown */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Ecosystem Choice by Category
+          Network Choice by Category
         </h2>
-        <CategoryBreakdown data={categoryBreakdown} modelNames={modelNames} />
+        <CategoryBreakdown data={categoryBreakdown} />
       </section>
     </div>
   );
