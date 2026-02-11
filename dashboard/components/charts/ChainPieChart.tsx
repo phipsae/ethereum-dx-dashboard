@@ -41,10 +41,22 @@ export default function ChainPieChart({ data, title, height = 300 }: ChainPieCha
           <Tooltip
             contentStyle={{ background: "#16213e", border: "1px solid #0f3460", borderRadius: 8 }}
             itemStyle={{ color: "#e0e0e0" }}
-            formatter={(value: number, name: string) => [
-              `${value} (${((value / total) * 100).toFixed(1)}%)`,
-              name,
-            ]}
+            formatter={(value: number, name: string) => {
+              const pct = `${value} (${((value / total) * 100).toFixed(1)}%)`;
+              if (name === "Unknown") {
+                return [
+                  <span key="unknown">
+                    {pct}
+                    <br />
+                    <span style={{ fontSize: 11, color: "#a0a0b0" }}>
+                      Response didn&apos;t specify a blockchain or was chain-agnostic
+                    </span>
+                  </span>,
+                  name,
+                ];
+              }
+              return [pct, name];
+            }}
           />
           <Legend
             wrapperStyle={{ fontSize: 12, color: "#a0a0b0" }}
