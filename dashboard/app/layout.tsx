@@ -3,8 +3,8 @@ import Nav from "@/components/Nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ethereum DX Dashboard",
-  description: "Measuring blockchain ecosystem bias in AI model responses",
+  title: "Chain Bias Dashboard",
+  description: "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
 };
 
 export default function RootLayout({
