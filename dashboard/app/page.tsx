@@ -4,14 +4,12 @@ import {
   computePerModelEcosystems,
   computeOverallNetworks,
   computePerModelNetworks,
-  computeLatencyPerModel,
   computeDefaultEcosystems,
   computeCategoryBreakdown,
   computeToolFrequency,
 } from "@/lib/data";
 import ChainPieChart from "@/components/charts/ChainPieChart";
 import NetworkDistribution from "@/components/charts/NetworkDistribution";
-import LatencyBar from "@/components/charts/LatencyBar";
 import CategoryBreakdown from "@/components/charts/CategoryBreakdown";
 import ToolFrequencyBar from "@/components/charts/ToolFrequencyBar";
 import ResultsGrid from "@/components/tables/ResultsGrid";
@@ -41,7 +39,6 @@ export default function DashboardPage() {
   const perModelEcosystems = computePerModelEcosystems(data);
   const overallNetworks = computeOverallNetworks(data);
   const perModelNetworks = computePerModelNetworks(data);
-  const latencyData = computeLatencyPerModel(data);
   const defaultEcosystems = computeDefaultEcosystems(data);
   const categoryBreakdown = computeCategoryBreakdown(data);
   const toolFrequency = computeToolFrequency(data);
@@ -98,14 +95,6 @@ export default function DashboardPage() {
           Tool / Framework Frequency
         </h2>
         <ToolFrequencyBar data={toolFrequency} />
-      </section>
-
-      {/* Latency */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Average Latency
-        </h2>
-        <LatencyBar data={latencyData} />
       </section>
 
       {/* Prompts */}
