@@ -4,19 +4,43 @@ import { useState } from "react";
 import type { DashboardRunData } from "@/lib/types";
 import { getChainColor, getNetworkColor } from "@/lib/types";
 
+// Labels that are generic EVM/Solidity tooling, not chain-specific
+const EVM_GENERIC_LABELS = new Set([
+  "pragma solidity", ".sol file reference", "Hardhat", "Foundry/Forge",
+  "Truffle", "Remix", "ethers.js", "web3.js", "ERC standard", "OpenZeppelin",
+  "ABI encoding", "msg.sender", "Solidity require()", "Solidity mapping",
+  "Solidity modifier", "Solidity emit", "payable keyword", "Scaffold-ETH",
+  "wagmi", "viem", "Infura/Alchemy", "MetaMask", "Solidity mention",
+  "Ethereum mention",
+]);
+
+function countChainSpecificSignals(evidence: string[]): number {
+  return evidence.filter((e) => {
+    const label = e.replace(/\s*\(×\d+.*$/, "");
+    return !EVM_GENERIC_LABELS.has(label);
+  }).length;
+}
+
 interface ResultsGridProps {
   data: DashboardRunData;
 }
 
 export default function ResultsGrid({ data }: ResultsGridProps) {
   const { promptIds, models, cells } = data.grid;
+  // Build lookup from results for evidence
+  const evidenceLookup = new Map<string, string[]>();
+  for (const r of data.results) {
+    if (r.evidence) {
+      evidenceLookup.set(`${r.promptId}::${r.model}`, r.evidence);
+    }
+  }
+
   const [tooltip, setTooltip] = useState<{
     x: number;
     y: number;
     ecosystem: string;
     network: string | null;
-    confidence: number;
-    latencyMs: number;
+    chainSignals: number;
     prompt: string;
     model: string;
   } | null>(null);
@@ -60,8 +84,10 @@ export default function ResultsGrid({ data }: ResultsGridProps) {
                     ? cell.network
                     : null;
                 const ecoColor = getChainColor(eco);
-                // Map confidence (0-100) to opacity (0.2 - 1.0)
-                const opacity = eco === "Unknown" ? 0.15 : 0.2 + (cell.confidence / 100) * 0.8;
+                const evidence = evidenceLookup.get(`${pid}::${m.id}`) ?? [];
+                const signals = countChainSpecificSignals(evidence);
+                // Map chain-specific signals to opacity (0 signals → 0.3, 5+ → 1.0)
+                const opacity = eco === "Unknown" ? 0.15 : 0.3 + Math.min(signals / 5, 1) * 0.7;
 
                 return (
                   <td key={m.id} className="px-1 py-1 text-center">
@@ -70,13 +96,13 @@ export default function ResultsGrid({ data }: ResultsGridProps) {
                       style={{ backgroundColor: ecoColor, opacity }}
                       onMouseEnter={(e) => {
                         const rect = e.currentTarget.getBoundingClientRect();
+                        const evidence = evidenceLookup.get(`${pid}::${m.id}`) ?? [];
                         setTooltip({
                           x: rect.left + rect.width / 2,
                           y: rect.top,
                           ecosystem: eco,
                           network: netLabel,
-                          confidence: cell.confidence,
-                          latencyMs: cell.latencyMs,
+                          chainSignals: countChainSpecificSignals(evidence),
                           prompt: pid,
                           model: m.displayName,
                         });
@@ -121,7 +147,9 @@ export default function ResultsGrid({ data }: ResultsGridProps) {
             )}
           </div>
           <div className="mt-0.5 text-xs text-[#a0a0b0]">
-            Confidence: {tooltip.confidence}% · Latency: {(tooltip.latencyMs / 1000).toFixed(1)}s
+            {tooltip.chainSignals > 0
+              ? `${tooltip.chainSignals} chain-specific signal${tooltip.chainSignals !== 1 ? "s" : ""}`
+              : "No chain-specific signals (generic EVM only)"}
           </div>
         </div>
       )}
