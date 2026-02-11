@@ -48,15 +48,12 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-8">
-      {/* Header */}
-      <div>
-        <h1 className="text-2xl font-bold text-white">Chain Bias Dashboard</h1>
-        <p className="text-sm text-[#a0a0b0]">
-          Run: {new Date(data.meta.timestamp).toLocaleString()} &middot;{" "}
-          {data.meta.resultCount} results &middot; {data.meta.modelCount} models &middot;{" "}
-          {data.meta.promptCount} prompts
-        </p>
-      </div>
+      {/* Run stats */}
+      <p className="text-sm text-[#a0a0b0]">
+        Run: {new Date(data.meta.timestamp).toLocaleString()} &middot;{" "}
+        {data.meta.resultCount} results &middot; {data.meta.modelCount} models &middot;{" "}
+        {data.meta.promptCount} prompts
+      </p>
 
       {/* Overall Chain Distribution */}
       <section>
