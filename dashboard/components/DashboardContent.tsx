@@ -286,21 +286,39 @@ export default function DashboardContent({
           About this Research
         </h2>
         <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
-          <p className="mb-3">
-            This benchmark sends {chainData.meta.promptCount} chain-agnostic prompts to {chainData.meta.modelCount} AI
-            models via their APIs, with no system prompt, to measure each model&apos;s inherent chain
-            defaults. Every response is classified by Claude Opus 4.6.
-          </p>
-          <p>
-            Classification follows a strict priority: an explicit chain recommendation wins first; then
-            a concrete example or tutorial targeting one chain; then code with chain-specific
-            configuration (chain IDs, RPC URLs); generic Ethereum/EVM code without a specific L2 is
-            marked &quot;Ethereum Ecosystem&quot;; multiple EVM chains presented equally is also
-            &quot;Ethereum Ecosystem&quot;; if listed chains span multiple ecosystems (e.g. Solana,
-            Base, and Ethereum presented equally), the response is &quot;Chain-Agnostic&quot;; and if
-            no blockchain is mentioned or the model refuses to choose, it is also
-            &quot;Chain-Agnostic&quot;.
-          </p>
+          {tab === "network" ? (
+            <>
+              <p className="mb-3">
+                This benchmark sends {chainData.meta.promptCount} chain-agnostic prompts to {chainData.meta.modelCount} AI
+                models via their APIs, with no system prompt, to measure each model&apos;s inherent chain
+                defaults. Every response is classified by Claude Opus 4.6.
+              </p>
+              <p>
+                Classification follows a strict priority: an explicit chain recommendation wins first; then
+                a concrete example or tutorial targeting one chain; then code with chain-specific
+                configuration (chain IDs, RPC URLs); generic Ethereum/EVM code without a specific L2 is
+                marked &quot;Ethereum Ecosystem&quot;; multiple EVM chains presented equally is also
+                &quot;Ethereum Ecosystem&quot;; if listed chains span multiple ecosystems (e.g. Solana,
+                Base, and Ethereum presented equally), the response is &quot;Chain-Agnostic&quot;; and if
+                no blockchain is mentioned or the model refuses to choose, it is also
+                &quot;Chain-Agnostic&quot;.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="mb-3">
+                The same {chainData.meta.promptCount} chain-agnostic prompts are sent to {chainData.meta.modelCount} AI
+                models via their APIs. Each response is then analyzed by Claude Opus 4.6 to identify
+                which development tools, frameworks, and libraries the model actively recommends.
+              </p>
+              <p>
+                The classifier distinguishes genuine recommendations from passing mentions - a tool
+                is only counted when the model suggests using it as part of the solution, not when
+                it mentions it as an alternative or outdated option. This reveals which tools each
+                model defaults to when given open-ended blockchain development prompts.
+              </p>
+            </>
+          )}
         </div>
       </section>
 
