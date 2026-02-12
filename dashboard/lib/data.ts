@@ -3,6 +3,15 @@ import { TOOL_LABELS } from "./types";
 
 const DATA_BASE = "/data";
 
+/** Map legacy category names to current ones. */
+const CATEGORY_RENAMES: Record<string, string> = {
+  Advisory: "Recommendation",
+  Identity: "Registry",
+};
+function normalizeCategory(cat: string): string {
+  return CATEGORY_RENAMES[cat] ?? cat;
+}
+
 export async function fetchRunsIndex(): Promise<RunIndexEntry[]> {
   try {
     const res = await fetch(`${DATA_BASE}/runs.json`);
@@ -129,11 +138,11 @@ export function computeDefaultEcosystems(
 export function computeCategoryBreakdown(
   data: DashboardRunData
 ): Array<{ category: string; networks: Record<string, number> }> {
-  const categories = [...new Set(data.prompts.map((p) => p.category))];
+  const categories = [...new Set(data.prompts.map((p) => normalizeCategory(p.category)))];
   return categories.map((cat) => {
     const networks: Record<string, number> = {};
     for (const r of data.results) {
-      if (r.promptCategory !== cat) continue;
+      if (normalizeCategory(r.promptCategory) !== cat) continue;
       const net = r.network || r.ecosystem || "Chain-Agnostic";
       networks[net] = (networks[net] ?? 0) + 1;
     }
@@ -215,11 +224,11 @@ export function computePerModelTools(
 export function computeToolsByCategory(
   data: ToolDashboardRunData
 ): Array<{ category: string; tools: Record<string, number> }> {
-  const categories = [...new Set(data.prompts.map((p) => p.category))];
+  const categories = [...new Set(data.prompts.map((p) => normalizeCategory(p.category)))];
   return categories.map((cat) => {
     const tools: Record<string, number> = {};
     for (const r of data.results) {
-      if (r.promptCategory !== cat) continue;
+      if (normalizeCategory(r.promptCategory) !== cat) continue;
       for (const tool of r.tools) {
         tools[tool] = (tools[tool] ?? 0) + 1;
       }

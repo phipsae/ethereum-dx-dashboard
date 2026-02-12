@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { loadResponsesOrResults, type RawResponse } from "../storage/response-store.js";
 import { setClassifierModel } from "../analysis/claude-cli.js";
 import { llmDetectTools } from "../analysis/tool-detector.js";
+import { PROMPTS } from "../prompts.js";
 import type { ToolBenchmarkResult } from "../providers/types.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -82,17 +83,29 @@ function exportToolDashboardData(results: ToolBenchmarkResult[]): string {
   const runId = results[0]?.runId ?? safeTimestamp;
   const filename = `run-${safeTimestamp}.json`;
 
-  // Build unique prompts
+  // Use canonical prompt definitions from prompts.ts as source of truth
+  const canonicalPromptMap = new Map(PROMPTS.map((p) => [p.id, p]));
+
+  // Build unique prompts, preferring canonical category names
   const promptMap = new Map<string, { id: string; category: string; text: string }>();
   for (const r of results) {
     if (!promptMap.has(r.promptId)) {
+      const canonical = canonicalPromptMap.get(r.promptId);
       promptMap.set(r.promptId, {
         id: r.promptId,
-        category: r.promptCategory,
+        category: canonical?.category ?? r.promptCategory,
         text: r.promptText,
       });
     }
   }
+
+  // Normalize result categories to match canonical names
+  const slimResults = results.map((r) => {
+    const slim = toToolSlimResult(r);
+    const canonical = canonicalPromptMap.get(r.promptId);
+    if (canonical) slim.promptCategory = canonical.category;
+    return slim;
+  });
 
   const models = new Set(results.map(r => r.model.id));
 
@@ -105,7 +118,7 @@ function exportToolDashboardData(results: ToolBenchmarkResult[]): string {
       resultCount: results.length,
       webSearch: results.some(r => r.webSearch),
     },
-    results: results.map(toToolSlimResult),
+    results: slimResults,
     prompts: [...promptMap.values()],
   };
 

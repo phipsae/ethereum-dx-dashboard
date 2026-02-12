@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { BenchmarkResult } from "../providers/types.js";
+import { PROMPTS } from "../prompts.js";
 import type { Grid } from "./summary-grid.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -133,12 +134,23 @@ export function exportDashboardData(
   const runId = results[0]?.runId ?? safeTimestamp;
   const filename = `run-${safeTimestamp}.json`;
 
-  // Build prompts array
+  // Use canonical prompt definitions for category names
+  const canonicalPromptMap = new Map(PROMPTS.map((p) => [p.id, p]));
+
+  // Build prompts array, preferring canonical category names
   const prompts: DashboardPrompt[] = grid.promptIds.map((id) => ({
     id,
-    category: grid.promptCategories.get(id) ?? "Unknown",
+    category: canonicalPromptMap.get(id)?.category ?? grid.promptCategories.get(id) ?? "Unknown",
     text: grid.promptTexts.get(id) ?? "",
   }));
+
+  // Normalize result categories to match canonical names
+  const slimResults = results.map((r) => {
+    const slim = toSlimResult(r);
+    const canonical = canonicalPromptMap.get(r.promptId);
+    if (canonical) slim.promptCategory = canonical.category;
+    return slim;
+  });
 
   // Build run data
   const runData: DashboardRunData = {
@@ -150,7 +162,7 @@ export function exportDashboardData(
       resultCount: results.length,
       webSearch: results.some((r) => r.webSearch === true),
     },
-    results: results.map(toSlimResult),
+    results: slimResults,
     grid: serializeGrid(grid),
     prompts,
   };

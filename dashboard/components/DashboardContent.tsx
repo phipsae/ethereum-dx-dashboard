@@ -42,6 +42,7 @@ export default function DashboardContent({
 
   const [tab, setTab] = useState<DashboardTab>("network");
   const [mode, setMode] = useState<SearchMode>(webSearch ? "webSearch" : "standard");
+  const [showAllTools, setShowAllTools] = useState(false);
 
   // Chain data selection
   const chainData = hasChainToggle
@@ -70,6 +71,38 @@ export default function DashboardContent({
   const overallTools = useMemo(() => toolData ? computeOverallTools(toolData) : [], [toolData]);
   const perModelTools = useMemo(() => toolData ? computePerModelTools(toolData) : [], [toolData]);
   const toolsByCategory = useMemo(() => toolData ? computeToolsByCategory(toolData) : [], [toolData]);
+
+  // Tool filtering: only show tools with >= 10% of results by default
+  const minToolCount = toolData ? Math.ceil(toolData.meta.resultCount * 0.1) : 0;
+  const filteredOverallTools = useMemo(() => {
+    if (showAllTools) return overallTools;
+    return overallTools.filter((t) => t.count >= minToolCount);
+  }, [overallTools, showAllTools, minToolCount]);
+
+  const visibleToolNames = useMemo(
+    () => new Set(filteredOverallTools.map((t) => t.tool)),
+    [filteredOverallTools],
+  );
+
+  const filteredPerModelTools = useMemo(() => {
+    if (showAllTools) return perModelTools;
+    return perModelTools.map((entry) => ({
+      ...entry,
+      tools: Object.fromEntries(
+        Object.entries(entry.tools).filter(([name]) => visibleToolNames.has(name)),
+      ),
+    }));
+  }, [perModelTools, showAllTools, visibleToolNames]);
+
+  const filteredToolsByCategory = useMemo(() => {
+    if (showAllTools) return toolsByCategory;
+    return toolsByCategory.map((entry) => ({
+      ...entry,
+      tools: Object.fromEntries(
+        Object.entries(entry.tools).filter(([name]) => visibleToolNames.has(name)),
+      ),
+    }));
+  }, [toolsByCategory, showAllTools, visibleToolNames]);
 
   const activeData = tab === "network" ? chainData : toolData;
   const modeLabel = activeData?.meta.webSearch ? "Web Search" : "Base Model";
@@ -198,12 +231,29 @@ export default function DashboardContent({
             </div>
           ) : (
             <>
+              {/* Filter toggle */}
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setShowAllTools((v) => !v)}
+                  className="rounded border border-[#0f3460] bg-[#16213e] px-3 py-1.5 text-xs font-medium text-[#a0a0b0] transition-colors hover:border-[#e94560] hover:text-white"
+                >
+                  {showAllTools
+                    ? `Show top tools`
+                    : `Show all (${overallTools.length})`}
+                </button>
+                <span className="text-xs text-[#a0a0b0]">
+                  {showAllTools
+                    ? `Showing all ${overallTools.length} tools`
+                    : `Showing ${filteredOverallTools.length} tools with ${minToolCount}+ recommendations`}
+                </span>
+              </div>
+
               {/* Overall Tool Frequency */}
               <section>
                 <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
                   Tool / Framework Recommendations (Overall)
                 </h2>
-                <ToolFrequencyBar data={overallTools} />
+                <ToolFrequencyBar data={filteredOverallTools} />
               </section>
 
               {/* Tool Recommendations by Model */}
@@ -212,7 +262,7 @@ export default function DashboardContent({
                   Tool Recommendations by Model
                 </h2>
                 <ToolStackedBar
-                  data={perModelTools.map((e) => ({ label: e.model, tools: e.tools }))}
+                  data={filteredPerModelTools.map((e) => ({ label: e.model, tools: e.tools }))}
                 />
               </section>
 
@@ -222,7 +272,7 @@ export default function DashboardContent({
                   Tool Recommendations by Category
                 </h2>
                 <ToolStackedBar
-                  data={toolsByCategory.map((e) => ({ label: e.category, tools: e.tools }))}
+                  data={filteredToolsByCategory.map((e) => ({ label: e.category, tools: e.tools }))}
                 />
               </section>
             </>
