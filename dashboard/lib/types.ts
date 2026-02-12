@@ -91,7 +91,7 @@ export const CHAIN_COLORS: Record<string, string> = {
   BSC: "#f0b90b",
   Avalanche: "#e84142",
   TON: "#0098ea",
-  Unknown: "#64748b",
+  "Chain-Agnostic": "#64748b",
 };
 
 export const NETWORK_COLORS: Record<string, string> = {
@@ -106,12 +106,10 @@ export const NETWORK_COLORS: Record<string, string> = {
   Scroll: "#ffeeda",
   Linea: "#61dfff",
   Mantle: "#c4a35a",
-  Unspecified: "#9b8ec4",
+  "Ethereum Ecosystem": "#9b8ec4",
 };
 
 export const DISPLAY_NAMES: Record<string, string> = {
-  Unspecified: "Ethereum (No Specific L2)",
-  Unknown: "Chain Agnostic",
 };
 
 export function getDisplayName(key: string): string {

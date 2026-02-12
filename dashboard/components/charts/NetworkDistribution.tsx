@@ -17,7 +17,7 @@ interface NetworkDistributionProps {
 
 export default function NetworkDistribution({ overall, perModel }: NetworkDistributionProps) {
   const hasData = Object.keys(overall).some(
-    (n) => n !== "Unspecified" && overall[n] > 0
+    (n) => n !== "Ethereum Ecosystem" && overall[n] > 0
   );
 
   if (!hasData) return null;

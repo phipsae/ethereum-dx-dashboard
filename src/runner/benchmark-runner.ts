@@ -115,7 +115,7 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
               results.push(result);
               saveResult(outputDir, result);
 
-              const netSuffix = analysis.detection.network !== "Unspecified" && analysis.detection.network !== "Unknown"
+              const netSuffix = analysis.detection.network !== "Ethereum Ecosystem" && analysis.detection.network !== "Chain-Agnostic"
                 ? ` [${analysis.detection.network}]` : "";
               console.log(
                 `       → ${analysis.detection.ecosystem}${netSuffix} (${analysis.detection.strength}) | ` +

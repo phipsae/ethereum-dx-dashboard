@@ -3,12 +3,12 @@
  * Reads raw results from results.jsonl, runs each through claude -p
  * in parallel batches, updates detection fields, and re-exports to dashboard.
  *
- * Usage: npx tsx src/reclassify.ts results/run-2026-02-11T08-35-40
- *        npx tsx src/reclassify.ts --concurrency 8 results/run-*
+ * Usage: npx tsx src/reclassify.ts results/run-2026-02-11T08-35-40-standard
+ *        npx tsx src/reclassify.ts -c 8 -m claude-sonnet-4-5-20250929 results/run-*
  */
 
 import { loadResults } from "./storage/json-store.js";
-import { llmDetect } from "./analysis/llm-detector.js";
+import { llmDetect, setClassifierModel } from "./analysis/llm-detector.js";
 import { buildGrid } from "./reporting/summary-grid.js";
 import { exportDashboardData } from "./reporting/dashboard-exporter.js";
 import type { BenchmarkResult } from "./providers/types.js";
@@ -18,6 +18,7 @@ const DEFAULT_CONCURRENCY = 6;
 function parseArgs() {
   const args = process.argv.slice(2);
   let concurrency = DEFAULT_CONCURRENCY;
+  let model: string | undefined;
   const dirs: string[] = [];
 
   for (let i = 0; i < args.length; i++) {
@@ -27,17 +28,19 @@ function parseArgs() {
         console.error("Invalid concurrency value");
         process.exit(1);
       }
+    } else if (args[i] === "--model" || args[i] === "-m") {
+      model = args[++i];
     } else {
       dirs.push(args[i]);
     }
   }
 
   if (dirs.length === 0) {
-    console.error("Usage: npx tsx src/reclassify.ts [-c <concurrency>] <results-dir> [<results-dir> ...]");
+    console.error("Usage: npx tsx src/reclassify.ts [-c <concurrency>] [-m <model>] <results-dir> [...]");
     process.exit(1);
   }
 
-  return { concurrency, dirs };
+  return { concurrency, model, dirs };
 }
 
 async function reclassifyOne(
@@ -102,7 +105,11 @@ async function runParallel(
 }
 
 async function main() {
-  const { concurrency, dirs } = parseArgs();
+  const { concurrency, model, dirs } = parseArgs();
+
+  if (model) {
+    setClassifierModel(model);
+  }
 
   const results = loadResults(dirs);
   if (results.length === 0) {
@@ -110,8 +117,9 @@ async function main() {
     process.exit(1);
   }
 
+  const modelLabel = model ?? "default (Opus)";
   console.log(`Loaded ${results.length} results from ${dirs.length} dir(s)`);
-  console.log(`Re-classifying with LLM detector (concurrency: ${concurrency})...\n`);
+  console.log(`Re-classifying with LLM detector (concurrency: ${concurrency}, model: ${modelLabel})...\n`);
 
   const reclassified = await runParallel(results, concurrency);
 

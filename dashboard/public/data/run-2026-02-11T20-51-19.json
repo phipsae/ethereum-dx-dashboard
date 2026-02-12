@@ -15,7 +15,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 20,
@@ -33,7 +33,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -69,7 +69,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 65,
@@ -86,8 +86,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -105,7 +105,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 78,
       "behavior": "just-built",
       "completeness": 40,
@@ -123,7 +123,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -141,7 +141,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -159,7 +159,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 20,
@@ -176,8 +176,8 @@
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 75,
@@ -195,7 +195,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 22,
@@ -213,7 +213,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -231,7 +231,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -249,7 +249,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -267,7 +267,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 2,
@@ -284,8 +284,8 @@
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "mixed",
       "completeness": 42,
@@ -302,8 +302,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -321,7 +321,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 40,
@@ -339,7 +339,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "mixed",
       "completeness": 28,
@@ -375,7 +375,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 20,
@@ -393,7 +393,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 75,
@@ -411,7 +411,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 20,
@@ -429,7 +429,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 40,
@@ -473,7 +473,7 @@
     "cells": {
       "token-launch::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 20,
@@ -482,13 +482,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "token-launch::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 40,
@@ -497,7 +497,7 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
@@ -518,7 +518,7 @@
       },
       "memecoin::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 65,
@@ -527,28 +527,28 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "prediction-market::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 0,
         "latencyMs": 13546,
         "ecosystemCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 1
       },
       "prediction-market::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 78,
         "behavior": "just-built",
         "completeness": 40,
@@ -557,13 +557,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "nft-marketplace::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 20,
@@ -572,13 +572,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "nft-marketplace::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 40,
@@ -587,13 +587,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "dao-voting::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 20,
@@ -602,28 +602,28 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "dao-voting::gpt-5-mini": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 75,
         "latencyMs": 50398,
         "ecosystemCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 1
       },
       "onchain-game::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 22,
@@ -632,13 +632,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "onchain-game::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 40,
@@ -647,13 +647,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "which-chain::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 0,
@@ -662,13 +662,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "which-chain::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 0,
@@ -677,13 +677,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "ai-agent::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 2,
@@ -692,43 +692,43 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "ai-agent::gpt-5-mini": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "mixed",
         "completeness": 42,
         "latencyMs": 75608,
         "ecosystemCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 1
       },
       "token-bridge::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 20,
         "latencyMs": 30953,
         "ecosystemCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 1
       },
       "token-bridge::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 40,
@@ -737,13 +737,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "block-explorer::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "mixed",
         "completeness": 28,
@@ -752,7 +752,7 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
@@ -773,7 +773,7 @@
       },
       "social-tipping::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "asked-questions",
         "completeness": 20,
@@ -782,13 +782,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "social-tipping::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "asked-questions",
         "completeness": 75,
@@ -797,13 +797,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "name-service::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 20,
@@ -812,13 +812,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "name-service::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 40,
@@ -827,7 +827,7 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       }

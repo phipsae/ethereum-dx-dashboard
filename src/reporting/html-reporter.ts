@@ -16,7 +16,7 @@ const CHAIN_COLORS: Record<string, string> = {
   Base: "#0052ff",
   Avalanche: "#e84142",
   TON: "#0098ea",
-  Unknown: "#888888",
+  "Chain-Agnostic": "#888888",
 };
 
 const NETWORK_COLORS: Record<string, string> = {
@@ -30,7 +30,7 @@ const NETWORK_COLORS: Record<string, string> = {
   zkSync: "#8c8dfc",
   Scroll: "#ffeeda",
   Linea: "#61dfff",
-  Unspecified: "#888888",
+  "Ethereum Ecosystem": "#888888",
   "N/A": "#555555",
 };
 
@@ -304,7 +304,7 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
   }
 
   const hasNetworkData = Object.keys(data.overallNetworks).some(
-    (n) => n !== "Unspecified" && data.overallNetworks[n] > 0
+    (n) => n !== "Ethereum Ecosystem" && data.overallNetworks[n] > 0
   );
 
   // Build the summary table HTML
@@ -314,7 +314,7 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
       const cells = row.cells
         .map((c) => {
           if (!c) return "<td>—</td>";
-          const netBadge = c.network && c.network !== "Unspecified" && c.network !== "Unknown"
+          const netBadge = c.network && c.network !== "Ethereum Ecosystem" && c.network !== "Chain-Agnostic"
             ? ` <span style="color:${escapeHtml(getNetworkColor(c.network))}">→ ${escapeHtml(c.network)}</span>` : "";
           return `<td><strong>${escapeHtml(c.ecosystem)}</strong>${netBadge} [${escapeHtml(c.strength)}]<br><span class="detail">${c.latency}s</span></td>`;
         })
@@ -705,7 +705,7 @@ if (Object.keys(chartData.toolFrequencyOverall).length > 0) {
 }
 
 // EVM Network charts
-if (chartData.overallNetworks && Object.keys(chartData.overallNetworks).some(n => n !== 'Unspecified' && chartData.overallNetworks[n] > 0)) {
+if (chartData.overallNetworks && Object.keys(chartData.overallNetworks).some(n => n !== 'Ethereum Ecosystem' && chartData.overallNetworks[n] > 0)) {
   // Overall network pie
   {
     const labels = Object.keys(chartData.overallNetworks);

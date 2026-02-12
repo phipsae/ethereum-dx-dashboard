@@ -112,8 +112,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 0,
@@ -197,7 +197,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 91,
       "behavior": "asked-questions",
       "completeness": 20,
@@ -364,7 +364,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "mixed",
       "completeness": 42,
@@ -643,17 +643,17 @@
         "runCount": 1
       },
       "prediction-market::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 0,
         "latencyMs": 13546,
         "ecosystemCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 1
       },
@@ -704,7 +704,7 @@
       },
       "dao-voting::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 91,
         "behavior": "asked-questions",
         "completeness": 20,
@@ -713,7 +713,7 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
@@ -809,7 +809,7 @@
       },
       "ai-agent::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "mixed",
         "completeness": 42,
@@ -818,7 +818,7 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },

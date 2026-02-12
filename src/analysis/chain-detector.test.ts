@@ -25,7 +25,7 @@ npx hardhat deploy
     `;
     const result = detect(text);
     expect(result.ecosystem).toBe("Ethereum Ecosystem");
-    expect(result.network).toBe("Unspecified");
+    expect(result.network).toBe("Ethereum Ecosystem");
     expect(result.strength).toBe("strong");
     expect(result.evidence.length).toBeGreaterThan(0);
   });
@@ -86,8 +86,8 @@ module my_game::creature {
   it("returns Unknown for unrelated text", () => {
     const text = "Here is a recipe for chocolate cake. Preheat oven to 350F.";
     const result = detect(text);
-    expect(result.network).toBe("Unknown");
-    expect(result.ecosystem).toBe("Unknown");
+    expect(result.network).toBe("Chain-Agnostic");
+    expect(result.ecosystem).toBe("Chain-Agnostic");
     expect(result.strength).toBe("implicit");
   });
 

@@ -2,9 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 import type { BenchmarkResult } from "../providers/types.js";
 
-export function createOutputDir(baseDir: string): string {
+export function createOutputDir(baseDir: string, webSearch?: boolean): string {
   const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
-  const dir = path.join(baseDir, `run-${timestamp}`);
+  const suffix = webSearch ? "-web-search" : "-standard";
+  const dir = path.join(baseDir, `run-${timestamp}${suffix}`);
   fs.mkdirSync(dir, { recursive: true });
   return dir;
 }

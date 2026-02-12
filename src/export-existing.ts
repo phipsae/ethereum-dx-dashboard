@@ -4,8 +4,8 @@ import { exportDashboardData } from "./reporting/dashboard-exporter.js";
 
 // Combine only the two full 72-result runs
 const dirs = [
-  "results/run-2026-02-10T21-00-03",
-  "results/run-2026-02-10T21-19-48",
+  "results/run-2026-02-10T21-00-03-standard",
+  "results/run-2026-02-10T21-19-48-standard",
 ];
 
 const allResults = loadResults(dirs);

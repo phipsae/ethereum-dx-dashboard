@@ -41,7 +41,7 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
     const cells = models.map((m) => {
       const cell = getCell(grid, promptId, m.id);
       if (!cell) return "—";
-      const net = cell.network && cell.network !== "Unspecified" && cell.network !== "Unknown"
+      const net = cell.network && cell.network !== "Ethereum Ecosystem" && cell.network !== "Chain-Agnostic"
         ? ` → ${cell.network}` : "";
       return `**${cell.ecosystem}${net}** [${cell.strength}] ${(cell.latencyMs / 1000).toFixed(1)}s`;
     });
@@ -76,7 +76,7 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
   const hasNetworkData = models.some((m) =>
     promptIds.some((pid) => {
       const cell = getCell(grid, pid, m.id);
-      return cell?.network && cell.network !== "Unspecified" && cell.network !== "Unknown";
+      return cell?.network && cell.network !== "Ethereum Ecosystem" && cell.network !== "Chain-Agnostic";
     })
   );
 

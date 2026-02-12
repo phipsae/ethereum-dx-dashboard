@@ -77,7 +77,7 @@ async function main() {
         console.log(`${"=".repeat(60)}`);
       }
 
-      const outputDir = createOutputDir("results");
+      const outputDir = createOutputDir("results", mode.webSearch);
 
       const results = await runBenchmark({
         prompts: PROMPTS,

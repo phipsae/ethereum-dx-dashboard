@@ -16,7 +16,7 @@ export const NETWORK_TO_ECOSYSTEM: Record<string, string> = {
   Scroll: "Ethereum Ecosystem",
   Linea: "Ethereum Ecosystem",
   Mantle: "Ethereum Ecosystem",
-  Unspecified: "Ethereum Ecosystem", // generic Solidity, no network-specific signals
+  "Ethereum Ecosystem": "Ethereum Ecosystem", // generic Solidity, no network-specific signals
   BSC: "BSC",
   Avalanche: "Avalanche",
   Solana: "Solana",
@@ -29,7 +29,7 @@ export const NETWORK_TO_ECOSYSTEM: Record<string, string> = {
 };
 
 export function getEcosystem(network: string): string {
-  return NETWORK_TO_ECOSYSTEM[network] ?? "Unknown";
+  return NETWORK_TO_ECOSYSTEM[network] ?? "Chain-Agnostic";
 }
 
 // Networks that receive the EVM-generic score boost
@@ -320,18 +320,18 @@ export function detect(text: string): Detection {
       existing.push(...evmGenericEvidence);
       evidence.set(topEvmNetwork, existing);
     } else {
-      // No specific EVM network detected → "Unspecified"
-      scores.set("Unspecified", (scores.get("Unspecified") ?? 0) + evmGenericScore);
-      const existing = evidence.get("Unspecified") ?? [];
+      // No specific EVM network detected → "Ethereum Ecosystem"
+      scores.set("Ethereum Ecosystem", (scores.get("Ethereum Ecosystem") ?? 0) + evmGenericScore);
+      const existing = evidence.get("Ethereum Ecosystem") ?? [];
       existing.push(...evmGenericEvidence);
-      evidence.set("Unspecified", existing);
+      evidence.set("Ethereum Ecosystem", existing);
     }
   }
 
   if (scores.size === 0) {
     return {
-      network: "Unknown",
-      ecosystem: "Unknown",
+      network: "Chain-Agnostic",
+      ecosystem: "Chain-Agnostic",
       strength: "implicit",
       evidence: [],
       all: {},

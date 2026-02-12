@@ -15,7 +15,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 83,
@@ -33,7 +33,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 40,
@@ -51,7 +51,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 65,
@@ -69,7 +69,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 40,
@@ -87,7 +87,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 25,
       "behavior": "just-built",
       "completeness": 22,
@@ -105,7 +105,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -123,7 +123,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 81,
@@ -140,8 +140,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 0,
@@ -159,7 +159,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 20,
@@ -177,7 +177,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "mixed",
       "completeness": 42,
@@ -195,7 +195,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -212,8 +212,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 0,
@@ -248,8 +248,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 0,
@@ -267,7 +267,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 22,
@@ -285,7 +285,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 57,
@@ -302,8 +302,8 @@
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -321,7 +321,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 59,
@@ -356,8 +356,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -375,7 +375,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 83,
@@ -392,8 +392,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 8,
@@ -411,7 +411,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 20,
@@ -429,7 +429,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 55,
@@ -447,7 +447,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 96,
@@ -483,7 +483,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 37,
@@ -501,7 +501,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 55,
@@ -519,7 +519,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 59,
@@ -537,7 +537,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 90,
@@ -555,7 +555,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 83,
@@ -573,7 +573,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 2,
@@ -591,7 +591,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 52,
@@ -627,7 +627,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 35,
@@ -645,7 +645,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 20,
@@ -663,7 +663,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 20,
@@ -699,7 +699,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -717,7 +717,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -735,7 +735,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 90,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -789,7 +789,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -806,8 +806,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 72,
       "behavior": "just-built",
       "completeness": 25,
@@ -824,8 +824,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -843,7 +843,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 65,
@@ -878,8 +878,8 @@
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 20,
@@ -897,7 +897,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 75,
@@ -932,8 +932,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -987,7 +987,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 59,
@@ -1005,7 +1005,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 79,
@@ -1040,8 +1040,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -1076,8 +1076,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 2,
@@ -1095,7 +1095,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 35,
       "behavior": "just-built",
       "completeness": 51,
@@ -1112,8 +1112,8 @@
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -1131,7 +1131,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 65,
@@ -1149,7 +1149,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 79,
@@ -1167,7 +1167,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 40,
@@ -1185,7 +1185,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 46,
@@ -1221,7 +1221,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 73,
@@ -1239,7 +1239,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 63,
@@ -1257,7 +1257,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -1293,7 +1293,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -1311,7 +1311,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -1347,7 +1347,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 94,
@@ -1383,7 +1383,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 24,
@@ -1400,8 +1400,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -1437,7 +1437,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -1455,7 +1455,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 20,
@@ -1472,8 +1472,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -1491,7 +1491,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 20,
@@ -1509,7 +1509,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 22,
@@ -1545,7 +1545,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 79,
@@ -1563,7 +1563,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 59,
@@ -1581,7 +1581,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 20,
@@ -1598,8 +1598,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -1616,8 +1616,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 0,
@@ -1653,7 +1653,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "asked-questions",
       "completeness": 20,
@@ -1689,7 +1689,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 94,
@@ -1706,8 +1706,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -1725,7 +1725,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 69,
@@ -1743,7 +1743,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 37,
@@ -1796,8 +1796,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -1815,7 +1815,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 52,
@@ -1833,7 +1833,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 98,
@@ -1851,7 +1851,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 57,
@@ -1869,7 +1869,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 75,
       "behavior": "just-built",
       "completeness": 57,
@@ -1887,7 +1887,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 0,
@@ -1923,7 +1923,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 51,
@@ -1941,7 +1941,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 40,
@@ -1959,7 +1959,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 0,
@@ -1977,7 +1977,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 0,
@@ -1995,7 +1995,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 5,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -2013,7 +2013,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 0,
@@ -2030,8 +2030,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 25,
@@ -2048,8 +2048,8 @@
       "model": "gemini-3-pro-preview",
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 45,
@@ -2066,8 +2066,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 24,
@@ -2085,7 +2085,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 40,
@@ -2103,7 +2103,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 24,
@@ -2121,7 +2121,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 41,
@@ -2138,8 +2138,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 42,
@@ -2157,7 +2157,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 75,
       "behavior": "just-built",
       "completeness": 61,
@@ -2174,8 +2174,8 @@
       "model": "gemini-3-flash-preview",
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -2192,8 +2192,8 @@
       "model": "gpt-5-mini",
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 40,
@@ -2211,7 +2211,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 85,
@@ -2229,7 +2229,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -2264,8 +2264,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -2283,7 +2283,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 42,
@@ -2301,7 +2301,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "asked-questions",
       "completeness": 0,
@@ -2337,7 +2337,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "mixed",
       "completeness": 22,
@@ -2355,7 +2355,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 61,
@@ -2373,7 +2373,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 83,
@@ -2391,7 +2391,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 0,
@@ -2409,7 +2409,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 72,
       "behavior": "just-built",
       "completeness": 79,
@@ -2427,7 +2427,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 67,
@@ -2445,7 +2445,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 36,
@@ -2481,7 +2481,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 92,
       "behavior": "just-built",
       "completeness": 40,
@@ -2499,7 +2499,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 75,
       "behavior": "just-built",
       "completeness": 74,
@@ -2517,7 +2517,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 85,
       "behavior": "just-built",
       "completeness": 55,
@@ -2552,8 +2552,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 95,
       "behavior": "mixed",
       "completeness": 2,
@@ -2571,7 +2571,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 95,
       "behavior": "just-built",
       "completeness": 20,
@@ -2639,7 +2639,7 @@
     "cells": {
       "token-launch::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 72,
         "behavior": "just-built",
         "completeness": 82,
@@ -2648,14 +2648,14 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Base": 1
         },
         "runCount": 2
       },
       "token-launch::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 40,
@@ -2664,13 +2664,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "token-launch::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 80,
@@ -2679,13 +2679,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "token-launch::gemini-3-flash-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 20,
@@ -2695,14 +2695,14 @@
           "Solana": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Solana": 1
         },
         "runCount": 2
       },
       "token-launch::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 23,
@@ -2711,13 +2711,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "token-launch::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "asked-questions",
         "completeness": 40,
@@ -2726,13 +2726,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "memecoin::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 52,
@@ -2742,29 +2742,29 @@
           "Solana": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Solana": 1
         },
         "runCount": 2
       },
       "memecoin::claude-opus-4-6": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 0,
         "latencyMs": 12577,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "memecoin::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 20,
@@ -2773,13 +2773,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "memecoin::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 85,
         "behavior": "mixed",
         "completeness": 31,
@@ -2788,13 +2788,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "memecoin::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 10,
@@ -2803,22 +2803,22 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "prediction-market::claude-opus-4-6": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 0,
         "latencyMs": 16311,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
@@ -2838,23 +2838,23 @@
         "runCount": 2
       },
       "prediction-market::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 10,
         "latencyMs": 15914,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "prediction-market::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 22,
@@ -2863,13 +2863,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "prediction-market::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 68,
@@ -2878,30 +2878,30 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "prediction-market::gpt-5-mini": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 10,
         "latencyMs": 60022,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
-          "Unspecified": 1
+          "Chain-Agnostic": 1,
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "nft-marketplace::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 59,
@@ -2910,7 +2910,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -2930,23 +2930,23 @@
         "runCount": 2
       },
       "nft-marketplace::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 10,
         "latencyMs": 29614,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "nft-marketplace::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 74,
@@ -2955,29 +2955,29 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Polygon": 1
         },
         "runCount": 2
       },
       "nft-marketplace::claude-sonnet-4-5-20250929": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 85,
         "behavior": "just-built",
         "completeness": 4,
         "latencyMs": 42524,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "nft-marketplace::gemini-3-flash-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 45,
@@ -2986,13 +2986,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "nft-marketplace::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "asked-questions",
         "completeness": 48,
@@ -3001,14 +3001,14 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Polygon": 1
         },
         "runCount": 2
       },
       "dao-voting::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 95,
@@ -3017,7 +3017,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3038,24 +3038,24 @@
       },
       "dao-voting::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 29,
         "latencyMs": 31545,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
-          "Unknown": 1
+          "Ethereum Ecosystem": 1,
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
       "dao-voting::gemini-3-flash-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 75,
         "behavior": "just-built",
         "completeness": 56,
@@ -3064,13 +3064,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "dao-voting::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 48,
@@ -3079,13 +3079,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "dao-voting::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "asked-questions",
         "completeness": 94,
@@ -3094,13 +3094,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "onchain-game::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 72,
         "behavior": "just-built",
         "completeness": 81,
@@ -3109,14 +3109,14 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Polygon": 1
         },
         "runCount": 2
       },
       "onchain-game::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 1,
@@ -3125,13 +3125,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "onchain-game::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 52,
@@ -3140,7 +3140,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3156,13 +3156,13 @@
         },
         "networkCounts": {
           "Polygon": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "onchain-game::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 46,
@@ -3171,13 +3171,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "which-chain::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 10,
@@ -3186,13 +3186,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "onchain-game::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 85,
         "behavior": "just-built",
         "completeness": 30,
@@ -3201,7 +3201,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3217,13 +3217,13 @@
         },
         "networkCounts": {
           "Base": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "which-chain::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "asked-questions",
         "completeness": 0,
@@ -3232,13 +3232,13 @@
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 1
       },
       "which-chain::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 5,
         "behavior": "asked-questions",
         "completeness": 0,
@@ -3247,13 +3247,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "which-chain::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 85,
         "behavior": "asked-questions",
         "completeness": 0,
@@ -3262,7 +3262,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3275,11 +3275,11 @@
         "latencyMs": 36699,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
@@ -3295,13 +3295,13 @@
         },
         "networkCounts": {
           "Base": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "which-chain::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 20,
@@ -3310,43 +3310,43 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "ai-agent::claude-opus-4-6": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 25,
         "latencyMs": 53138,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "ai-agent::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 31,
         "latencyMs": 25383,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "token-bridge::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 75,
         "behavior": "just-built",
         "completeness": 63,
@@ -3355,7 +3355,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3368,43 +3368,43 @@
         "latencyMs": 29023,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
       "ai-agent::gpt-5-mini": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 30,
         "latencyMs": 64872,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "token-bridge::gemini-3-flash-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 48,
         "latencyMs": 30275,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
-          "Unknown": 1
+          "Ethereum Ecosystem": 1,
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
@@ -3420,24 +3420,24 @@
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "token-bridge::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 20,
         "latencyMs": 29213,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
-          "Unspecified": 1
+          "Chain-Agnostic": 1,
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
@@ -3468,13 +3468,13 @@
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "token-bridge::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 72,
@@ -3483,13 +3483,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "token-bridge::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 40,
@@ -3498,7 +3498,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3514,22 +3514,22 @@
         },
         "networkCounts": {
           "Base": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "block-explorer::claude-opus-4-6": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 0,
         "latencyMs": 42586,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
@@ -3545,30 +3545,30 @@
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "block-explorer::claude-sonnet-4-5-20250929": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 2,
         "latencyMs": 43853,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Mainnet": 1
         },
         "runCount": 2
       },
       "social-tipping::gemini-3-flash-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 26,
@@ -3577,30 +3577,30 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "block-explorer::gpt-5-mini": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 92,
         "behavior": "asked-questions",
         "completeness": 38,
         "latencyMs": 60072,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
-          "Unspecified": 1
+          "Chain-Agnostic": 1,
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "social-tipping::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 85,
         "behavior": "just-built",
         "completeness": 74,
@@ -3609,13 +3609,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "name-service::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 72,
         "behavior": "just-built",
         "completeness": 79,
@@ -3624,13 +3624,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "social-tipping::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 92,
         "behavior": "just-built",
         "completeness": 40,
@@ -3639,13 +3639,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "social-tipping::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 85,
         "behavior": "just-built",
         "completeness": 57,
@@ -3654,7 +3654,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3676,7 +3676,7 @@
       },
       "social-tipping::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 85,
         "behavior": "asked-questions",
         "completeness": 73,
@@ -3685,14 +3685,14 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Polygon": 1
         },
         "runCount": 2
       },
       "name-service::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 75,
         "behavior": "just-built",
         "completeness": 69,
@@ -3701,24 +3701,24 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "name-service::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 11,
         "latencyMs": 26017,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
-          "Unknown": 1
+          "Ethereum Ecosystem": 1,
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
@@ -3734,13 +3734,13 @@
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "name-service::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "asked-questions",
         "completeness": 30,
@@ -3749,7 +3749,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       }

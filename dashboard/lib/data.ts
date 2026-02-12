@@ -27,7 +27,7 @@ export async function fetchRun(filename: string): Promise<DashboardRunData | nul
 export function computeOverallEcosystems(data: DashboardRunData): Record<string, number> {
   const counts: Record<string, number> = {};
   for (const r of data.results) {
-    const eco = r.ecosystem || "Unknown";
+    const eco = r.ecosystem || "Chain-Agnostic";
     counts[eco] = (counts[eco] ?? 0) + 1;
   }
   return counts;
@@ -43,7 +43,7 @@ export function computePerModelEcosystems(
       entry = { display: r.modelDisplayName, ecosystems: {} };
       byModel.set(r.model, entry);
     }
-    const eco = r.ecosystem || "Unknown";
+    const eco = r.ecosystem || "Chain-Agnostic";
     entry.ecosystems[eco] = (entry.ecosystems[eco] ?? 0) + 1;
   }
   return Array.from(byModel.values()).map((e) => ({
@@ -56,7 +56,7 @@ export function computeOverallNetworks(data: DashboardRunData): Record<string, n
   const counts: Record<string, number> = {};
   for (const r of data.results) {
     if (r.ecosystem !== "Ethereum Ecosystem") continue;
-    const net = r.network || "Unspecified";
+    const net = r.network || "Ethereum Ecosystem";
     counts[net] = (counts[net] ?? 0) + 1;
   }
   return counts;
@@ -73,7 +73,7 @@ export function computePerModelNetworks(
       entry = { display: r.modelDisplayName, networks: {} };
       byModel.set(r.model, entry);
     }
-    const net = r.network || "Unspecified";
+    const net = r.network || "Ethereum Ecosystem";
     entry.networks[net] = (entry.networks[net] ?? 0) + 1;
   }
   return Array.from(byModel.values()).map((e) => ({
@@ -112,7 +112,7 @@ export function computeDefaultEcosystems(
       entry = { display: r.modelDisplayName, tier: r.modelTier, ecoCounts: {} };
       byModel.set(r.model, entry);
     }
-    const eco = r.ecosystem || "Unknown";
+    const eco = r.ecosystem || "Chain-Agnostic";
     entry.ecoCounts[eco] = (entry.ecoCounts[eco] ?? 0) + 1;
   }
   return Array.from(byModel.values()).map((e) => {
@@ -120,7 +120,7 @@ export function computeDefaultEcosystems(
     return {
       model: e.display,
       tier: e.tier,
-      defaultEcosystem: sorted[0]?.[0] ?? "Unknown",
+      defaultEcosystem: sorted[0]?.[0] ?? "Chain-Agnostic",
       timesChosen: `${sorted[0]?.[1] ?? 0}/${promptCount}`,
     };
   });
@@ -134,7 +134,7 @@ export function computeCategoryBreakdown(
     const networks: Record<string, number> = {};
     for (const r of data.results) {
       if (r.promptCategory !== cat) continue;
-      const net = r.network || r.ecosystem || "Unknown";
+      const net = r.network || r.ecosystem || "Chain-Agnostic";
       networks[net] = (networks[net] ?? 0) + 1;
     }
     return { category: cat, networks };
@@ -149,7 +149,7 @@ export function computePerPromptNetworks(
     const networks: Record<string, number> = {};
     for (const r of data.results) {
       if (r.promptId !== pid) continue;
-      const net = r.network || r.ecosystem || "Unknown";
+      const net = r.network || r.ecosystem || "Chain-Agnostic";
       networks[net] = (networks[net] ?? 0) + 1;
     }
     return { promptId: pid, networks };

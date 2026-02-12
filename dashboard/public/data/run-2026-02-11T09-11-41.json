@@ -96,7 +96,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 63,
@@ -185,7 +185,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 39,
@@ -239,7 +239,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 68,
       "behavior": "just-built",
       "completeness": 75,
@@ -372,8 +372,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 35,
@@ -418,7 +418,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 98,
@@ -499,7 +499,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 83,
@@ -528,7 +528,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 37,
@@ -600,8 +600,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 30,
@@ -709,8 +709,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 0,
@@ -725,7 +725,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 96,
@@ -793,7 +793,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 52,
@@ -818,7 +818,7 @@
       "modelDisplayName": "GPT-5 mini",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 85,
@@ -843,7 +843,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 59,
@@ -899,8 +899,8 @@
       "model": "gemini-3-pro-preview",
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 39,
@@ -936,7 +936,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 92,
@@ -997,7 +997,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 97,
       "behavior": "just-built",
       "completeness": 57,
@@ -1067,8 +1067,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 0,
@@ -1182,7 +1182,7 @@
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 74,
       "behavior": "just-built",
       "completeness": 26,
@@ -1322,8 +1322,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 25,
@@ -1482,7 +1482,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 39,
@@ -1533,8 +1533,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 16,
@@ -1568,8 +1568,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 0,
@@ -1669,8 +1669,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 20,
@@ -1734,7 +1734,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 39,
@@ -1815,8 +1815,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 45,
@@ -1882,7 +1882,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 61,
@@ -2130,7 +2130,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 57,
@@ -2211,7 +2211,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 59,
@@ -2286,8 +2286,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 30,
@@ -2302,7 +2302,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 83,
@@ -2358,7 +2358,7 @@
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 77,
@@ -2386,8 +2386,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 0,
@@ -2494,7 +2494,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 74,
@@ -2614,7 +2614,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 72,
@@ -2639,8 +2639,8 @@
       "model": "gemini-3-pro-preview",
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 21,
@@ -2654,8 +2654,8 @@
       "model": "gemini-3-flash-preview",
       "modelDisplayName": "Gemini 3 Flash",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 22,
@@ -2670,7 +2670,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 72,
@@ -2809,8 +2809,8 @@
       "model": "claude-sonnet-4-5-20250929",
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 20,
@@ -2870,8 +2870,8 @@
       "model": "gpt-5.2",
       "modelDisplayName": "GPT-5.2",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 28,
@@ -3050,7 +3050,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 25,
@@ -3067,7 +3067,7 @@
       "modelDisplayName": "Gemini 3 Pro",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 75,
@@ -3194,7 +3194,7 @@
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 39,
@@ -3220,7 +3220,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 39,
@@ -3292,8 +3292,8 @@
       "model": "claude-opus-4-6",
       "modelDisplayName": "Claude Opus 4.6",
       "modelTier": "flagship",
-      "ecosystem": "Unknown",
-      "network": "Unknown",
+      "ecosystem": "Chain-Agnostic",
+      "network": "Chain-Agnostic",
       "confidence": 0,
       "behavior": "just-built",
       "completeness": 20,
@@ -3428,7 +3428,7 @@
       "modelDisplayName": "Claude Sonnet 4.5",
       "modelTier": "mid-tier",
       "ecosystem": "Ethereum Ecosystem",
-      "network": "Unspecified",
+      "network": "Ethereum Ecosystem",
       "confidence": 100,
       "behavior": "just-built",
       "completeness": 57,
@@ -3600,18 +3600,18 @@
       },
       "token-launch::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 54,
         "latencyMs": 48739,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
-          "Unknown": 1
+          "Ethereum Ecosystem": 1,
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
@@ -3664,7 +3664,7 @@
       },
       "token-launch::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 50,
@@ -3673,7 +3673,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3695,7 +3695,7 @@
       },
       "memecoin::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 73,
         "behavior": "just-built",
         "completeness": 77,
@@ -3705,7 +3705,7 @@
           "BSC": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "BSC": 1
         },
         "runCount": 2
@@ -3772,18 +3772,18 @@
         "runCount": 2
       },
       "prediction-market::gpt-5.2": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 28,
         "latencyMs": 23747,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Polygon": 1
         },
         "runCount": 2
@@ -3805,7 +3805,7 @@
       },
       "prediction-market::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 78,
@@ -3814,7 +3814,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3852,7 +3852,7 @@
       },
       "dao-voting::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 83,
@@ -3861,13 +3861,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "prediction-market::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 48,
@@ -3876,7 +3876,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -3908,22 +3908,22 @@
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
       "nft-marketplace::claude-opus-4-6": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 30,
         "latencyMs": 43426,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
@@ -3975,23 +3975,23 @@
         "runCount": 2
       },
       "nft-marketplace::claude-sonnet-4-5-20250929": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 0,
         "latencyMs": 42388,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
       "dao-voting::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 95,
         "behavior": "just-built",
         "completeness": 95,
@@ -4000,7 +4000,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Arbitrum": 1
         },
         "runCount": 2
@@ -4038,7 +4038,7 @@
       },
       "dao-voting::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 63,
@@ -4047,13 +4047,13 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
       "dao-voting::gpt-5-mini": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 84,
         "behavior": "just-built",
         "completeness": 82,
@@ -4062,14 +4062,14 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Polygon": 1
         },
         "runCount": 2
       },
       "dao-voting::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 66,
@@ -4078,7 +4078,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -4099,17 +4099,17 @@
         "runCount": 2
       },
       "ai-agent::gemini-3-pro-preview": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 30,
         "latencyMs": 30377,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
@@ -4122,17 +4122,17 @@
         "latencyMs": 15739,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
       "onchain-game::claude-opus-4-6": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 82,
@@ -4141,7 +4141,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -4162,7 +4162,7 @@
       },
       "token-bridge::gemini-3-pro-preview": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 96,
         "behavior": "just-built",
         "completeness": 70,
@@ -4171,7 +4171,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Polygon": 1
         },
         "runCount": 2
@@ -4209,17 +4209,17 @@
         "runCount": 2
       },
       "onchain-game::claude-sonnet-4-5-20250929": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 10,
         "latencyMs": 43499,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
@@ -4303,18 +4303,18 @@
       },
       "ai-agent::gpt-5.2": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 27,
         "latencyMs": 29606,
         "ecosystemCounts": {
           "Ethereum Ecosystem": 1,
-          "Unknown": 1
+          "Chain-Agnostic": 1
         },
         "networkCounts": {
-          "Unspecified": 1,
-          "Unknown": 1
+          "Ethereum Ecosystem": 1,
+          "Chain-Agnostic": 1
         },
         "runCount": 2
       },
@@ -4345,7 +4345,7 @@
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
@@ -4395,18 +4395,18 @@
         "runCount": 2
       },
       "ai-agent::claude-sonnet-4-5-20250929": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 18,
         "latencyMs": 46886,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Mainnet": 1
         },
         "runCount": 2
@@ -4440,7 +4440,7 @@
         },
         "networkCounts": {
           "Polygon": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
@@ -4456,7 +4456,7 @@
         },
         "networkCounts": {
           "Mainnet": 1,
-          "Unspecified": 1
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
@@ -4492,7 +4492,7 @@
       },
       "token-bridge::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 39,
@@ -4501,7 +4501,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 2
+          "Ethereum Ecosystem": 2
         },
         "runCount": 2
       },
@@ -4521,17 +4521,17 @@
         "runCount": 2
       },
       "block-explorer::claude-opus-4-6": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 0,
         "behavior": "just-built",
         "completeness": 18,
         "latencyMs": 50791,
         "ecosystemCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "networkCounts": {
-          "Unknown": 2
+          "Chain-Agnostic": 2
         },
         "runCount": 2
       },
@@ -4552,18 +4552,18 @@
         "runCount": 2
       },
       "block-explorer::claude-sonnet-4-5-20250929": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 6,
         "latencyMs": 45819,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Mainnet": 1
         },
         "runCount": 2
@@ -4615,19 +4615,19 @@
         "runCount": 2
       },
       "social-tipping::claude-sonnet-4-5-20250929": {
-        "ecosystem": "Unknown",
-        "network": "Unknown",
+        "ecosystem": "Chain-Agnostic",
+        "network": "Chain-Agnostic",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 39,
         "latencyMs": 44662,
         "ecosystemCounts": {
-          "Unknown": 1,
+          "Chain-Agnostic": 1,
           "Ethereum Ecosystem": 1
         },
         "networkCounts": {
-          "Unknown": 1,
-          "Unspecified": 1
+          "Chain-Agnostic": 1,
+          "Ethereum Ecosystem": 1
         },
         "runCount": 2
       },
@@ -4665,7 +4665,7 @@
       },
       "name-service::claude-sonnet-4-5-20250929": {
         "ecosystem": "Ethereum Ecosystem",
-        "network": "Unspecified",
+        "network": "Ethereum Ecosystem",
         "confidence": 100,
         "behavior": "just-built",
         "completeness": 60,
@@ -4674,7 +4674,7 @@
           "Ethereum Ecosystem": 2
         },
         "networkCounts": {
-          "Unspecified": 1,
+          "Ethereum Ecosystem": 1,
           "Mainnet": 1
         },
         "runCount": 2

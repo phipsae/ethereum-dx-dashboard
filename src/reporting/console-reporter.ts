@@ -30,7 +30,7 @@ export function printGrid(grid: Grid): void {
       if (!cell) return pad("—", cellWidth);
 
       const eco = cell.ecosystem.slice(0, 10);
-      const net = cell.network && cell.network !== "Unspecified" && cell.network !== "Unknown"
+      const net = cell.network && cell.network !== "Ethereum Ecosystem" && cell.network !== "Chain-Agnostic"
         ? `→${cell.network}` : "";
       const chainNet = net ? `${eco}${net}` : eco;
       const str = cell.strength.slice(0, 3); // str/wea/imp

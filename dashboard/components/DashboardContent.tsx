@@ -26,7 +26,7 @@ interface DashboardContentProps {
 
 export default function DashboardContent({ standard, webSearch }: DashboardContentProps) {
   const hasToggle = !!standard && !!webSearch;
-  const [mode, setMode] = useState<SearchMode>("standard");
+  const [mode, setMode] = useState<SearchMode>(webSearch ? "webSearch" : "standard");
 
   const data = hasToggle
     ? mode === "standard"
@@ -128,12 +128,19 @@ export default function DashboardContent({ standard, webSearch }: DashboardConte
           About this Research
         </h2>
         <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
+          <p className="mb-3">
+            This benchmark sends {data.meta.promptCount} chain-agnostic prompts to {data.meta.modelCount} AI
+            models via their APIs, with no system prompt, to measure each model&apos;s inherent chain
+            defaults. Every response is classified by Claude Opus 4.6 using a 3x majority vote (three
+            independent classifications per response, majority wins) to reduce non-deterministic noise.
+          </p>
           <p>
-            This benchmark sends {data.meta.promptCount} chain-agnostic prompts (see above) to {data.meta.modelCount} AI models without specifying a blockchain, and analyzes
-            which chain each response defaults to. Each response is classified by an LLM that
-            determines the primary chain recommended. If a response explicitly picks one chain, that
-            wins; if it lists multiple options equally or uses generic EVM code, it&apos;s marked
-            &quot;Ethereum (No Specific L2)&quot;; if no blockchain is mentioned at all, it&apos;s &quot;Chain Agnostic&quot;.
+            Classification follows a strict priority: an explicit chain recommendation wins first; then
+            a concrete example or tutorial targeting one chain; then code with chain-specific
+            configuration (chain IDs, RPC URLs); generic Ethereum/EVM code without a specific L2 is
+            marked &quot;Ethereum Ecosystem&quot;; multiple EVM chains presented equally is also
+            &quot;Ethereum Ecosystem&quot;; and if no blockchain is mentioned at all, the response is
+            classified as &quot;Chain-Agnostic&quot;.
           </p>
         </div>
       </section>
@@ -150,27 +157,27 @@ export default function DashboardContent({ standard, webSearch }: DashboardConte
           </p>
           <ul className="list-disc space-y-2 pl-5">
             <li>
-              <strong className="text-white">No system prompt</strong> &mdash; ChatGPT.com injects a
+              <strong className="text-white">No system prompt</strong> - ChatGPT.com injects a
               hidden system prompt that shapes tone, safety behavior, and formatting. API calls send
               only the raw user prompt, giving a purer read of the model&apos;s defaults.
             </li>
             <li>
-              <strong className="text-white">Fewer tools available</strong> &mdash; ChatGPT.com has
+              <strong className="text-white">Fewer tools available</strong> - ChatGPT.com has
               Code Interpreter, DALL-E, file upload, and canvas. The model may behave differently when
               it knows these tools exist. Our API calls only optionally enable web search.
             </li>
             <li>
-              <strong className="text-white">Different moderation layers</strong> &mdash; ChatGPT.com
+              <strong className="text-white">Different moderation layers</strong> - ChatGPT.com
               applies additional safety and moderation filtering on top of the model that can alter or
               refuse certain outputs.
             </li>
             <li>
-              <strong className="text-white">Model version may differ</strong> &mdash; The model served
+              <strong className="text-white">Model version may differ</strong> - The model served
               on ChatGPT.com can be a slightly different snapshot or fine-tune than what the API returns
               for the same model name.
             </li>
             <li>
-              <strong className="text-white">No user memory or context</strong> &mdash; ChatGPT.com can
+              <strong className="text-white">No user memory or context</strong> - ChatGPT.com can
               use stored user preferences and conversation history. API calls are stateless with zero
               prior context.
             </li>
@@ -180,6 +187,38 @@ export default function DashboardContent({ standard, webSearch }: DashboardConte
             while ChatGPT.com responses are shaped by multiple additional layers that could nudge the
             model toward or away from specific chains.
           </p>
+        </div>
+      </section>
+
+      {/* Limitations */}
+      <section>
+        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+          Limitations
+        </h2>
+        <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
+          <ul className="list-disc space-y-2 pl-5">
+            <li>
+              <strong className="text-white">Single classifier</strong> - All responses are
+              classified by Claude Opus 4.6. While 3x majority voting reduces noise, systematic
+              biases in the classifier would affect all results uniformly. Cross-validation with
+              other classifiers is planned.
+            </li>
+            <li>
+              <strong className="text-white">Sample size</strong> - Results depend on the number of
+              prompts and runs per prompt. Single-prompt categories reflect one prompt, not the
+              category as a whole. More runs improve reliability.
+            </li>
+            <li>
+              <strong className="text-white">Prompt design</strong> - Some prompts may implicitly
+              favor chains where well-known products already exist (e.g., name service prompts
+              resemble ENS, memecoin prompts resemble pump.fun).
+            </li>
+            <li>
+              <strong className="text-white">Non-deterministic</strong> - LLM responses and
+              classifications vary between runs. The same prompt can produce different chain choices
+              on repeat.
+            </li>
+          </ul>
         </div>
       </section>
     </div>

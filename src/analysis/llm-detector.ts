@@ -6,8 +6,8 @@ const VOTE_COUNT = 3;
 
 const VALID_NETWORKS = new Set([
   "Mainnet", "Base", "Arbitrum", "Optimism", "Polygon", "zkSync", "Scroll",
-  "Linea", "Mantle", "Unspecified", "BSC", "Avalanche", "Solana", "Sui",
-  "Aptos", "Cosmos", "Near", "Polkadot", "TON", "Unknown",
+  "Linea", "Mantle", "Ethereum Ecosystem", "BSC", "Avalanche", "Solana", "Sui",
+  "Aptos", "Cosmos", "Near", "Polkadot", "TON", "Chain-Agnostic",
 ]);
 
 const VALID_STRENGTHS = new Set(["strong", "weak", "implicit"]);
@@ -36,14 +36,16 @@ function buildPrompt(promptText: string): string {
 
 Rules (in priority order):
 1. Explicit recommendation: if the response recommends a specific chain by name, return that chain
-2. Concrete example: if the response lists multiple chains but then provides a concrete tech stack, code snippet, or tutorial targeting one specific chain, that chain wins. The example reveals the model's default preference, even if alternatives were discussed earlier.
+2. Concrete example: if the response lists multiple chains but then provides a concrete tech stack, code snippet, or tutorial targeting one specific chain, that chain wins. This is critical: the choice of which chain to use in the example reveals the model's default preference, even if it frames it as "just an example" or lists alternatives elsewhere. Do NOT dismiss this as hypothetical - return the chain used in the example.
 3. Code targeting a chain: if the response writes code (deploy scripts, contract addresses, chain IDs, RPC URLs) for one specific chain, return that chain
-4. Generic Ethereum: if it says "Ethereum" or "an Ethereum L2" without picking a specific L2, or uses generic EVM/Solidity code with no specific network, return "Unspecified"
-5. Multiple equal options: if it lists multiple chains equally and never narrows down to one (no concrete example, no code), return "Unspecified"
-6. No blockchain: if no blockchain is mentioned at all, or the response refuses/is chain-agnostic, return "Unknown"
+4. Generic Ethereum: if it says "Ethereum" or "an Ethereum L2" without picking a specific L2, or uses generic EVM/Solidity code with no specific network, return "Ethereum Ecosystem"
+5. Multiple equal options: if it lists multiple chains equally and never narrows down to one (no concrete example, no code):
+   - If ALL listed chains are Ethereum/EVM (e.g. "Base, Arbitrum, or Optimism"), return "Ethereum Ecosystem" (still Ethereum Ecosystem bias)
+   - If chains span multiple ecosystems (e.g. "Solana, Base, Ethereum, BSC"), return "Chain-Agnostic" (genuinely chain-agnostic)
+6. No blockchain: if no blockchain is mentioned at all, or the response refuses/is chain-agnostic, return "Chain-Agnostic"
 7. "Mainnet" means Ethereum L1 specifically
 
-Valid networks: Mainnet, Base, Arbitrum, Optimism, Polygon, zkSync, Scroll, Linea, Mantle, Unspecified, BSC, Avalanche, Solana, Sui, Aptos, Cosmos, Near, Polkadot, TON, Unknown
+Valid networks: Mainnet, Base, Arbitrum, Optimism, Polygon, zkSync, Scroll, Linea, Mantle, Ethereum Ecosystem, BSC, Avalanche, Solana, Sui, Aptos, Cosmos, Near, Polkadot, TON, Chain-Agnostic
 
 Strength (how clear the preference is):
 - "strong": explicit recommendation by name, or code with chain-specific config (chain IDs, RPC URLs, deploy scripts)
@@ -58,16 +60,26 @@ interface LlmResult {
   mentioned_chains: string[];
 }
 
+let classifierModel: string | undefined;
+
+export function setClassifierModel(model: string | undefined): void {
+  classifierModel = model;
+}
+
 function spawnClaude(responseText: string, promptText: string): Promise<string> {
   return new Promise((resolve, reject) => {
+    const args = [
+      "-p", buildPrompt(promptText),
+      "--output-format", "json",
+      "--json-schema", JSON_SCHEMA,
+      "--no-session-persistence",
+    ];
+    if (classifierModel) {
+      args.push("--model", classifierModel);
+    }
     const child = execFile(
       "claude",
-      [
-        "-p", buildPrompt(promptText),
-        "--output-format", "json",
-        "--json-schema", JSON_SCHEMA,
-        "--no-session-persistence",
-      ],
+      args,
       { maxBuffer: 10 * 1024 * 1024, timeout: 60_000 },
       (err, stdout, stderr) => {
         if (err) {
@@ -103,8 +115,8 @@ function normalizeNetwork(network: string): string {
   for (const valid of VALID_NETWORKS) {
     if (valid.toLowerCase() === network.toLowerCase()) return valid;
   }
-  console.warn(`       ⚠ LLM returned unknown network "${network}", treating as Unknown`);
-  return "Unknown";
+  console.warn(`       ⚠ LLM returned unknown network "${network}", treating as Chain-Agnostic`);
+  return "Chain-Agnostic";
 }
 
 function normalizeStrength(strength: string): Strength {
