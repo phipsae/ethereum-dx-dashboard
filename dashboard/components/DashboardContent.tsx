@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import type { DashboardRunData, SearchMode } from "@/lib/types";
+import type { DashboardRunData, ToolDashboardRunData, SearchMode, DashboardTab } from "@/lib/types";
 import {
   computeOverallEcosystems,
   computePerModelEcosystems,
@@ -10,11 +10,15 @@ import {
   computeCategoryBreakdown,
   computePerPromptNetworks,
   computeToolFrequency,
+  computeOverallTools,
+  computePerModelTools,
+  computeToolsByCategory,
 } from "@/lib/data";
 import ChainPieChart from "@/components/charts/ChainPieChart";
 import NetworkDistribution from "@/components/charts/NetworkDistribution";
 import CategoryBreakdown from "@/components/charts/CategoryBreakdown";
 import ToolFrequencyBar from "@/components/charts/ToolFrequencyBar";
+import ToolStackedBar from "@/components/charts/ToolStackedBar";
 import ResultsGrid from "@/components/tables/ResultsGrid";
 import PromptsTable from "@/components/tables/PromptsTable";
 import ModeToggle from "@/components/ModeToggle";
@@ -22,105 +26,209 @@ import ModeToggle from "@/components/ModeToggle";
 interface DashboardContentProps {
   standard: DashboardRunData | null;
   webSearch: DashboardRunData | null;
+  toolStandard?: ToolDashboardRunData | null;
+  toolWebSearch?: ToolDashboardRunData | null;
 }
 
-export default function DashboardContent({ standard, webSearch }: DashboardContentProps) {
-  const hasToggle = !!standard && !!webSearch;
+export default function DashboardContent({
+  standard,
+  webSearch,
+  toolStandard,
+  toolWebSearch,
+}: DashboardContentProps) {
+  const hasChainToggle = !!standard && !!webSearch;
+  const hasToolData = !!toolStandard || !!toolWebSearch;
+  const hasToolToggle = !!toolStandard && !!toolWebSearch;
+
+  const [tab, setTab] = useState<DashboardTab>("network");
   const [mode, setMode] = useState<SearchMode>(webSearch ? "webSearch" : "standard");
 
-  const data = hasToggle
+  // Chain data selection
+  const chainData = hasChainToggle
     ? mode === "standard"
       ? standard!
       : webSearch!
     : standard ?? webSearch!;
 
-  const overallEcosystems = useMemo(() => computeOverallEcosystems(data), [data]);
-  const perModelEcosystems = useMemo(() => computePerModelEcosystems(data), [data]);
-  const overallNetworks = useMemo(() => computeOverallNetworks(data), [data]);
-  const perModelNetworks = useMemo(() => computePerModelNetworks(data), [data]);
-  const categoryBreakdown = useMemo(() => computeCategoryBreakdown(data), [data]);
-  const perPromptNetworks = useMemo(() => computePerPromptNetworks(data), [data]);
-  const toolFrequency = useMemo(() => computeToolFrequency(data), [data]);
+  // Tool data selection
+  const toolData = hasToolToggle
+    ? mode === "standard"
+      ? toolStandard!
+      : toolWebSearch!
+    : toolStandard ?? toolWebSearch ?? null;
 
-  const modeLabel = data.meta.webSearch ? "Web Search" : "Base Model";
+  // Chain computations
+  const overallEcosystems = useMemo(() => computeOverallEcosystems(chainData), [chainData]);
+  const perModelEcosystems = useMemo(() => computePerModelEcosystems(chainData), [chainData]);
+  const overallNetworks = useMemo(() => computeOverallNetworks(chainData), [chainData]);
+  const perModelNetworks = useMemo(() => computePerModelNetworks(chainData), [chainData]);
+  const categoryBreakdown = useMemo(() => computeCategoryBreakdown(chainData), [chainData]);
+  const perPromptNetworks = useMemo(() => computePerPromptNetworks(chainData), [chainData]);
+  const toolFrequency = useMemo(() => computeToolFrequency(chainData), [chainData]);
+
+  // Tool computations
+  const overallTools = useMemo(() => toolData ? computeOverallTools(toolData) : [], [toolData]);
+  const perModelTools = useMemo(() => toolData ? computePerModelTools(toolData) : [], [toolData]);
+  const toolsByCategory = useMemo(() => toolData ? computeToolsByCategory(toolData) : [], [toolData]);
+
+  const activeData = tab === "network" ? chainData : toolData;
+  const modeLabel = activeData?.meta.webSearch ? "Web Search" : "Base Model";
+  const hasToggle = tab === "network" ? hasChainToggle : hasToolToggle;
 
   return (
     <div className="space-y-8">
+      {/* Tab bar */}
+      <div className="flex items-center gap-6 border-b border-[#0f3460]">
+        <button
+          onClick={() => setTab("network")}
+          className={`pb-2 text-sm font-medium transition-colors ${
+            tab === "network"
+              ? "border-b-2 border-[#e94560] text-white"
+              : "text-[#a0a0b0] hover:text-white"
+          }`}
+        >
+          Network Bias
+        </button>
+        <button
+          onClick={() => setTab("tools")}
+          className={`pb-2 text-sm font-medium transition-colors ${
+            tab === "tools"
+              ? "border-b-2 border-[#e94560] text-white"
+              : "text-[#a0a0b0] hover:text-white"
+          }`}
+        >
+          Tool Bias
+        </button>
+      </div>
+
       {/* Run stats + toggle */}
       <div className="flex flex-wrap items-center gap-4">
         {hasToggle && <ModeToggle mode={mode} onChange={setMode} />}
-        <p className="text-sm text-[#a0a0b0]">
-          {hasToggle && <span className="font-medium text-white">{modeLabel} &middot; </span>}
-          Run: {new Date(data.meta.timestamp).toLocaleString()} &middot;{" "}
-          {data.meta.resultCount} results &middot; {data.meta.modelCount} models &middot;{" "}
-          {data.meta.promptCount} prompts
-        </p>
+        {activeData && (
+          <p className="text-sm text-[#a0a0b0]">
+            {hasToggle && <span className="font-medium text-white">{modeLabel} &middot; </span>}
+            Run: {new Date(activeData.meta.timestamp).toLocaleString()} &middot;{" "}
+            {activeData.meta.resultCount} results &middot; {activeData.meta.modelCount} models &middot;{" "}
+            {activeData.meta.promptCount} prompts
+          </p>
+        )}
       </div>
 
-      {/* Overall Chain Distribution */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Chain Distribution (Overall)
-        </h2>
-        <ChainPieChart data={overallEcosystems} />
-      </section>
+      {/* Network Bias Tab */}
+      {tab === "network" && (
+        <>
+          {/* Overall Chain Distribution */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Chain Distribution (Overall)
+            </h2>
+            <ChainPieChart data={overallEcosystems} />
+          </section>
 
-      {/* Per-model Chain Distribution */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Chain Distribution (Per Model)
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {perModelEcosystems.map((entry) => (
-            <ChainPieChart
-              key={entry.model}
-              data={entry.ecosystems}
-              title={entry.model}
-              height={250}
-            />
-          ))}
-        </div>
-      </section>
+          {/* Per-model Chain Distribution */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Chain Distribution (Per Model)
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {perModelEcosystems.map((entry) => (
+                <ChainPieChart
+                  key={entry.model}
+                  data={entry.ecosystems}
+                  title={entry.model}
+                  height={250}
+                />
+              ))}
+            </div>
+          </section>
 
-      {/* Ethereum Ecosystem Breakdown */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Ethereum Ecosystem Breakdown
-        </h2>
-        <NetworkDistribution overall={overallNetworks} perModel={perModelNetworks} />
-      </section>
+          {/* Ethereum Ecosystem Breakdown */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Ethereum Ecosystem Breakdown
+            </h2>
+            <NetworkDistribution overall={overallNetworks} perModel={perModelNetworks} />
+          </section>
 
-      {/* Tool / Framework Frequency */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Tool / Framework Frequency
-        </h2>
-        <ToolFrequencyBar data={toolFrequency} />
-      </section>
+          {/* Tool / Framework Frequency (legacy, from evidence field) */}
+          {toolFrequency.length > 0 && (
+            <section>
+              <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+                Tool / Framework Frequency
+              </h2>
+              <ToolFrequencyBar data={toolFrequency} />
+            </section>
+          )}
 
-      {/* Network Choice by Category */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Network Choice by Category
-        </h2>
-        <CategoryBreakdown data={categoryBreakdown} />
-      </section>
+          {/* Network Choice by Category */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Network Choice by Category
+            </h2>
+            <CategoryBreakdown data={categoryBreakdown} />
+          </section>
 
-      {/* Prompts */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Prompts Used
-        </h2>
-        <PromptsTable prompts={data.prompts} />
-      </section>
+          {/* Prompts */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Prompts Used
+            </h2>
+            <PromptsTable prompts={chainData.prompts} />
+          </section>
 
-      {/* Network Choice by Prompt */}
-      <section>
-        <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
-          Network Choice by Prompt
-        </h2>
-        <ResultsGrid data={perPromptNetworks} />
-      </section>
+          {/* Network Choice by Prompt */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Network Choice by Prompt
+            </h2>
+            <ResultsGrid data={perPromptNetworks} />
+          </section>
+        </>
+      )}
+
+      {/* Tool Bias Tab */}
+      {tab === "tools" && (
+        <>
+          {!hasToolData ? (
+            <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-8 text-center">
+              <p className="text-[#a0a0b0]">No tool classification data available yet.</p>
+              <code className="mt-2 block rounded bg-[#1a1a2e] px-4 py-2 font-mono text-sm text-[#e94560]">
+                npx tsx src/index.ts classify tools &lt;responses-dir&gt;
+              </code>
+            </div>
+          ) : (
+            <>
+              {/* Overall Tool Frequency */}
+              <section>
+                <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+                  Tool / Framework Recommendations (Overall)
+                </h2>
+                <ToolFrequencyBar data={overallTools} />
+              </section>
+
+              {/* Tool Recommendations by Model */}
+              <section>
+                <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+                  Tool Recommendations by Model
+                </h2>
+                <ToolStackedBar
+                  data={perModelTools.map((e) => ({ label: e.model, tools: e.tools }))}
+                />
+              </section>
+
+              {/* Tool Recommendations by Category */}
+              <section>
+                <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+                  Tool Recommendations by Category
+                </h2>
+                <ToolStackedBar
+                  data={toolsByCategory.map((e) => ({ label: e.category, tools: e.tools }))}
+                />
+              </section>
+            </>
+          )}
+        </>
+      )}
 
       {/* About */}
       <section>
@@ -129,7 +237,7 @@ export default function DashboardContent({ standard, webSearch }: DashboardConte
         </h2>
         <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
           <p className="mb-3">
-            This benchmark sends {data.meta.promptCount} chain-agnostic prompts to {data.meta.modelCount} AI
+            This benchmark sends {chainData.meta.promptCount} chain-agnostic prompts to {chainData.meta.modelCount} AI
             models via their APIs, with no system prompt, to measure each model&apos;s inherent chain
             defaults. Every response is classified by Claude Opus 4.6.
           </p>

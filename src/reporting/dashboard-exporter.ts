@@ -121,10 +121,12 @@ function serializeGrid(grid: Grid): DashboardRunData["grid"] {
 
 export function exportDashboardData(
   results: BenchmarkResult[],
-  grid: Grid
+  grid: Grid,
+  subdir?: string,
 ): string {
+  const outputDir = subdir ? path.join(DASHBOARD_DATA_DIR, subdir) : DASHBOARD_DATA_DIR;
   // Ensure output directory exists
-  fs.mkdirSync(DASHBOARD_DATA_DIR, { recursive: true });
+  fs.mkdirSync(outputDir, { recursive: true });
 
   const timestamp = new Date().toISOString();
   const safeTimestamp = timestamp.replace(/:/g, "-").replace(/\.\d+Z$/, "");
@@ -154,15 +156,15 @@ export function exportDashboardData(
   };
 
   // Write run file
-  const runFilePath = path.join(DASHBOARD_DATA_DIR, filename);
+  const runFilePath = path.join(outputDir, filename);
   fs.writeFileSync(runFilePath, JSON.stringify(runData, null, 2));
 
   // Write latest.json (always the data that was passed in)
-  const latestPath = path.join(DASHBOARD_DATA_DIR, "latest.json");
+  const latestPath = path.join(outputDir, "latest.json");
   fs.writeFileSync(latestPath, JSON.stringify(runData, null, 2));
 
   // Update runs.json index
-  const runsIndexPath = path.join(DASHBOARD_DATA_DIR, "runs.json");
+  const runsIndexPath = path.join(outputDir, "runs.json");
   let runsIndex: RunIndexEntry[] = [];
   if (fs.existsSync(runsIndexPath)) {
     try {

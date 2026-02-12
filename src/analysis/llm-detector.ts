@@ -1,6 +1,8 @@
-import { execFile } from "node:child_process";
 import type { Detection, Strength } from "../providers/types.js";
 import { getEcosystem } from "./detector.js";
+import { spawnClaude, setClassifierModel } from "./claude-cli.js";
+
+export { setClassifierModel };
 
 const VOTE_COUNT = 1;
 
@@ -58,44 +60,6 @@ interface LlmResult {
   strength: string;
   reasoning: string;
   mentioned_chains: string[];
-}
-
-let classifierModel: string | undefined;
-
-export function setClassifierModel(model: string | undefined): void {
-  classifierModel = model;
-}
-
-function spawnClaude(responseText: string, promptText: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const args = [
-      "-p", buildPrompt(promptText),
-      "--output-format", "json",
-      "--json-schema", JSON_SCHEMA,
-      "--no-session-persistence",
-    ];
-    if (classifierModel) {
-      args.push("--model", classifierModel);
-    }
-    const child = execFile(
-      "claude",
-      args,
-      { maxBuffer: 10 * 1024 * 1024, timeout: 60_000 },
-      (err, stdout, stderr) => {
-        if (err) {
-          reject(new Error(`claude CLI failed: ${err.message}${stderr ? `\n${stderr}` : ""}`));
-          return;
-        }
-        resolve(stdout);
-      },
-    );
-
-    // Pipe response text via stdin to avoid shell escaping issues
-    if (child.stdin) {
-      child.stdin.write(responseText);
-      child.stdin.end();
-    }
-  });
 }
 
 function parseResult(stdout: string): LlmResult {
@@ -162,7 +126,7 @@ function toDetection(result: LlmResult, voteCounts?: Map<string, number>): Detec
 export async function llmDetect(responseText: string, promptText: string): Promise<Detection> {
   // Run classification multiple times concurrently for reliability
   const votePromises = Array.from({ length: VOTE_COUNT }, () =>
-    spawnClaude(responseText, promptText).then(parseResult),
+    spawnClaude(responseText, buildPrompt(promptText), JSON_SCHEMA).then(parseResult),
   );
   const votes = await Promise.all(votePromises);
 

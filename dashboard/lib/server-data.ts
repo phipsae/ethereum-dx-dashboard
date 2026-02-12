@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { DashboardRunData, RunIndexEntry } from "./types";
+import type { DashboardRunData, RunIndexEntry, ToolDashboardRunData } from "./types";
 
 export function loadRunDataFromFile(): DashboardRunData | null {
   const filePath = path.join(process.cwd(), "public", "data", "latest.json");
@@ -41,7 +41,7 @@ export function loadComparisonData(): {
 } {
   const index = loadRunsIndexFromFile();
   if (index.length === 0) {
-    // No index — fall back to latest.json as standard
+    // No index - fall back to latest.json as standard
     return { standard: loadRunDataFromFile(), webSearch: null };
   }
 
@@ -58,4 +58,49 @@ export function loadComparisonData(): {
   }
 
   return { standard, webSearch };
+}
+
+export function loadToolData(): {
+  toolStandard: ToolDashboardRunData | null;
+  toolWebSearch: ToolDashboardRunData | null;
+} {
+  // Try loading from tools/latest.json
+  const latestPath = path.join(process.cwd(), "public", "data", "tools", "latest.json");
+  try {
+    if (!fs.existsSync(latestPath)) {
+      return { toolStandard: null, toolWebSearch: null };
+    }
+    const raw = fs.readFileSync(latestPath, "utf-8");
+    const data: ToolDashboardRunData = JSON.parse(raw);
+
+    // Check if it has webSearch results
+    const hasWebSearch = data.results.some(r => r.webSearch);
+    const hasStandard = data.results.some(r => !r.webSearch);
+
+    if (hasWebSearch && hasStandard) {
+      // Split into standard and web search
+      const standardResults = data.results.filter(r => !r.webSearch);
+      const webSearchResults = data.results.filter(r => r.webSearch);
+
+      const toolStandard: ToolDashboardRunData = {
+        ...data,
+        meta: { ...data.meta, resultCount: standardResults.length, webSearch: false },
+        results: standardResults,
+      };
+      const toolWebSearch: ToolDashboardRunData = {
+        ...data,
+        meta: { ...data.meta, resultCount: webSearchResults.length, webSearch: true },
+        results: webSearchResults,
+      };
+      return { toolStandard, toolWebSearch };
+    }
+
+    // Single mode
+    if (hasWebSearch) {
+      return { toolStandard: null, toolWebSearch: data };
+    }
+    return { toolStandard: data, toolWebSearch: null };
+  } catch {
+    return { toolStandard: null, toolWebSearch: null };
+  }
 }

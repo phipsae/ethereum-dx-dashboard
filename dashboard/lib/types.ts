@@ -78,7 +78,27 @@ export interface RunIndexEntry {
   webSearch?: boolean;
 }
 
+export interface ToolSlimResult {
+  promptId: string;
+  promptCategory: string;
+  model: string;
+  modelDisplayName: string;
+  modelTier: string;
+  tools: string[];
+  reasoning?: string;
+  latencyMs: number;
+  tokensUsed: number;
+  webSearch?: boolean;
+}
+
+export interface ToolDashboardRunData {
+  meta: DashboardRunMeta;
+  results: ToolSlimResult[];
+  prompts: DashboardPrompt[];
+}
+
 export type SearchMode = "standard" | "webSearch";
+export type DashboardTab = "network" | "tools";
 
 export const CHAIN_COLORS: Record<string, string> = {
   "Ethereum Ecosystem": "#627eea",

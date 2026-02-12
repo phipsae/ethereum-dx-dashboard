@@ -1,7 +1,11 @@
 import { getAvailableModels } from "./config.js";
 import { PROMPTS } from "./prompts.js";
 import { runBenchmark } from "./runner/benchmark-runner.js";
+import { runCollect } from "./runner/collect-runner.js";
+import { runClassifyChains } from "./runner/classify-chains.js";
+import { runClassifyTools } from "./runner/classify-tools.js";
 import { createOutputDir, loadResults } from "./storage/json-store.js";
+import { createResponseDir } from "./storage/response-store.js";
 import { buildGrid } from "./reporting/summary-grid.js";
 import { printGrid } from "./reporting/console-reporter.js";
 import { generateMarkdown, saveMarkdownReport } from "./reporting/markdown-reporter.js";
@@ -25,6 +29,10 @@ function parseArgs(argv: string[]) {
       } else {
         flags[key] = "true";
       }
+    } else if (args[i] === "-c") {
+      flags["concurrency"] = args[++i];
+    } else if (args[i] === "-m") {
+      flags["model"] = args[++i];
     } else {
       positional.push(args[i]);
     }
@@ -36,7 +44,78 @@ function parseArgs(argv: string[]) {
 async function main() {
   const { command, flags, positional } = parseArgs(process.argv);
 
-  if (command === "run") {
+  if (command === "collect") {
+    const runs = parseInt(flags.runs ?? "1", 10);
+    const dryRun = flags["dry-run"] === "true";
+    const webSearch = flags["web-search"] === "true";
+    const compare = flags["compare"] === "true";
+    const modelFilter = flags.models?.split(",");
+
+    const models = getAvailableModels(modelFilter);
+
+    if (models.length === 0 && !dryRun) {
+      console.error(
+        "No models available. Set at least one API key in .env:\n" +
+          "  ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY"
+      );
+      process.exit(1);
+    }
+
+    const dryRunModels = dryRun && models.length === 0
+      ? (await import("./config.js")).MODELS
+      : models;
+    const effectiveModels = dryRun ? dryRunModels : models;
+
+    const searchModes: Array<{ label: string; webSearch: boolean }> = compare
+      ? [
+          { label: "without web search", webSearch: false },
+          { label: "with web search", webSearch: true },
+        ]
+      : [{ label: webSearch ? "with web search" : "without web search", webSearch }];
+
+    for (const mode of searchModes) {
+      if (compare) {
+        console.log(`\n${"=".repeat(60)}`);
+        console.log(`  Collecting ${mode.label.toUpperCase()}`);
+        console.log(`${"=".repeat(60)}`);
+      }
+
+      const outputDir = createResponseDir("responses", mode.webSearch);
+
+      const responses = await runCollect({
+        prompts: PROMPTS,
+        models: effectiveModels,
+        runs,
+        dryRun,
+        outputDir,
+        webSearch: mode.webSearch,
+      });
+
+      if (responses.length > 0) {
+        console.log(`\n${responses.length} responses saved to: ${outputDir}`);
+      }
+    }
+  } else if (command === "classify") {
+    const subcommand = positional[0];
+    const dirs = positional.slice(1);
+
+    if (!subcommand || dirs.length === 0) {
+      console.error("Usage:\n  classify chains <responses-dir> [...] [-c <concurrency>] [-m <model>]\n  classify tools <responses-dir> [...] [-c <concurrency>] [-m <model>]");
+      process.exit(1);
+    }
+
+    const concurrency = parseInt(flags.concurrency ?? "6", 10);
+    const model = flags.model;
+
+    if (subcommand === "chains") {
+      await runClassifyChains({ dirs, concurrency, model });
+    } else if (subcommand === "tools") {
+      await runClassifyTools({ dirs, concurrency, model });
+    } else {
+      console.error(`Unknown classify subcommand: ${subcommand}\nUse 'chains' or 'tools'.`);
+      process.exit(1);
+    }
+  } else if (command === "run") {
     const runs = parseInt(flags.runs ?? "1", 10);
     const dryRun = flags["dry-run"] === "true";
     const webSearch = flags["web-search"] === "true";
@@ -136,13 +215,22 @@ async function main() {
     console.log(`CSV report: ${csvPath}`);
   } else {
     console.log(`Usage:
-  npx tsx src/index.ts run                              Full benchmark
+  npx tsx src/index.ts run                              Full benchmark (collect + classify chains)
   npx tsx src/index.ts run --runs 5                     Multiple runs
   npx tsx src/index.ts run --models claude-opus-4-6,o3  Subset of models
   npx tsx src/index.ts run --dry-run                    Preview what would run
   npx tsx src/index.ts run --web-search                 Enable web search for all providers
   npx tsx src/index.ts run --compare                    Run both with and without web search
-  npx tsx src/index.ts report results/run-*             Report from saved data`);
+
+  npx tsx src/index.ts collect                           Collect raw responses only (no classification)
+  npx tsx src/index.ts collect --web-search              Collect with web search enabled
+  npx tsx src/index.ts collect --compare                 Collect both modes
+
+  npx tsx src/index.ts classify chains <dir> [...]       Classify chain bias from responses
+  npx tsx src/index.ts classify tools <dir> [...]        Classify tool bias from responses
+    Options: -c <concurrency> -m <model>
+
+  npx tsx src/index.ts report results/run-*              Report from saved data`);
   }
 }
 

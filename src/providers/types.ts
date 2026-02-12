@@ -61,3 +61,15 @@ export interface BenchmarkResult {
   runId: string;
   webSearch?: boolean;
 }
+
+export interface ToolBenchmarkResult {
+  promptId: string;
+  promptText: string;
+  promptCategory: string;
+  model: ModelConfig;
+  response: ProviderResponse;
+  toolDetection: { tools: string[]; reasoning: string };
+  timestamp: string;
+  runId: string;
+  webSearch: boolean;
+}

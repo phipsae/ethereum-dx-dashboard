@@ -1,4 +1,4 @@
-import type { DashboardRunData, RunIndexEntry } from "./types";
+import type { DashboardRunData, RunIndexEntry, ToolDashboardRunData } from "./types";
 import { TOOL_LABELS } from "./types";
 
 const DATA_BASE = "/data";
@@ -174,4 +174,56 @@ export function computeToolFrequency(
   return Object.entries(counts)
     .map(([tool, count]) => ({ tool, count }))
     .sort((a, b) => b.count - a.count);
+}
+
+// --- Tool bias compute functions ---
+
+export function computeOverallTools(
+  data: ToolDashboardRunData
+): Array<{ tool: string; count: number }> {
+  const counts: Record<string, number> = {};
+  for (const r of data.results) {
+    for (const tool of r.tools) {
+      counts[tool] = (counts[tool] ?? 0) + 1;
+    }
+  }
+  return Object.entries(counts)
+    .map(([tool, count]) => ({ tool, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function computePerModelTools(
+  data: ToolDashboardRunData
+): Array<{ model: string; tools: Record<string, number> }> {
+  const byModel = new Map<string, { display: string; tools: Record<string, number> }>();
+  for (const r of data.results) {
+    let entry = byModel.get(r.model);
+    if (!entry) {
+      entry = { display: r.modelDisplayName, tools: {} };
+      byModel.set(r.model, entry);
+    }
+    for (const tool of r.tools) {
+      entry.tools[tool] = (entry.tools[tool] ?? 0) + 1;
+    }
+  }
+  return Array.from(byModel.values()).map((e) => ({
+    model: e.display,
+    tools: e.tools,
+  }));
+}
+
+export function computeToolsByCategory(
+  data: ToolDashboardRunData
+): Array<{ category: string; tools: Record<string, number> }> {
+  const categories = [...new Set(data.prompts.map((p) => p.category))];
+  return categories.map((cat) => {
+    const tools: Record<string, number> = {};
+    for (const r of data.results) {
+      if (r.promptCategory !== cat) continue;
+      for (const tool of r.tools) {
+        tools[tool] = (tools[tool] ?? 0) + 1;
+      }
+    }
+    return { category: cat, tools };
+  });
 }

@@ -30,7 +30,7 @@ export default function ToolFrequencyBar({ data }: ToolFrequencyBarProps) {
   return (
     <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-4">
       <h3 className="mb-2 text-center text-sm text-[#a0a0b0]">
-        Total mentions across all responses
+        Number of responses recommending each tool
       </h3>
       <ResponsiveContainer width="100%" height={Math.max(300, data.length * 32)}>
         <BarChart data={data} layout="vertical" margin={{ left: 20 }}>
@@ -45,7 +45,7 @@ export default function ToolFrequencyBar({ data }: ToolFrequencyBarProps) {
           <Tooltip
             contentStyle={{ background: "#16213e", border: "1px solid #0f3460", borderRadius: 8 }}
             itemStyle={{ color: "#e0e0e0" }}
-            formatter={(value: number) => [`${value} mentions`, "Count"]}
+            formatter={(value: number) => [`${value} responses`, "Count"]}
           />
           <Bar dataKey="count" radius={[0, 4, 4, 0]}>
             {data.map((_, i) => (

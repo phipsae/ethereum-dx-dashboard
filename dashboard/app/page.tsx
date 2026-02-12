@@ -1,8 +1,9 @@
-import { loadComparisonData } from "@/lib/server-data";
+import { loadComparisonData, loadToolData } from "@/lib/server-data";
 import DashboardContent from "@/components/DashboardContent";
 
 export default function DashboardPage() {
   const { standard, webSearch } = loadComparisonData();
+  const { toolStandard, toolWebSearch } = loadToolData();
 
   if (!standard && !webSearch) {
     return (
@@ -20,5 +21,12 @@ export default function DashboardPage() {
     );
   }
 
-  return <DashboardContent standard={standard} webSearch={webSearch} />;
+  return (
+    <DashboardContent
+      standard={standard}
+      webSearch={webSearch}
+      toolStandard={toolStandard}
+      toolWebSearch={toolWebSearch}
+    />
+  );
 }
