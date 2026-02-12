@@ -43,7 +43,7 @@ export function generateMarkdown(grid: Grid, results: BenchmarkResult[]): string
       if (!cell) return "—";
       const net = cell.network && cell.network !== "Unspecified" && cell.network !== "Unknown"
         ? ` → ${cell.network}` : "";
-      return `**${cell.ecosystem}${net}** (${cell.confidence}%) ${(cell.latencyMs / 1000).toFixed(1)}s`;
+      return `**${cell.ecosystem}${net}** [${cell.strength}] ${(cell.latencyMs / 1000).toFixed(1)}s`;
     });
     lines.push(`| ${promptId} | ${cells.join(" | ")} |`);
   }

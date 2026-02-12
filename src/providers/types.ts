@@ -18,10 +18,12 @@ export interface ModelConfig {
   displayName: string;
 }
 
+export type Strength = "strong" | "weak" | "implicit";
+
 export interface Detection {
   network: string;
   ecosystem: string;
-  confidence: number;
+  strength: Strength;
   evidence: string[];
   all: Record<string, number>;
   reasoning?: string;

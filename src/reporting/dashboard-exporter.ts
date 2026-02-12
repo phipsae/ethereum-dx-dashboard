@@ -24,7 +24,7 @@ interface SlimResult {
   modelTier: string;
   ecosystem: string;
   network: string;
-  confidence: number;
+  strength: string;
   behavior: string;
   completeness: number;
   latencyMs: number;
@@ -36,7 +36,7 @@ interface SlimResult {
 interface SerializedGridCell {
   ecosystem: string;
   network: string;
-  confidence: number;
+  strength: string;
   behavior: string;
   completeness: number;
   latencyMs: number;
@@ -81,7 +81,7 @@ function toSlimResult(r: BenchmarkResult): SlimResult {
     modelTier: r.model.tier,
     ecosystem: r.analysis.detection.ecosystem,
     network: r.analysis.detection.network,
-    confidence: r.analysis.detection.confidence,
+    strength: r.analysis.detection.strength,
     behavior: r.analysis.behavior.behavior,
     completeness: r.analysis.completeness.score,
     latencyMs: r.response.latencyMs,
@@ -97,7 +97,7 @@ function serializeGrid(grid: Grid): DashboardRunData["grid"] {
     cells[key] = {
       ecosystem: cell.ecosystem,
       network: cell.network,
-      confidence: cell.confidence,
+      strength: cell.strength,
       behavior: cell.behavior,
       completeness: cell.completeness,
       latencyMs: cell.latencyMs,

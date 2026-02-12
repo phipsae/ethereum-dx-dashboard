@@ -1,6 +1,8 @@
 import { execFile } from "node:child_process";
-import type { Detection } from "../providers/types.js";
+import type { Detection, Strength } from "../providers/types.js";
 import { getEcosystem } from "./detector.js";
+
+const VOTE_COUNT = 3;
 
 const VALID_NETWORKS = new Set([
   "Mainnet", "Base", "Arbitrum", "Optimism", "Polygon", "zkSync", "Scroll",
@@ -8,11 +10,17 @@ const VALID_NETWORKS = new Set([
   "Aptos", "Cosmos", "Near", "Polkadot", "TON", "Unknown",
 ]);
 
+const VALID_STRENGTHS = new Set(["strong", "weak", "implicit"]);
+
 const JSON_SCHEMA = JSON.stringify({
   type: "object",
   properties: {
     network: { type: "string", description: "The primary network the response favors" },
-    confidence: { type: "number", description: "0-100 confidence" },
+    strength: {
+      type: "string",
+      enum: ["strong", "weak", "implicit"],
+      description: "How clear the chain preference is: strong = explicit recommendation or chain-specific code, weak = leans toward one chain but presents alternatives, implicit = bias only visible through code language/tooling (e.g. generic Solidity)",
+    },
     reasoning: { type: "string", description: "1-2 sentence explanation" },
     mentioned_chains: {
       type: "array",
@@ -20,7 +28,7 @@ const JSON_SCHEMA = JSON.stringify({
       description: "All blockchain networks mentioned or discussed in the response",
     },
   },
-  required: ["network", "confidence", "reasoning", "mentioned_chains"],
+  required: ["network", "strength", "reasoning", "mentioned_chains"],
 });
 
 function buildPrompt(promptText: string): string {
@@ -35,12 +43,17 @@ Rules (in priority order):
 6. No blockchain: if no blockchain is mentioned at all, or the response refuses/is chain-agnostic, return "Unknown"
 7. "Mainnet" means Ethereum L1 specifically
 
-Valid networks: Mainnet, Base, Arbitrum, Optimism, Polygon, zkSync, Scroll, Linea, Mantle, Unspecified, BSC, Avalanche, Solana, Sui, Aptos, Cosmos, Near, Polkadot, TON, Unknown`;
+Valid networks: Mainnet, Base, Arbitrum, Optimism, Polygon, zkSync, Scroll, Linea, Mantle, Unspecified, BSC, Avalanche, Solana, Sui, Aptos, Cosmos, Near, Polkadot, TON, Unknown
+
+Strength (how clear the preference is):
+- "strong": explicit recommendation by name, or code with chain-specific config (chain IDs, RPC URLs, deploy scripts)
+- "weak": leans toward one chain but presents alternatives, or recommends a category ("use an L2") then picks one as example
+- "implicit": bias only visible through code language or tooling choice (e.g. generic Solidity/EVM code without naming a chain)`;
 }
 
 interface LlmResult {
   network: string;
-  confidence: number;
+  strength: string;
   reasoning: string;
   mentioned_chains: string[];
 }
@@ -78,44 +91,56 @@ function parseResult(stdout: string): LlmResult {
   // The structured output lives under result.structured_output or directly in the object
   const result: LlmResult = parsed.result?.structured_output ?? parsed.structured_output ?? parsed;
 
-  if (!result.network || typeof result.confidence !== "number" || !result.reasoning) {
+  if (!result.network || !result.strength || !result.reasoning) {
     throw new Error(`Unexpected LLM output shape: ${JSON.stringify(result).slice(0, 200)}`);
   }
   return result;
 }
 
-function toDetection(result: LlmResult): Detection {
-  // Normalize network name — if not in our valid set, fall through
-  let network = result.network;
-  if (!VALID_NETWORKS.has(network)) {
-    // Try case-insensitive match
-    for (const valid of VALID_NETWORKS) {
-      if (valid.toLowerCase() === network.toLowerCase()) {
-        network = valid;
-        break;
-      }
-    }
-    // Still not found → treat as Unknown
-    if (!VALID_NETWORKS.has(network)) {
-      console.warn(`       ⚠ LLM returned unknown network "${result.network}", treating as Unknown`);
-      network = "Unknown";
-    }
+function normalizeNetwork(network: string): string {
+  if (VALID_NETWORKS.has(network)) return network;
+  // Try case-insensitive match
+  for (const valid of VALID_NETWORKS) {
+    if (valid.toLowerCase() === network.toLowerCase()) return valid;
   }
+  console.warn(`       ⚠ LLM returned unknown network "${network}", treating as Unknown`);
+  return "Unknown";
+}
+
+function normalizeStrength(strength: string): Strength {
+  const lower = strength.toLowerCase();
+  if (VALID_STRENGTHS.has(lower)) return lower as Strength;
+  // Fallback heuristic
+  if (/strong|explicit|clear/i.test(strength)) return "strong";
+  if (/weak|lean|alternative/i.test(strength)) return "weak";
+  return "implicit";
+}
+
+function toDetection(result: LlmResult, voteCounts?: Map<string, number>): Detection {
+  const network = normalizeNetwork(result.network);
+  const strength = normalizeStrength(result.strength);
 
   const all: Record<string, number> = {};
-  // Winner gets score 100
-  all[network] = 100;
-  // Mentioned chains each get score 1
+  if (voteCounts) {
+    // Use actual vote distribution (meaningful data)
+    for (const [net, count] of voteCounts) {
+      all[normalizeNetwork(net)] = count;
+    }
+  } else {
+    all[network] = 1;
+  }
+  // Mentioned chains not already in vote counts
   for (const chain of result.mentioned_chains) {
-    if (chain !== network && !all[chain]) {
-      all[chain] = 1;
+    const normalized = normalizeNetwork(chain);
+    if (!all[normalized]) {
+      all[normalized] = 0;
     }
   }
 
   return {
     network,
     ecosystem: getEcosystem(network),
-    confidence: result.confidence,
+    strength,
     evidence: [result.reasoning],
     all,
     reasoning: result.reasoning,
@@ -123,7 +148,32 @@ function toDetection(result: LlmResult): Detection {
 }
 
 export async function llmDetect(responseText: string, promptText: string): Promise<Detection> {
-  const stdout = await spawnClaude(responseText, promptText);
-  const result = parseResult(stdout);
-  return toDetection(result);
+  // Run classification multiple times concurrently for reliability
+  const votePromises = Array.from({ length: VOTE_COUNT }, () =>
+    spawnClaude(responseText, promptText).then(parseResult),
+  );
+  const votes = await Promise.all(votePromises);
+
+  // Count network votes
+  const networkCounts = new Map<string, number>();
+  for (const vote of votes) {
+    const net = normalizeNetwork(vote.network);
+    networkCounts.set(net, (networkCounts.get(net) ?? 0) + 1);
+  }
+
+  // Find majority network
+  const [majorityNetwork] = [...networkCounts.entries()]
+    .sort((a, b) => b[1] - a[1])[0];
+
+  // Use the first result that matches the majority
+  const winningResult = votes.find(v => normalizeNetwork(v.network) === majorityNetwork) ?? votes[0];
+
+  // Merge mentioned_chains from all votes (deduplicated)
+  const allMentioned = new Set<string>();
+  for (const vote of votes) {
+    for (const chain of vote.mentioned_chains) allMentioned.add(chain);
+  }
+  winningResult.mentioned_chains = [...allMentioned];
+
+  return toDetection(winningResult, networkCounts);
 }

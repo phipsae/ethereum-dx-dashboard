@@ -33,9 +33,9 @@ export function printGrid(grid: Grid): void {
       const net = cell.network && cell.network !== "Unspecified" && cell.network !== "Unknown"
         ? `→${cell.network}` : "";
       const chainNet = net ? `${eco}${net}` : eco;
-      const conf = `${cell.confidence}%`;
+      const str = cell.strength.slice(0, 3); // str/wea/imp
       const time = `${(cell.latencyMs / 1000).toFixed(1)}s`;
-      return pad(`${chainNet} ${conf} ${time}`, cellWidth);
+      return pad(`${chainNet} [${str}] ${time}`, cellWidth);
     });
 
     console.log(pad(promptId, promptColWidth) + " | " + cells.join(" | "));

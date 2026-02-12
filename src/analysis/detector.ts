@@ -2,7 +2,7 @@
 // DO NOT DELETE this file. It exports getEcosystem() / NETWORK_TO_ECOSYSTEM which
 // are still used by the LLM detector, and detect() may be useful for offline testing.
 
-import type { Detection } from "../providers/types.js";
+import type { Detection, Strength } from "../providers/types.js";
 
 // === Ecosystem mapping (display-layer only) ===
 
@@ -332,7 +332,7 @@ export function detect(text: string): Detection {
     return {
       network: "Unknown",
       ecosystem: "Unknown",
-      confidence: 0,
+      strength: "implicit",
       evidence: [],
       all: {},
     };
@@ -341,7 +341,10 @@ export function detect(text: string): Detection {
   const sorted = [...scores.entries()].sort((a, b) => b[1] - a[1]);
   const [topNetwork, topScore] = sorted[0];
   const totalScore = [...scores.values()].reduce((a, b) => a + b, 0);
-  const confidence = Math.round((topScore / totalScore) * 100);
+  const pct = Math.round((topScore / totalScore) * 100);
+
+  // Map old percentage to strength
+  const strength: Strength = pct >= 80 ? "strong" : pct >= 50 ? "weak" : "implicit";
 
   const all: Record<string, number> = {};
   for (const [network, score] of sorted) {
@@ -351,7 +354,7 @@ export function detect(text: string): Detection {
   return {
     network: topNetwork,
     ecosystem: getEcosystem(topNetwork),
-    confidence,
+    strength,
     evidence: evidence.get(topNetwork) ?? [],
     all,
   };

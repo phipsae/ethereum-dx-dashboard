@@ -113,7 +113,7 @@ interface ChartData {
     cells: Array<{
       ecosystem: string;
       network: string;
-      confidence: number;
+      strength: string;
       latency: string;
       behavior: string;
       completeness: number;
@@ -202,7 +202,7 @@ function extractChartData(grid: Grid, results: BenchmarkResult[]): ChartData {
       return {
         ecosystem: cell.ecosystem,
         network: cell.network,
-        confidence: cell.confidence,
+        strength: cell.strength,
         latency: (cell.latencyMs / 1000).toFixed(1),
         behavior: cell.behavior,
         completeness: cell.completeness,
@@ -316,7 +316,7 @@ export function generateHtml(grid: Grid, results: BenchmarkResult[]): string {
           if (!c) return "<td>—</td>";
           const netBadge = c.network && c.network !== "Unspecified" && c.network !== "Unknown"
             ? ` <span style="color:${escapeHtml(getNetworkColor(c.network))}">→ ${escapeHtml(c.network)}</span>` : "";
-          return `<td><strong>${escapeHtml(c.ecosystem)}</strong>${netBadge} (${c.confidence}%)<br><span class="detail">${c.latency}s</span></td>`;
+          return `<td><strong>${escapeHtml(c.ecosystem)}</strong>${netBadge} [${escapeHtml(c.strength)}]<br><span class="detail">${c.latency}s</span></td>`;
         })
         .join("");
       return `<tr><td class="prompt-cell">${escapeHtml(row.prompt)}</td>${cells}</tr>`;

@@ -3,7 +3,7 @@ import type { BenchmarkResult, ModelConfig } from "../providers/types.js";
 export interface GridCell {
   ecosystem: string;
   network: string;
-  confidence: number;
+  strength: string;
   behavior: string;
   completeness: number;
   latencyMs: number;
@@ -81,7 +81,7 @@ export function buildGrid(results: BenchmarkResult[]): Grid {
     cells.set(key, {
       ecosystem: topEcosystem[0],
       network: topNetwork[0],
-      confidence: latestResult.analysis.detection.confidence,
+      strength: latestResult.analysis.detection.strength,
       behavior: topBehavior[0],
       completeness: Math.round(totalCompleteness / group.length),
       latencyMs: Math.round(totalLatency / group.length),

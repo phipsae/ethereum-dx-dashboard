@@ -118,7 +118,7 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
               const netSuffix = analysis.detection.network !== "Unspecified" && analysis.detection.network !== "Unknown"
                 ? ` [${analysis.detection.network}]` : "";
               console.log(
-                `       → ${analysis.detection.ecosystem}${netSuffix} (${analysis.detection.confidence}% confidence) | ` +
+                `       → ${analysis.detection.ecosystem}${netSuffix} (${analysis.detection.strength}) | ` +
                 `${(response.latencyMs / 1000).toFixed(1)}s`
               );
             } catch (err) {

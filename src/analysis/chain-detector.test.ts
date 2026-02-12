@@ -26,7 +26,7 @@ npx hardhat deploy
     const result = detect(text);
     expect(result.ecosystem).toBe("Ethereum Ecosystem");
     expect(result.network).toBe("Unspecified");
-    expect(result.confidence).toBeGreaterThan(80);
+    expect(result.strength).toBe("strong");
     expect(result.evidence.length).toBeGreaterThan(0);
   });
 
@@ -51,7 +51,7 @@ Install @solana/web3.js for the frontend.
     const result = detect(text);
     expect(result.network).toBe("Solana");
     expect(result.ecosystem).toBe("Solana");
-    expect(result.confidence).toBeGreaterThan(70);
+    expect(["strong", "weak"]).toContain(result.strength);
   });
 
   it("detects Sui from Move code", () => {
@@ -80,7 +80,7 @@ module my_game::creature {
     const result = detect(text);
     expect(result.network).toBe("Sui");
     expect(result.ecosystem).toBe("Sui");
-    expect(result.confidence).toBeGreaterThan(60);
+    expect(["strong", "weak"]).toContain(result.strength);
   });
 
   it("returns Unknown for unrelated text", () => {
@@ -88,7 +88,7 @@ module my_game::creature {
     const result = detect(text);
     expect(result.network).toBe("Unknown");
     expect(result.ecosystem).toBe("Unknown");
-    expect(result.confidence).toBe(0);
+    expect(result.strength).toBe("implicit");
   });
 
   it("handles mixed signals with dominant ecosystem winning", () => {
@@ -108,7 +108,7 @@ You could also deploy this on Solana but I'll use Ethereum.
     `;
     const result = detect(text);
     expect(result.ecosystem).toBe("Ethereum Ecosystem");
-    expect(result.confidence).toBeGreaterThan(70);
+    expect(["strong", "weak"]).toContain(result.strength);
   });
 
   it("detects Cosmos from CosmWasm code", () => {
@@ -121,7 +121,7 @@ use cosmwasm_std::{entry_point, DepsMut, Env, MessageInfo, Response};
     const result = detect(text);
     expect(result.network).toBe("Cosmos");
     expect(result.ecosystem).toBe("Cosmos");
-    expect(result.confidence).toBeGreaterThan(50);
+    expect(["strong", "weak"]).toContain(result.strength);
   });
 
   it("detects BSC with EVM-generic boost", () => {

@@ -15,7 +15,9 @@ export interface SlimResult {
   modelTier: string;
   ecosystem: string;
   network: string;
-  confidence: number;
+  strength?: string;
+  /** @deprecated Use strength instead. Present in pre-migration data. */
+  confidence?: number;
   behavior: string;
   completeness: number;
   latencyMs: number;
@@ -27,16 +29,18 @@ export interface SlimResult {
 export interface SerializedGridCell {
   ecosystem: string;
   network: string;
-  confidence: number;
+  strength?: string;
+  /** @deprecated Use strength instead. Present in pre-migration data. */
+  confidence?: number;
   behavior: string;
   completeness: number;
   latencyMs: number;
   ecosystemCounts: Record<string, number>;
   networkCounts: Record<string, number>;
   runCount: number;
-  /** @deprecated Old format field — present in pre-migration JSON data */
+  /** @deprecated Old format field - present in pre-migration JSON data */
   chain?: string;
-  /** @deprecated Old format field — present in pre-migration JSON data */
+  /** @deprecated Old format field - present in pre-migration JSON data */
   chainCounts?: Record<string, number>;
 }
 
