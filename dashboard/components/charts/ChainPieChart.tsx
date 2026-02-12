@@ -1,7 +1,7 @@
 "use client";
 
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
-import { getChainColor } from "@/lib/types";
+import { getChainColor, getDisplayName } from "@/lib/types";
 
 interface ChainPieChartProps {
   data: Record<string, number>;
@@ -15,7 +15,7 @@ export default function ChainPieChart({ data, title, height = 300 }: ChainPieCha
     .sort((a, b) => b[1] - a[1]);
   const total = entries.reduce((sum, [, v]) => sum + v, 0);
 
-  const chartData = entries.map(([name, value]) => ({ name, value }));
+  const chartData = entries.map(([name, value]) => ({ name: getDisplayName(name), value }));
 
   return (
     <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-4">
@@ -43,18 +43,6 @@ export default function ChainPieChart({ data, title, height = 300 }: ChainPieCha
             itemStyle={{ color: "#e0e0e0" }}
             formatter={(value: number, name: string) => {
               const pct = `${value} (${((value / total) * 100).toFixed(1)}%)`;
-              if (name === "Unknown") {
-                return [
-                  <span key="unknown">
-                    {pct}
-                    <br />
-                    <span style={{ fontSize: 11, color: "#a0a0b0" }}>
-                      Response didn&apos;t specify a blockchain or was chain-agnostic
-                    </span>
-                  </span>,
-                  name,
-                ];
-              }
               return [pct, name];
             }}
           />

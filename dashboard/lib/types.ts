@@ -87,23 +87,32 @@ export const CHAIN_COLORS: Record<string, string> = {
   BSC: "#f0b90b",
   Avalanche: "#e84142",
   TON: "#0098ea",
-  Unknown: "#888888",
+  Unknown: "#64748b",
 };
 
 export const NETWORK_COLORS: Record<string, string> = {
   Mainnet: "#627eea",
   Base: "#0052ff",
-  Arbitrum: "#28a0f0",
+  Arbitrum: "#12aaff",
   Optimism: "#ff0420",
-  Polygon: "#8247e5",
+  Polygon: "#e667af",
   BSC: "#f0b90b",
   Avalanche: "#e84142",
   zkSync: "#8c8dfc",
   Scroll: "#ffeeda",
   Linea: "#61dfff",
-  Mantle: "#000000",
-  Unspecified: "#888888",
+  Mantle: "#c4a35a",
+  Unspecified: "#9b8ec4",
 };
+
+export const DISPLAY_NAMES: Record<string, string> = {
+  Unspecified: "Ethereum (No Specific L2)",
+  Unknown: "Chain Agnostic",
+};
+
+export function getDisplayName(key: string): string {
+  return DISPLAY_NAMES[key] ?? key;
+}
 
 export const BEHAVIOR_COLORS: Record<string, string> = {
   "just-built": "#4bc0c0",
@@ -149,10 +158,20 @@ export function getToolColor(index: number): string {
   return TOOL_COLORS[index % TOOL_COLORS.length];
 }
 
+// Reverse lookup: display name → raw key
+const DISPLAY_TO_RAW: Record<string, string> = {};
+for (const [raw, display] of Object.entries(DISPLAY_NAMES)) {
+  DISPLAY_TO_RAW[display] = raw;
+}
+
+function resolveKey(key: string): string {
+  return DISPLAY_TO_RAW[key] ?? key;
+}
+
 export function getChainColor(chain: string): string {
-  return CHAIN_COLORS[chain] ?? "#888888";
+  return CHAIN_COLORS[resolveKey(chain)] ?? "#888888";
 }
 
 export function getNetworkColor(network: string): string {
-  return NETWORK_COLORS[network] ?? "#888888";
+  return NETWORK_COLORS[resolveKey(network)] ?? "#888888";
 }

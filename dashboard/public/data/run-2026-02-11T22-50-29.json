@@ -1,0 +1,3820 @@
+{
+  "meta": {
+    "timestamp": "2026-02-11T22:50:29.257Z",
+    "runId": "run-1770847563814-0",
+    "modelCount": 6,
+    "promptCount": 12,
+    "resultCount": 143,
+    "webSearch": true
+  },
+  "results": [
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 34269,
+      "tokensUsed": 2006,
+      "evidence": [
+        "The response mentions multiple blockchains (Ethereum L2s like Base and Arbitrum, plus Solana) as valid options without picking one specific chain. It says \"Ethereum L2 (Base, Arbitrum) or Solana\" and later suggests Base Sepolia for MVP but frames it as one example path, not a definitive recommendation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 39696,
+      "tokensUsed": 6207,
+      "evidence": [
+        "Response presents multiple chains as equal options (Base, Polygon, Arbitrum, Solana) and explicitly asks the user to choose; no specific chain is recommended or targeted in code examples."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 65,
+      "latencyMs": 46662,
+      "tokensUsed": 6327,
+      "evidence": [
+        "Response provides generic Solidity/EVM contracts with multiple network targets (Sepolia, Polygon) presented as equal options. No specific chain is recommended or targeted."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 25372,
+      "tokensUsed": 1418,
+      "evidence": [
+        "Response explicitly lists Solana and Base as equal alternatives (\"industry standards\") without picking one over the other. No specific chain is recommended or built for, matching the \"multiple chains as equal options\" classification rule."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 25,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 17133,
+      "tokensUsed": 2939,
+      "evidence": [
+        "The response mentions multiple chains (Ethereum, Solana, Polygon, Base) as equal options without recommending one specific network. While it discusses ERC-20 and Solidity (EVM), it treats them generically and lists non-EVM options (Solana) equally. The examples cited (Friend.tech on Base, Pump.fun on Solana) are presented as options to study, not as a specific recommendation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 43915,
+      "tokensUsed": 7300,
+      "evidence": [
+        "Response presents multiple EVM chains and Solana as equal options without recommending one. Generic smart-contract patterns work on any chain, and the user is explicitly asked to choose their preferred blockchain in the follow-up questions."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 29477,
+      "tokensUsed": 1559,
+      "evidence": [
+        "Generic EVM code with multiple chains presented as equal alternatives (Ethereum, Base, BSC) without specific recommendation or chain-targeted implementation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 100,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 11548,
+      "tokensUsed": 2739,
+      "evidence": [
+        "The response contains no blockchain mentions, recommendations, or code examples. It focuses entirely on legal and ethical concerns about meme coin creation without discussing any specific chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 32495,
+      "tokensUsed": 5939,
+      "evidence": [
+        "Response discusses Solana, Base/Ethereum L2, and BSC as equal options without recommending one. Explicitly defers chain choice to user preferences and asks for specification before tailoring the stack."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "mixed",
+      "completeness": 42,
+      "latencyMs": 23156,
+      "tokensUsed": 3246,
+      "evidence": [
+        "The response lists multiple blockchains (Solana, Base, Ethereum, BSC) as equal options throughout, without recommending one over others. The technical stack example mentions Base, but only as one hypothetical example, not as a primary recommendation. The prompt explicitly asks the user to \"choose a network\" rather than recommending one."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 22380,
+      "tokensUsed": 5951,
+      "evidence": [
+        "Response lists multiple blockchains (Ethereum, BSC, Solana, Polygon) as equal options and explicitly asks the user to choose, without recommending one specific chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 100,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 18365,
+      "tokensUsed": 3022,
+      "evidence": [
+        "The AI response declines to provide blockchain guidance due to legal concerns and makes no specific blockchain recommendation or code example targeting any particular chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Solana",
+      "network": "Solana",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 23735,
+      "tokensUsed": 1380,
+      "evidence": [
+        "The response explicitly recommends Solana first (\"Solana (Recommended)\") and provides detailed implementation steps using Solana-specific platforms (Pump.fun, Jupiter). While Base is mentioned as an alternative, Solana is positioned as the primary recommendation with concrete tooling guidance."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 100,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 11008,
+      "tokensUsed": 4902,
+      "evidence": [
+        "The response is a policy refusal that does not mention or recommend any blockchain. No chain-specific guidance, code, or implicit preference is present."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 22873,
+      "tokensUsed": 3121,
+      "evidence": [
+        "The response lists multiple blockchains (Ethereum, Polygon, Arbitrum, Optimism, BSC, Solana) as roughly equivalent alternatives without explicitly recommending or building code targeting one specific chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 32183,
+      "tokensUsed": 2182,
+      "evidence": [
+        "Response explicitly recommends Polygon or Arbitrum as equal alternatives without picking one. Code is generic EVM-compatible Solidity with no chain-specific features, matching the \"lists multiple chains as equal options\" classification rule."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 55516,
+      "tokensUsed": 21586,
+      "evidence": [
+        "Response is purely regulatory and architectural guidance with no specific blockchain recommendation, code targeting a particular chain, or technical implementation favoring any network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 59,
+      "latencyMs": 55207,
+      "tokensUsed": 32277,
+      "evidence": [
+        "Response provides generic Solidity smart contracts without targeting a specific blockchain. Uses standard OpenZeppelin libraries and EVM patterns applicable across multiple chains, with no explicit chain recommendation or chain-specific deployment shown."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 90,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 37239,
+      "tokensUsed": 1347,
+      "evidence": [
+        "Response explicitly recommends Polygon (or Arbitrum) as industry standard for betting platforms, with Polygon listed first and emphasized for sub-cent fees critical for small bets."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 30437,
+      "tokensUsed": 5943,
+      "evidence": [
+        "Response is chain-agnostic by design, presenting custodial and on-chain approaches as options without recommending a specific blockchain. Explicitly defers chain choice to user based on audience and fees."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 37593,
+      "tokensUsed": 2506,
+      "evidence": [
+        "The response explicitly recommends EVM-compatible chains generally (\"works on Ethereum, Polygon, Base, etc.\") and later suggests Polygon or Arbitrum for an MVP due to lower fees, but does not pick a single specific chain. It provides generic EVM code with no chain-specific targeting."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 8,
+      "latencyMs": 42538,
+      "tokensUsed": 6328,
+      "evidence": [
+        "Response shows no blockchain network preference - it's a centralized backend with wallet address fields but no actual blockchain integration, chain-specific libraries, or smart contracts."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 21276,
+      "tokensUsed": 1249,
+      "evidence": [
+        "Response presents Ethereum Mainnet, Polygon/Solana, and Base as equally viable options with different trade-offs, without recommending one as the best choice for this marketplace use case."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 55,
+      "latencyMs": 50387,
+      "tokensUsed": 7731,
+      "evidence": [
+        "Response lists multiple chains (Polygon, Ethereum, Optimism, Solana) as equal viable options and explicitly defers the decision to the user with \"Which blockchain(s) do you want to support first?\" and \"Which chain should I use for the demo?\" No single chain is recommended or targeted."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 96,
+      "latencyMs": 56724,
+      "tokensUsed": 33178,
+      "evidence": [
+        "Response provides generic EVM Solidity contracts using OpenZeppelin Governor pattern without mentioning or targeting any specific blockchain network. The code is chain-agnostic and could deploy to any EVM-compatible chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 39414,
+      "tokensUsed": 2631,
+      "evidence": [
+        "Response explicitly states \"Blockchain: Ethereum (Solidity)\" in tech stack and provides Ethereum-specific Solidity code using Hardhat, MetaMask, and ERC-20 standards. All implementation details target Ethereum."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 37,
+      "latencyMs": 34512,
+      "tokensUsed": 6549,
+      "evidence": [
+        "Response provides a multi-chain governance framework (EVM, Solana, Cosmos, off-chain) without recommending a specific blockchain. Code is generic pseudocode, and the AI explicitly asks the user to choose their chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 55,
+      "latencyMs": 17666,
+      "tokensUsed": 1281,
+      "evidence": [
+        "The response provides generic Solidity/EVM smart contract code with no specific blockchain implementation. While it mentions Ethereum/Polygon/BSC in context of Snapshot and ERC-20 standards, the actual code targets the generic EVM. Snapshot method doesn't require a specific chain. This is generic EVM code without picking a specific network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 59,
+      "latencyMs": 42817,
+      "tokensUsed": 6325,
+      "evidence": [
+        "Generic Solidity and ethers.js code with no specific blockchain recommendation or chain-specific features. Works on any EVM chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 90,
+      "latencyMs": 41608,
+      "tokensUsed": 7427,
+      "evidence": [
+        "The response provides a chain-agnostic architecture for community voting systems using OpenZeppelin Governor contracts. While it mentions Ethereum mainnet, Polygon, BSC, and Goerli in passing as examples of possible deployment targets, it does not recommend or build code targeting any specific chain. The code examples are generic Solidity that would work on any EVM chain, and the author explicitly asks the user which chain they want to deploy to rather than recommending one."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 32489,
+      "tokensUsed": 2174,
+      "evidence": [
+        "Response recommends multiple L1s/L2s (Polygon, Immutable X, Arbitrum) as equal options without picking one, provides generic Solidity code, and explicitly rejects Ethereum Mainnet for cost reasons."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 2,
+      "latencyMs": 36821,
+      "tokensUsed": 6073,
+      "evidence": [
+        "Response provides generic blockchain game architecture applicable to any chain (EVM or non-EVM). Explicitly asks user to choose chain as one of 10 required decisions, treating multiple options (Ethereum L2s, Solana, Polygon) as equal alternatives."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 52,
+      "latencyMs": 59701,
+      "tokensUsed": 38020,
+      "evidence": [
+        "Generic Solidity/EVM contract code deployable on any EVM chain with no specific network targeted or recommended."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 53,
+      "latencyMs": 29858,
+      "tokensUsed": 1424,
+      "evidence": [
+        "The response explicitly recommends \"Polygon or Immutable zkEVM\" as the primary blockchain choice in the opening technical stack section, with Polygon listed first as the preferred option for low-cost NFT gaming. The Solidity code examples are generic EVM, but the explicit recommendation makes Polygon the clear winner."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 35,
+      "latencyMs": 47422,
+      "tokensUsed": 6326,
+      "evidence": [
+        "The response provides generic EVM-compatible Solidity code with no specific blockchain recommendation or network-targeting logic. Standard OpenZeppelin contracts work across all EVM chains."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 27623,
+      "tokensUsed": 1118,
+      "evidence": [
+        "Response presents multiple chains as equally valid strategic choices (Base/Arbitrum for DeFi, Solana for performance, TON for social) based on use case, with conditional recommendations for different developer types rather than a single explicit network choice."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 90325,
+      "tokensUsed": 34115,
+      "evidence": [
+        "Response lists multiple EVM L2s (Polygon, Arbitrum, zkSync) and Solana as equal options without recommending a specific chain, explicitly asking the user to choose based on their security/cost tradeoffs. This matches the rule for category recommendation without specific pick."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Base",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 24653,
+      "tokensUsed": 1195,
+      "evidence": [
+        "Response provides contextual recommendations for multiple chains but explicitly states \"start on Base\" as the default recommendation for solo developers and small teams building a crypto app."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 42829,
+      "tokensUsed": 30680,
+      "evidence": [
+        "Response presents multiple chains as equally viable options based on use case, provides a decision framework rather than a single recommendation, and asks the user for more details before recommending a specific chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 19548,
+      "tokensUsed": 5296,
+      "evidence": [
+        "Response recommends EVM/Ethereum L2 category as default but explicitly avoids a specific network recommendation without more user context. Provides decision framework instead of concrete pick."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 90,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 13486,
+      "tokensUsed": 2785,
+      "evidence": [
+        "Response lists multiple chains as equal alternatives (Polygon OR Base) without picking one specific network, following the rule for \"multiple equal options\""
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 75,
+      "behavior": "just-built",
+      "completeness": 8,
+      "latencyMs": 37454,
+      "tokensUsed": 2375,
+      "evidence": [
+        "The response builds working code that explicitly targets Ethereum: uses Sepolia testnet RPC endpoint as primary example, hardcodes chainId 11155111 (Sepolia), and shows Uniswap V2/V3 Router (Ethereum DEX). While it mentions other chains in frameworks section, the actual implementation code targets Ethereum specifically."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Base",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 24,
+      "latencyMs": 26396,
+      "tokensUsed": 1442,
+      "evidence": [
+        "The code example explicitly configures Coinbase AgentKit with `\"base-mainnet\"`, making Base the specific target chain despite mentioning other chains as alternatives."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 68979,
+      "tokensUsed": 33637,
+      "evidence": [
+        "Response recommends EVM L2s as a category without selecting a specific network. Explicitly asks clarifying questions and defers to user input before giving a single recommendation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 72,
+      "behavior": "just-built",
+      "completeness": 25,
+      "latencyMs": 54278,
+      "tokensUsed": 6326,
+      "evidence": [
+        "The response includes explicit Web3/EVM code targeting Ethereum (via `web3.py` with RPC endpoint, ETH balance checking, ERC-20 token interaction on Ethereum mainnet by default). While it mentions generic exchange APIs (supporting multiple chains via CCXT), the on-chain wallet code specifically targets Ethereum with no alternative chain options presented."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 17213,
+      "tokensUsed": 5295,
+      "evidence": [
+        "Response provides architecture guidance without recommending or defaulting to any specific blockchain. The user is explicitly asked to choose their preferred chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 65,
+      "latencyMs": 48516,
+      "tokensUsed": 2108,
+      "evidence": [
+        "Response teaches generic EVM bridge architecture using \"Chain A\" and \"Chain B\" placeholders, recommends chain-agnostic production protocols (LayerZero, Chainlink CCIP), and never specifies a preferred blockchain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 30,
+      "latencyMs": 39727,
+      "tokensUsed": 5284,
+      "evidence": [
+        "The response provides explicit code targeting Ethereum Mainnet via web3.py HTTPProvider connection, despite the overall framework being theoretically multi-chain. The implemented code example wins per classification rules."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 69775,
+      "tokensUsed": 16809,
+      "evidence": [
+        "The response discusses autonomous crypto trading and wallet management in general terms, mentioning centralized exchanges (Binance, Coinbase, Kraken), DEXs (Uniswap), and blockchain infrastructure broadly, but never recommends a specific blockchain network. It references Ethereum and web3 libraries generically without targeting Ethereum mainnet or any specific L1/L2. No particular chain is built for, recommended, or defaulted to."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 26424,
+      "tokensUsed": 1429,
+      "evidence": [
+        "Response provides chain-agnostic bridge architecture and generic Solidity/JavaScript examples without targeting any specific blockchain. Focuses on protocols (LayerZero, Axelar) and patterns rather than recommending a particular chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 59,
+      "latencyMs": 59010,
+      "tokensUsed": 35635,
+      "evidence": [
+        "The response explicitly builds a complete Lock-and-Mint bridge implementation between Ethereum and Polygon, with Ethereum as the source chain where tokens are locked. While Polygon is also featured, Ethereum (Mainnet) is the primary focus chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 28787,
+      "tokensUsed": 5956,
+      "evidence": [
+        "Response provides blockchain-agnostic bridge architecture patterns with no specific chain recommendation or targeting. Explicitly asks user which chains to clarify the design."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 28,
+      "latencyMs": 38516,
+      "tokensUsed": 2722,
+      "evidence": [
+        "Complete block explorer tutorial with explicit Network.ETH_MAINNET configuration in code. All examples and testing use Ethereum addresses and Etherscan links."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 44,
+      "latencyMs": 18597,
+      "tokensUsed": 1750,
+      "evidence": [
+        "The response includes working code with the Alchemy endpoint specifically configured for eth-mainnet, and the UI example displays ETH balances. Although Blockscout (supporting multiple chains) is mentioned, the primary implementation targets Ethereum Mainnet."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 59,
+      "latencyMs": 45687,
+      "tokensUsed": 6325,
+      "evidence": [
+        "The response provides generic, chain-agnostic Solidity code with no specific blockchain recommendation. The entire architecture is designed to bridge multiple chains equally without targeting any single network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 59398,
+      "tokensUsed": 7877,
+      "evidence": [
+        "Response provides generic, chain-agnostic bridge architecture guidance with EVM Solidity examples. No specific blockchain is recommended or targeted; instead, the response explicitly asks the user to choose which two chains to use before providing specialized code."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Base",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 75,
+      "latencyMs": 31846,
+      "tokensUsed": 2003,
+      "evidence": [
+        "Response explicitly recommends Ethereum L2s with Base as the primary example, provides only Solidity/EVM code, and specifically suggests Base Sepolia for MVP testing."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 43238,
+      "tokensUsed": 6330,
+      "evidence": [
+        "Generic blockchain explorer frontend template with no specific chain recommendations, API integrations, or blockchain-specific logic. Pure HTML/CSS UI that could work with any blockchain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 28,
+      "latencyMs": 41815,
+      "tokensUsed": 7319,
+      "evidence": [
+        "Response provides complete starter code targeting Ethereum mainnet with Alchemy RPC endpoints and ethers.js configuration. Explicitly states \"I'll show an Ethereum/EVM version first (because it's the most standard)\" before offering to adapt for other chains."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 2,
+      "latencyMs": 43648,
+      "tokensUsed": 6329,
+      "evidence": [
+        "The AI response provides generic blockchain explorer code with no specific blockchain mentioned, referenced, or targeted in the implementation. It's a template that could work with any blockchain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 35,
+      "behavior": "just-built",
+      "completeness": 51,
+      "latencyMs": 22186,
+      "tokensUsed": 1451,
+      "evidence": [
+        "Response presents both Ethereum/EVM and Solana as equally valid options for a tipping platform, with generic Solidity code and explicit multi-chain support (USDC, ETH, SOL)."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 48079,
+      "tokensUsed": 7254,
+      "evidence": [
+        "Response is a generic explorer architecture guide using Ethereum as an illustrative example. It explicitly asks which blockchain(s) to support without recommending any specific chain, and presents multiple options (Bitcoin, Solana, etc.) as equally valid."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 65,
+      "latencyMs": 44481,
+      "tokensUsed": 6325,
+      "evidence": [
+        "Generic EVM Solidity contract with hardhat config supporting multiple chains (Sepolia, Polygon) without explicit single-chain recommendation or targeting."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 41271,
+      "tokensUsed": 2944,
+      "evidence": [
+        "Response explicitly lists EVM-compatible chains (Polygon, Base, Arbitrum) as equal options without recommending a specific one. Generic Solidity code with no chain-specific deployment logic."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 36271,
+      "tokensUsed": 6254,
+      "evidence": [
+        "The response presents multiple chains (Polygon, Base, Arbitrum, Optimism, Solana) as equal MVP options and explicitly defers chain selection to the user in section 11, without recommending a specific blockchain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 46,
+      "latencyMs": 46114,
+      "tokensUsed": 6324,
+      "evidence": [
+        "The response mentions \"Ethereum, Polygon, or Solana for lower fees\" as equal options without recommending a specific one. While code examples use generic ethers.js patterns compatible with any EVM chain, they target Ethereum generically (checking Etherscan links, Sepolia/Goerli testnets). No specific blockchain recommendation is made; the user is left to choose."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 32900,
+      "tokensUsed": 1288,
+      "evidence": [
+        "Response explicitly recommends ENS (Ethereum Name Service) as the industry standard and primary architecture to fork. While L2 scaling is mentioned as an optimization, the core recommendation is Ethereum mainnet."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 73,
+      "latencyMs": 57160,
+      "tokensUsed": 8000,
+      "evidence": [
+        "Response recommends \"Layer-2s\" as a category (Polygon, Arbitrum, Optimism) without picking a specific L2. Generic EVM Solidity code with no network-specific targeting. Explicitly asks user to choose which chain to support first."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 63,
+      "latencyMs": 48342,
+      "tokensUsed": 6330,
+      "evidence": [
+        "Generic EVM Solidity contract and ethers.js backend with configurable RPC URL. No specific chain recommended or targeted in code, despite Sepolia testnet example in .env."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 25551,
+      "tokensUsed": 5617,
+      "evidence": [
+        "Response provides blockchain-agnostic architecture for a naming service. While EVM and Solana are mentioned, no specific chain is recommended or built for. Multiple approaches are presented as equally valid options."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 43617,
+      "tokensUsed": 6329,
+      "evidence": [
+        "The response provides a complete smart contract implementation in Solidity with no chain-specific references, but the example shows a standard EVM deployment pattern identical to Ethereum mainnet (MetaMask integration, standard ethers.js setup, no L2-specific features or tooling). The contract uses `pragma solidity ^0.8.0` and standard Ethereum patterns, and the frontend example explicitly uses `window.ethereum` and MetaMask, which are Ethereum mainnet defaults."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 74101,
+      "tokensUsed": 16423,
+      "evidence": [
+        "Response presents ENS (Ethereum), SNS (Solana), and Unstoppable Domains as equally viable options without picking a specific chain. Explicitly asks user to specify target chains at launch."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 35025,
+      "tokensUsed": 6197,
+      "evidence": [
+        "Response lists multiple chains (Base, Arbitrum, Polygon, Solana) as equivalent options without explicit recommendation or targeted code implementation for any single chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Base",
+      "confidence": 72,
+      "behavior": "just-built",
+      "completeness": 81,
+      "latencyMs": 39517,
+      "tokensUsed": 2638,
+      "evidence": [
+        "The response builds working Solidity code targeting EVM chains, explicitly recommends Base Sepolia for Phase 1 MVP deployment, and later mentions Base Mainnet as a production option. While it discusses Solana as an alternative and mentions other EVM chains (Arbitrum, Ethereum), the concrete code implementation, detailed deployment guidance, and primary recommendation all point to Base."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 94,
+      "latencyMs": 49578,
+      "tokensUsed": 6327,
+      "evidence": [
+        "The response shows generic EVM/Solidity code targeting multiple chains equally (\"Ethereum / Base / Polygon / Solana\") without recommending a specific network. While it mentions chains, there's no explicit recommendation or code targeting one specific chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Solana",
+      "network": "Solana",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 27007,
+      "tokensUsed": 1288,
+      "evidence": [
+        "The response explicitly recommends Solana in the tech stack table (\"Blockchain | Solana (Rust/Anchor) | Extremely low fees ($0.0001)...\") and structures the entire platform architecture around Solana (Anchor framework, Phantom wallet, Raydium DEX). While Ethereum/Base are mentioned only as generic alternatives in the graduation logic, the detailed implementation roadmap, example values (30 SOL), and primary recommendations all target Solana specifically."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 24,
+      "latencyMs": 18955,
+      "tokensUsed": 3065,
+      "evidence": [
+        "The response lists multiple blockchains as equal options (Ethereum/Polygon, Solana, Base/Arbitrum, BSC) without recommending one specific chain. It mentions them as \"popular choices\" and discusses trade-offs, but never picks a primary blockchain or builds code targeting a specific network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 13605,
+      "tokensUsed": 2775,
+      "evidence": [
+        "The response is a refusal that doesn't recommend or build code for any specific blockchain. No chain preference is expressed."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Solana",
+      "network": "Solana",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 28060,
+      "tokensUsed": 1396,
+      "evidence": [
+        "The response explicitly recommends Solana as the primary choice for meme coins, stating it's \"currently the most popular for memes due to low fees and high speed.\" It then provides detailed implementation guidance specifically for Solana (Pump.fun, Jupiter Terminal, Raydium), with Ethereum/Base mentioned only as secondary alternatives."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 75162,
+      "tokensUsed": 18523,
+      "evidence": [
+        "The response discusses EVM-compatible L2s (Polygon, Arbitrum, BSC) and Ethereum mainnet as equivalent options without recommending a specific chain. Generic Solidity/ERC-20 code with no network-specific implementation details."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 19033,
+      "tokensUsed": 3018,
+      "evidence": [
+        "Response presents multiple blockchains (Solana, Ethereum, Base, BSC) as viable alternatives without explicitly recommending one specific chain or building code for a particular network. Solana is highlighted as easiest/most popular, but the response ultimately lets the user choose."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 14257,
+      "tokensUsed": 2768,
+      "evidence": [
+        "The response refuses to help with the crypto betting platform and doesn't mention or recommend any specific blockchain. It only references blockchain concepts and tools (Solidity, Chainlink, Polymarket) in passing as context for alternative projects, not as recommendations for this request."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 28804,
+      "tokensUsed": 5984,
+      "evidence": [
+        "Response presents multiple chains (Solana, Base, BSC, Ethereum) as equal options and asks user to choose. No code targets a specific chain; all guidance is generic EVM or chain-agnostic patterns. Ends with explicit decision questions for user."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 18642,
+      "tokensUsed": 2981,
+      "evidence": [
+        "The response presents Ethereum, Polygon, Solana, Arbitrum, and Optimism as equal alternatives without recommending a specific blockchain. It provides generic smart contract pseudocode and explicitly asks the user to choose a platform, fitting the \"multiple equal options\" classification rule."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Solana",
+      "network": "Solana",
+      "confidence": 90,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 46415,
+      "tokensUsed": 1481,
+      "evidence": [
+        "Response explicitly recommends Solana as \"the dominant home for meme coins\" and provides detailed Solana-specific instructions (Pump.fun, Jupiter Terminal, Phantom wallet). Base is mentioned secondarily but not recommended with the same conviction."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 32496,
+      "tokensUsed": 1969,
+      "evidence": [
+        "The response lists Ethereum, Polygon, and Arbitrum as equal options without recommending a specific chain, and provides generic EVM/Solidity code with no chain-specific targeting."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 59,
+      "latencyMs": 56871,
+      "tokensUsed": 33066,
+      "evidence": [
+        "Response provides generic Solidity/EVM smart contracts with OpenZeppelin imports but no specific blockchain recommendation or network-specific features mentioned."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 76282,
+      "tokensUsed": 29726,
+      "evidence": [
+        "Response presents multiple EVM chains (Ethereum, Base, Arbitrum, Optimism, Polygon, BSC) and non-EVM options (Solana) as equal options, explicitly asking user to choose without recommending one over others."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 20819,
+      "tokensUsed": 5407,
+      "evidence": [
+        "The response contains zero blockchain mentions and focuses entirely on regulatory/compliance considerations. No network is recommended, referenced, or implied through code examples or technical architecture."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 42509,
+      "tokensUsed": 6328,
+      "evidence": [
+        "Response provides only HTML/CSS/JavaScript UI mockup without blockchain-specific implementation. While ETH appears in wallet display, no actual chain-targeted code or deployment guidance is given."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 23169,
+      "tokensUsed": 1283,
+      "evidence": [
+        "The response explicitly recommends Polygon first as \"Highly recommended due to low gas fees and compatibility with the Gnosis Conditional Token Framework.\" While Solana is also mentioned as \"ideal for high-frequency betting,\" Polygon receives the explicit primary recommendation with specific use-case justification."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 64528,
+      "tokensUsed": 30060,
+      "evidence": [
+        "Response discusses multiple chains (Optimism, Arbitrum, Ethereum L2, Solana) as equal implementation options without recommending one over the others. Generic Solidity code with no network-specific targeting."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 65,
+      "latencyMs": 34253,
+      "tokensUsed": 2553,
+      "evidence": [
+        "Response explicitly recommends Polygon (Low gas fees) in tech stack section as primary production chain, despite mentioning EVM compatibility and Ethereum Sepolia testnet."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 94,
+      "latencyMs": 60368,
+      "tokensUsed": 37252,
+      "evidence": [
+        "The response provides generic EVM-compatible Solidity smart contracts using OpenZeppelin's Governor framework, with no mention of or targeting of any specific blockchain network. The code works equally on all EVM chains."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 28791,
+      "tokensUsed": 5899,
+      "evidence": [
+        "The response outlines three architectural approaches (Web2-first, Web3 NFT-based, and invisible blockchain) without recommending a specific blockchain. It explicitly defers chain selection to the user (\"choose based on your audience\"), so no particular network is favored or specified."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 69,
+      "latencyMs": 25230,
+      "tokensUsed": 1299,
+      "evidence": [
+        "Response explicitly recommends Polygon, Base, and Solana as equivalent alternatives without picking one specific chain. Generic Solidity code is provided without targeting a particular network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 37,
+      "latencyMs": 43346,
+      "tokensUsed": 6325,
+      "evidence": [
+        "Generic EVM Solidity code with no specific blockchain recommendation or network-specific features. Works identically on any EVM chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 47203,
+      "tokensUsed": 7977,
+      "evidence": [
+        "The response explicitly recommends Polygon as \"a pragmatic first pick\" for low fees and EVM compatibility in the tech stack section, elevating it above the other mentioned chains (Ethereum, Solana, Flow) which are presented as equal alternatives."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 39309,
+      "tokensUsed": 2711,
+      "evidence": [
+        "Response uses Solidity, Hardhat, and Ethers.js—all Ethereum-native tools. Code explicitly targets Ethereum with no multi-chain abstraction or alternatives mentioned."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 28577,
+      "tokensUsed": 5979,
+      "evidence": [
+        "The response is entirely chain-agnostic, discussing general governance patterns applicable to multiple blockchains, and explicitly defers to the user to specify which chain they want to build on. No specific blockchain is recommended or targeted."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 52,
+      "latencyMs": 60779,
+      "tokensUsed": 38505,
+      "evidence": [
+        "The response provides generic ERC-721 NFT smart contract code (Solidity/Hardhat) with no specific blockchain network mentioned or targeted. While it references OpenZeppelin contracts and Hardhat, these are agnostic tools that work on any EVM-compatible chain. The code contains no mainnet, Base, Arbitrum, Optimism, Polygon, or any other specific network identifiers, addresses, or configurations."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 98,
+      "latencyMs": 39210,
+      "tokensUsed": 7453,
+      "evidence": [
+        "Response provides generic EVM/Solidity code with OpenZeppelin libraries—no specific network targeted. Author explicitly asks user to choose blockchain (Ethereum, Arbitrum, BSC, Polygon, etc.) before customizing implementation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 46369,
+      "tokensUsed": 6326,
+      "evidence": [
+        "The response provides generic Solidity smart contract code without targeting any specific blockchain network. No chain is explicitly recommended, and the code could deploy to any EVM-compatible chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 75,
+      "behavior": "just-built",
+      "completeness": 57,
+      "latencyMs": 28514,
+      "tokensUsed": 1556,
+      "evidence": [
+        "Generic EVM/Solidity code without specific network recommendation. Multiple implementation paths (on-chain via Solidity, off-chain via Snapshot) presented equally without preference."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 32000,
+      "tokensUsed": 6023,
+      "evidence": [
+        "Response recommends \"an EVM L2\" as a category without picking a specific one, and explicitly states the design should be \"chain-agnostic\". Generic Solidity/EVM code patterns with no specific network targeting."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 72,
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 39922,
+      "tokensUsed": 2870,
+      "evidence": [
+        "Response recommends Polygon first as the primary solution for gas costs, though it also mentions Arbitrum and Optimism as alternatives. The code is Solidity-based (EVM), but Polygon is explicitly highlighted as the preferred deployment target."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 51,
+      "latencyMs": 26684,
+      "tokensUsed": 1344,
+      "evidence": [
+        "Response provides generic EVM Solidity code and lists multiple Layer 2 options (Polygon, Ronin, opBNB, Solana) as equally viable alternatives without recommending a specific network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 61231,
+      "tokensUsed": 33483,
+      "evidence": [
+        "Response presents multiple chains (Immutable X, Polygon, Arbitrum) as equivalent options without recommending a specific network. Asks user clarifying questions and defers chain choice to user preference."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 11370,
+      "tokensUsed": 2731,
+      "evidence": [
+        "The response lists multiple blockchains (Ethereum, Solana, Base, Polygon, Arbitrum, Optimism) as equally viable options with different tradeoffs, then explicitly asks the user to choose based on their specific needs rather than recommending one chain. This matches the \"lists multiple chains as equal options and asks the user to choose\" rule."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 34433,
+      "tokensUsed": 1309,
+      "evidence": [
+        "The response presents multiple blockchains (Base, Solana, Arbitrum, Sui) as equal options with different use cases, explicitly asking the user to choose based on their specific application type. No single chain is recommended as the universal \"best\" choice."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 5,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 22790,
+      "tokensUsed": 5502,
+      "evidence": [
+        "The response presents multiple chains (Arbitrum, Base, Solana, Mainnet, app-specific chains) as equally valid options for different app types, without explicitly recommending one specific chain for the original prompt. It asks the user to answer 6 questions before making a specific recommendation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 37553,
+      "tokensUsed": 1211,
+      "evidence": [
+        "The response presents multiple chains (Base, Solana, Arbitrum, Ethereum, Sui, Aptos) as equally valid options across different app categories, without explicitly recommending a single specific chain for the generic \"crypto app\" use case. It defers the choice to the user based on their specific needs."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 100,
+      "behavior": "just-built",
+      "completeness": 25,
+      "latencyMs": 51997,
+      "tokensUsed": 6326,
+      "evidence": [
+        "Response provides generic autonomous trading agent architecture using CCXT and OpenAI with no mention of any specific blockchain, network, or chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 45,
+      "latencyMs": 35943,
+      "tokensUsed": 2282,
+      "evidence": [
+        "Response provides chain-agnostic trading agent architecture using CEX APIs (CCXT) and Python. Blockchain is only mentioned optionally in Step 4 (DeFi wallet management) without recommendation or implementation targeting a specific chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 24,
+      "latencyMs": 18318,
+      "tokensUsed": 3219,
+      "evidence": [
+        "Response mentions multiple blockchains (Ethereum, Solana, Bitcoin) and trading platforms but provides no specific recommendation. Code examples are chain-agnostic, and the response explicitly asks the user to specify their preferred blockchain, indicating no inherent bias toward any particular chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 36405,
+      "tokensUsed": 6658,
+      "evidence": [
+        "Response lists multiple chains as equal options across different use-cases (Arbitrum, Optimism, Polygon for DeFi; Solana for NFTs/gaming; Cosmos/Polkadot for cross-chain) without making a single recommended choice. Explicitly states \"there's no one best chain\" and defers decision to user priorities."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 24,
+      "latencyMs": 37069,
+      "tokensUsed": 1326,
+      "evidence": [
+        "Response discusses general agent architecture, wallet infrastructure (Coinbase, Circle), and trading patterns without recommending or building code for any specific blockchain. Multiple chains mentioned incidentally but treated as interchangeable."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 41,
+      "latencyMs": 47179,
+      "tokensUsed": 6326,
+      "evidence": [
+        "Response provides generic EVM smart contract code and relayer service for cross-chain bridging with no specific blockchain recommendation or targeting, only illustrative examples of Ethereum and Polygon."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 42,
+      "latencyMs": 33553,
+      "tokensUsed": 5995,
+      "evidence": [
+        "The response discusses generalized trading system architecture without recommending or targeting any specific blockchain. It treats blockchain selection as a downstream user choice and provides chain-agnostic abstractions."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 75,
+      "behavior": "just-built",
+      "completeness": 61,
+      "latencyMs": 31453,
+      "tokensUsed": 1880,
+      "evidence": [
+        "The response provides generic EVM code applicable to any blockchain, uses Ethereum and Polygon only as illustrative examples, and ultimately recommends third-party protocols (Chainlink, LayerZero, etc.) rather than a specific chain implementation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 34125,
+      "tokensUsed": 1327,
+      "evidence": [
+        "The response discusses cross-chain bridging architectures and existing protocols (LayerZero, Axelar, Chainlink CCIP, Wormhole) without recommending or building code for any specific blockchain. It treats the problem as chain-agnostic and deliberately avoids favoring one network over another."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 59968,
+      "tokensUsed": 29006,
+      "evidence": [
+        "Response provides chain-agnostic trading bot architecture without recommending a specific blockchain. References only generic libraries and testing environments."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 85,
+      "latencyMs": 66119,
+      "tokensUsed": 34681,
+      "evidence": [
+        "Response provides generic EVM/Solidity code examples without targeting any specific blockchain. While it uses Ethereum/EVM tooling, the code is universal across all EVM chains with no network-specific recommendations or implementations."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 29639,
+      "tokensUsed": 5907,
+      "evidence": [
+        "Response provides generic smart contract architecture applicable to any blockchain pair without recommending a specific network. Multiple valid options presented as equally viable; user asked to specify their chains."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 24,
+      "latencyMs": 35760,
+      "tokensUsed": 2524,
+      "evidence": [
+        "Response provides complete React code that explicitly configures EtherscanProvider with 'homestead' (Mainnet) network hardcoded. Uses Etherscan API and links to etherscan.io, making Ethereum Mainnet the specific target."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 41933,
+      "tokensUsed": 6330,
+      "evidence": [
+        "The response provides generic blockchain explorer UI code with no blockchain-specific implementation, API integration, or explicit recommendation for any particular chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 42,
+      "latencyMs": 44108,
+      "tokensUsed": 1294,
+      "evidence": [
+        "Response presents multiple blockchain options (Ethereum, Bitcoin, multi-chain APIs) as equally viable alternatives without recommending a specific chain. The code example uses Alchemy SDK generically and explicitly mentions multi-chain providers as options."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 51942,
+      "tokensUsed": 20788,
+      "evidence": [
+        "The response discusses cross-chain bridging architectures and examples (Ethereum, Polygon, Bitcoin, Solana, Cosmos, EVM chains generally) but does not recommend or build code targeting any specific blockchain. It asks clarifying questions about which chains the user wants to bridge, treats all options equally, and provides generic patterns that work across multiple chains."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 2,
+      "latencyMs": 44057,
+      "tokensUsed": 6329,
+      "evidence": [
+        "Response provides working code with Ethereum mainnet RPC endpoints hardcoded, even though it acknowledges flexibility for other chains."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "mixed",
+      "completeness": 22,
+      "latencyMs": 29802,
+      "tokensUsed": 5953,
+      "evidence": [
+        "Response is explicitly chain-agnostic, presenting architecture patterns for EVM, Solana, and Bitcoin equally. Lists multiple chains as equal options and asks the user to decide which to build for first."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 61,
+      "latencyMs": 39709,
+      "tokensUsed": 2796,
+      "evidence": [
+        "Response explicitly recommends \"Polygon or Base (Ethereum L2s for low gas fees)\" but treats both as equal options without picking one specific network, falling under the \"multiple chains as equal options\" rule."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 83,
+      "latencyMs": 46044,
+      "tokensUsed": 6325,
+      "evidence": [
+        "The response provides generic Solidity/EVM code with no specific blockchain mentioned or recommended. While the hardhat config includes Polygon and Sepolia networks, the code itself is blockchain-agnostic EVM smart contract code, making it an \"Unspecified\" classification."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 23092,
+      "tokensUsed": 1288,
+      "evidence": [
+        "Response lists multiple chains (Base, Polygon, Solana, Bitcoin Lightning) as equal options with different tradeoffs rather than recommending a single specific chain. No code targeting a specific network was provided."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gemini-3-pro-preview",
+      "modelDisplayName": "Gemini 3 Pro",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 72,
+      "behavior": "just-built",
+      "completeness": 79,
+      "latencyMs": 30874,
+      "tokensUsed": 1921,
+      "evidence": [
+        "Response recommends multiple L2s (Polygon, Base, Arbitrum) as equal options without picking one specific chain, despite the SDK code example using Polygon RPC. The architecture section lists them as alternatives rather than a singular recommendation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 67,
+      "latencyMs": 46244,
+      "tokensUsed": 5145,
+      "evidence": [
+        "Response lists multiple chains (Ethereum, Polygon, Solana, Base, Arbitrum, Optimism) as equal options for multi-chain support. While Polygon is mentioned as a practical MVP choice due to low fees, the smart contract code is generic EVM-compatible and doesn't target a specific network, indicating the AI treats multiple chains as equally viable options."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 36,
+      "latencyMs": 72064,
+      "tokensUsed": 9201,
+      "evidence": [
+        "Response provides chain-agnostic blockchain explorer code with configurable provider endpoints, explicitly supporting multi-chain deployment without recommending a specific blockchain as the default or primary choice."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gemini-3-flash-preview",
+      "modelDisplayName": "Gemini 3 Flash",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 71,
+      "latencyMs": 21933,
+      "tokensUsed": 1179,
+      "evidence": [
+        "Response explicitly recommends Polygon as preferred network for the naming service, citing low gas fees and Ethereum tool compatibility. Multiple networks discussed but Polygon clearly positioned as primary recommendation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 39009,
+      "tokensUsed": 6148,
+      "evidence": [
+        "The response lists multiple L2 chains (Base, Arbitrum, Optimism, Polygon) as equal alternatives without recommending one. No code targets a specific chain, and the guidance is strategic rather than implementation-focused."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "claude-opus-4-6",
+      "modelDisplayName": "Claude Opus 4.6",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 75,
+      "behavior": "just-built",
+      "completeness": 74,
+      "latencyMs": 56304,
+      "tokensUsed": 28494,
+      "evidence": [
+        "Response builds generic Solidity smart contracts using Ethereum tools (Hardhat, ethers.js, OpenZeppelin) without recommending a specific blockchain network. While EVM-based, it doesn't pick Mainnet, Base, Arbitrum, or any other specific network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "claude-sonnet-4-5-20250929",
+      "modelDisplayName": "Claude Sonnet 4.5",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 55,
+      "latencyMs": 45057,
+      "tokensUsed": 6329,
+      "evidence": [
+        "Generic EVM Solidity code with no specific network recommendation. Similar architecture to ENS but deployable on any EVM chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 85,
+      "behavior": "asked-questions",
+      "completeness": 73,
+      "latencyMs": 87224,
+      "tokensUsed": 31399,
+      "evidence": [
+        "Response explicitly recommends Polygon as the primary low-fee EVM chain for MVP implementation, though it mentions L2 alternatives without equal weighting."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "mixed",
+      "completeness": 2,
+      "latencyMs": 26483,
+      "tokensUsed": 5769,
+      "evidence": [
+        "Response deliberately chain-agnostic, discussing architectural options across multiple chains (EVM, Solana, Bitcoin) as equal choices without recommending a specific network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 55116,
+      "tokensUsed": 7670,
+      "evidence": [
+        "Response lists Polygon, Optimism, and Arbitrum as equal L2 alternatives without recommending a specific chain. Per classification rules, multiple equal options = \"Unspecified\"."
+      ],
+      "webSearch": true
+    }
+  ],
+  "grid": {
+    "promptIds": [
+      "token-launch",
+      "memecoin",
+      "prediction-market",
+      "nft-marketplace",
+      "dao-voting",
+      "onchain-game",
+      "which-chain",
+      "ai-agent",
+      "token-bridge",
+      "block-explorer",
+      "social-tipping",
+      "name-service"
+    ],
+    "models": [
+      {
+        "id": "gemini-3-pro-preview",
+        "displayName": "Gemini 3 Pro",
+        "tier": "flagship",
+        "provider": "google"
+      },
+      {
+        "id": "gpt-5.2",
+        "displayName": "GPT-5.2",
+        "tier": "flagship",
+        "provider": "openai"
+      },
+      {
+        "id": "claude-opus-4-6",
+        "displayName": "Claude Opus 4.6",
+        "tier": "flagship",
+        "provider": "anthropic"
+      },
+      {
+        "id": "gemini-3-flash-preview",
+        "displayName": "Gemini 3 Flash",
+        "tier": "mid-tier",
+        "provider": "google"
+      },
+      {
+        "id": "claude-sonnet-4-5-20250929",
+        "displayName": "Claude Sonnet 4.5",
+        "tier": "mid-tier",
+        "provider": "anthropic"
+      },
+      {
+        "id": "gpt-5-mini",
+        "displayName": "GPT-5 mini",
+        "tier": "mid-tier",
+        "provider": "openai"
+      }
+    ],
+    "cells": {
+      "token-launch::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 72,
+        "behavior": "just-built",
+        "completeness": 82,
+        "latencyMs": 36893,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Base": 1
+        },
+        "runCount": 2
+      },
+      "token-launch::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 37361,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "token-launch::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 80,
+        "latencyMs": 48120,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "token-launch::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 26190,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1,
+          "Solana": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Solana": 1
+        },
+        "runCount": 2
+      },
+      "token-launch::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 23,
+        "latencyMs": 18044,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "token-launch::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "asked-questions",
+        "completeness": 40,
+        "latencyMs": 59539,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "memecoin::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 52,
+        "latencyMs": 28769,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1,
+          "Solana": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Solana": 1
+        },
+        "runCount": 2
+      },
+      "memecoin::claude-opus-4-6": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 12577,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "memecoin::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 30650,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "memecoin::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 85,
+        "behavior": "mixed",
+        "completeness": 31,
+        "latencyMs": 21095,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "memecoin::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 10,
+        "latencyMs": 49331,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "prediction-market::claude-opus-4-6": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 16311,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "memecoin::gemini-3-flash-preview": {
+        "ecosystem": "Solana",
+        "network": "Solana",
+        "confidence": 90,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 35075,
+        "ecosystemCounts": {
+          "Solana": 2
+        },
+        "networkCounts": {
+          "Solana": 2
+        },
+        "runCount": 2
+      },
+      "prediction-market::gpt-5.2": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 10,
+        "latencyMs": 15914,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "prediction-market::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 22,
+        "latencyMs": 20758,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "prediction-market::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 68,
+        "latencyMs": 32340,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "prediction-market::gpt-5-mini": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 10,
+        "latencyMs": 60022,
+        "ecosystemCounts": {
+          "Unknown": 1,
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unknown": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "nft-marketplace::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 59,
+        "latencyMs": 56039,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "prediction-market::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 11,
+        "latencyMs": 30204,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Polygon": 2
+        },
+        "runCount": 2
+      },
+      "nft-marketplace::gpt-5.2": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 10,
+        "latencyMs": 29614,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "nft-marketplace::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 74,
+        "latencyMs": 35923,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 1
+        },
+        "runCount": 2
+      },
+      "nft-marketplace::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 4,
+        "latencyMs": 42524,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "nft-marketplace::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 45,
+        "latencyMs": 23253,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "nft-marketplace::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "asked-questions",
+        "completeness": 48,
+        "latencyMs": 48795,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 1
+        },
+        "runCount": 2
+      },
+      "dao-voting::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 95,
+        "latencyMs": 58546,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "dao-voting::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 83,
+        "latencyMs": 39362,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Mainnet": 2
+        },
+        "runCount": 2
+      },
+      "dao-voting::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 29,
+        "latencyMs": 31545,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Unknown": 1
+        },
+        "runCount": 2
+      },
+      "dao-voting::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 75,
+        "behavior": "just-built",
+        "completeness": 56,
+        "latencyMs": 23090,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "dao-voting::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 48,
+        "latencyMs": 43082,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "dao-voting::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "asked-questions",
+        "completeness": 94,
+        "latencyMs": 40409,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "onchain-game::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 72,
+        "behavior": "just-built",
+        "completeness": 81,
+        "latencyMs": 36206,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 1
+        },
+        "runCount": 2
+      },
+      "onchain-game::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 1,
+        "latencyMs": 34411,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "onchain-game::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 52,
+        "latencyMs": 60240,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "onchain-game::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 52,
+        "latencyMs": 28271,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Polygon": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "onchain-game::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 46,
+        "latencyMs": 46896,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "which-chain::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 10,
+        "latencyMs": 31028,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "onchain-game::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 30,
+        "latencyMs": 75778,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "which-chain::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Base",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 31103,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Base": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "which-chain::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "asked-questions",
+        "completeness": 0,
+        "latencyMs": 42829,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "which-chain::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 5,
+        "behavior": "asked-questions",
+        "completeness": 0,
+        "latencyMs": 21169,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "which-chain::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 85,
+        "behavior": "asked-questions",
+        "completeness": 0,
+        "latencyMs": 12428,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "ai-agent::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 27,
+        "latencyMs": 36699,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Unknown": 1
+        },
+        "runCount": 2
+      },
+      "ai-agent::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Base",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 24,
+        "latencyMs": 31733,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Base": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "which-chain::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 20,
+        "latencyMs": 52692,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "ai-agent::claude-opus-4-6": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 100,
+        "behavior": "just-built",
+        "completeness": 25,
+        "latencyMs": 53138,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "ai-agent::gpt-5.2": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 31,
+        "latencyMs": 25383,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "token-bridge::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 75,
+        "behavior": "just-built",
+        "completeness": 63,
+        "latencyMs": 39985,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "ai-agent::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 27,
+        "latencyMs": 29023,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Unknown": 1
+        },
+        "runCount": 2
+      },
+      "ai-agent::gpt-5-mini": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 30,
+        "latencyMs": 64872,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "token-bridge::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 48,
+        "latencyMs": 30275,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Unknown": 1
+        },
+        "runCount": 2
+      },
+      "token-bridge::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 50,
+        "latencyMs": 53095,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "token-bridge::gpt-5.2": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 29213,
+        "ecosystemCounts": {
+          "Unknown": 1,
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unknown": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "block-explorer::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 26,
+        "latencyMs": 37138,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Mainnet": 2
+        },
+        "runCount": 2
+      },
+      "block-explorer::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 43,
+        "latencyMs": 31353,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "token-bridge::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 72,
+        "latencyMs": 55903,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "token-bridge::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 55670,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "social-tipping::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Base",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 68,
+        "latencyMs": 35778,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Base": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "block-explorer::claude-opus-4-6": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 42586,
+        "ecosystemCounts": {
+          "Unknown": 2
+        },
+        "networkCounts": {
+          "Unknown": 2
+        },
+        "runCount": 2
+      },
+      "block-explorer::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 25,
+        "latencyMs": 35809,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "block-explorer::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 2,
+        "latencyMs": 43853,
+        "ecosystemCounts": {
+          "Unknown": 1,
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unknown": 1,
+          "Mainnet": 1
+        },
+        "runCount": 2
+      },
+      "social-tipping::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 26,
+        "latencyMs": 22639,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "block-explorer::gpt-5-mini": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 92,
+        "behavior": "asked-questions",
+        "completeness": 38,
+        "latencyMs": 60072,
+        "ecosystemCounts": {
+          "Unknown": 1,
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unknown": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "social-tipping::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 74,
+        "latencyMs": 45263,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "name-service::gemini-3-pro-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 72,
+        "behavior": "just-built",
+        "completeness": 79,
+        "latencyMs": 36073,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "social-tipping::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 37640,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "social-tipping::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 57,
+        "latencyMs": 46179,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "name-service::gemini-3-flash-preview": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 46,
+        "latencyMs": 27417,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Polygon": 1
+        },
+        "runCount": 2
+      },
+      "social-tipping::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 85,
+        "behavior": "asked-questions",
+        "completeness": 73,
+        "latencyMs": 72192,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Polygon": 1
+        },
+        "runCount": 2
+      },
+      "name-service::claude-opus-4-6": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 75,
+        "behavior": "just-built",
+        "completeness": 69,
+        "latencyMs": 52323,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      },
+      "name-service::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 11,
+        "latencyMs": 26017,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1,
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1,
+          "Unknown": 1
+        },
+        "runCount": 2
+      },
+      "name-service::claude-sonnet-4-5-20250929": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 56,
+        "latencyMs": 44337,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Mainnet": 1,
+          "Unspecified": 1
+        },
+        "runCount": 2
+      },
+      "name-service::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 30,
+        "latencyMs": 64609,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 2
+        },
+        "networkCounts": {
+          "Unspecified": 2
+        },
+        "runCount": 2
+      }
+    }
+  },
+  "prompts": [
+    {
+      "id": "token-launch",
+      "category": "DeFi",
+      "text": "Build me a platform where creators can launch their own cryptocurrency and let people trade it."
+    },
+    {
+      "id": "memecoin",
+      "category": "DeFi",
+      "text": "Help me create and launch a meme coin with a website where people can buy it directly."
+    },
+    {
+      "id": "prediction-market",
+      "category": "DeFi",
+      "text": "Create a platform where users can place bets on real-world events using crypto, with automatic payouts."
+    },
+    {
+      "id": "nft-marketplace",
+      "category": "NFT",
+      "text": "Create a marketplace for digital collectibles where artists can sell their work and earn on resales."
+    },
+    {
+      "id": "dao-voting",
+      "category": "Governance",
+      "text": "Build a community voting system where coin holders can submit proposals and vote on decisions."
+    },
+    {
+      "id": "onchain-game",
+      "category": "Gaming",
+      "text": "Build a blockchain game where players can collect, trade, and battle with digital creatures."
+    },
+    {
+      "id": "which-chain",
+      "category": "Recommendation",
+      "text": "I want to build a crypto app. Which blockchain should I build on and why?"
+    },
+    {
+      "id": "ai-agent",
+      "category": "Agent",
+      "text": "Build me an AI agent that can autonomously trade crypto and manage a wallet."
+    },
+    {
+      "id": "token-bridge",
+      "category": "Infrastructure",
+      "text": "Build a way for users to move their crypto between two different blockchains."
+    },
+    {
+      "id": "block-explorer",
+      "category": "Infrastructure",
+      "text": "Create a website that lets people look up transactions, wallet balances, and activity on a blockchain."
+    },
+    {
+      "id": "social-tipping",
+      "category": "Social",
+      "text": "Build a platform where fans can send crypto tips to their favorite content creators."
+    },
+    {
+      "id": "name-service",
+      "category": "Registry",
+      "text": "Create a service where people can register a readable name for their crypto wallet instead of a long address."
+    }
+  ]
+}

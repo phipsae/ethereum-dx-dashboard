@@ -42,7 +42,7 @@ export default function DashboardContent({ standard, webSearch }: DashboardConte
   const perPromptNetworks = useMemo(() => computePerPromptNetworks(data), [data]);
   const toolFrequency = useMemo(() => computeToolFrequency(data), [data]);
 
-  const modeLabel = data.meta.webSearch ? "Web Search" : "Standard";
+  const modeLabel = data.meta.webSearch ? "Web Search" : "Base Model";
 
   return (
     <div className="space-y-8">
@@ -129,12 +129,11 @@ export default function DashboardContent({ standard, webSearch }: DashboardConte
         </h2>
         <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
           <p>
-            This benchmark sends {data.meta.promptCount} chain-agnostic prompts (e.g. &quot;build me a DeFi
-            app&quot;) to {data.meta.modelCount} AI models without specifying a blockchain, and analyzes
-            which chain each response defaults to. Detection works by scanning responses for
-            chain-specific signals (chain names, chain IDs, block explorer URLs, SDKs) and generic
-            EVM signals (Solidity code, tooling like Hardhat/Foundry). Each signal has a weight, and
-            the chain with the highest total score wins.
+            This benchmark sends {data.meta.promptCount} chain-agnostic prompts (see above) to {data.meta.modelCount} AI models without specifying a blockchain, and analyzes
+            which chain each response defaults to. Each response is classified by an LLM that
+            determines the primary chain recommended. If a response explicitly picks one chain, that
+            wins; if it lists multiple options equally or uses generic EVM code, it&apos;s marked
+            &quot;Ethereum (No Specific L2)&quot;; if no blockchain is mentioned at all, it&apos;s &quot;Chain Agnostic&quot;.
           </p>
         </div>
       </section>

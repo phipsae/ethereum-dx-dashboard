@@ -18,7 +18,7 @@ export default function ModeToggle({ mode, onChange }: ModeToggleProps) {
             : "text-[#a0a0b0] hover:text-white"
         }`}
       >
-        Standard
+        Base Model
       </button>
       <button
         onClick={() => onChange("webSearch")}

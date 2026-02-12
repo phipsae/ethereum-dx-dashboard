@@ -39,6 +39,8 @@ async function main() {
   if (command === "run") {
     const runs = parseInt(flags.runs ?? "1", 10);
     const dryRun = flags["dry-run"] === "true";
+    const webSearch = flags["web-search"] === "true";
+    const compare = flags["compare"] === "true";
     const modelFilter = flags.models?.split(",");
 
     const models = getAvailableModels(modelFilter);
@@ -56,32 +58,55 @@ async function main() {
       ? (await import("./config.js")).MODELS
       : models;
 
-    const outputDir = createOutputDir("results");
+    const effectiveModels = dryRun ? dryRunModels : models;
 
-    const results = await runBenchmark({
-      prompts: PROMPTS,
-      models: dryRun ? dryRunModels : models,
-      runs,
-      dryRun,
-      outputDir,
-    });
+    // --compare runs both modes (no search, then with search)
+    const searchModes: Array<{ label: string; webSearch: boolean }> = compare
+      ? [
+          { label: "without web search", webSearch: false },
+          { label: "with web search", webSearch: true },
+        ]
+      : [{ label: webSearch ? "with web search" : "without web search", webSearch }];
 
-    if (results.length > 0) {
-      const grid = buildGrid(results);
-      printGrid(grid);
+    const allResults: import("./providers/types.js").BenchmarkResult[] = [];
 
-      const markdown = generateMarkdown(grid, results);
-      const reportPath = saveMarkdownReport(outputDir, markdown);
-      const html = generateHtml(grid, results);
-      const htmlPath = saveHtmlReport(outputDir, html);
-      const csv = generateCsv(results);
-      const csvPath = saveCsvReport(outputDir, csv);
-      const dashboardPath = exportDashboardData(results, grid);
-      console.log(`\nResults saved to: ${outputDir}`);
-      console.log(`Markdown report: ${reportPath}`);
-      console.log(`HTML report: ${htmlPath}`);
-      console.log(`CSV report: ${csvPath}`);
-      console.log(`Dashboard data: ${dashboardPath}`);
+    for (const mode of searchModes) {
+      if (compare) {
+        console.log(`\n${"=".repeat(60)}`);
+        console.log(`  Running ${mode.label.toUpperCase()}`);
+        console.log(`${"=".repeat(60)}`);
+      }
+
+      const outputDir = createOutputDir("results");
+
+      const results = await runBenchmark({
+        prompts: PROMPTS,
+        models: effectiveModels,
+        runs,
+        dryRun,
+        outputDir,
+        webSearch: mode.webSearch,
+      });
+
+      allResults.push(...results);
+
+      if (results.length > 0) {
+        const grid = buildGrid(results);
+        printGrid(grid);
+
+        const markdown = generateMarkdown(grid, results);
+        const reportPath = saveMarkdownReport(outputDir, markdown);
+        const html = generateHtml(grid, results);
+        const htmlPath = saveHtmlReport(outputDir, html);
+        const csv = generateCsv(results);
+        const csvPath = saveCsvReport(outputDir, csv);
+        const dashboardPath = exportDashboardData(results, grid);
+        console.log(`\nResults saved to: ${outputDir}`);
+        console.log(`Markdown report: ${reportPath}`);
+        console.log(`HTML report: ${htmlPath}`);
+        console.log(`CSV report: ${csvPath}`);
+        console.log(`Dashboard data: ${dashboardPath}`);
+      }
     }
   } else if (command === "report") {
     if (positional.length === 0) {
@@ -115,6 +140,8 @@ async function main() {
   npx tsx src/index.ts run --runs 5                     Multiple runs
   npx tsx src/index.ts run --models claude-opus-4-6,o3  Subset of models
   npx tsx src/index.ts run --dry-run                    Preview what would run
+  npx tsx src/index.ts run --web-search                 Enable web search for all providers
+  npx tsx src/index.ts run --compare                    Run both with and without web search
   npx tsx src/index.ts report results/run-*             Report from saved data`);
   }
 }

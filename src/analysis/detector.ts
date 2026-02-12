@@ -1,3 +1,7 @@
+// NOTE: The regex detector is currently DISABLED — llm-detector.ts is used instead.
+// DO NOT DELETE this file. It exports getEcosystem() / NETWORK_TO_ECOSYSTEM which
+// are still used by the LLM detector, and detect() may be useful for offline testing.
+
 import type { Detection } from "../providers/types.js";
 
 // === Ecosystem mapping (display-layer only) ===
@@ -159,7 +163,7 @@ const SIGNALS: Signal[] = [
   // === Solana ===
   { pattern: /anchor_lang|use anchor/i, network: "Solana", weight: 10, label: "anchor_lang" },
   { pattern: /\bsolana[_-]?program\b/i, network: "Solana", weight: 9, label: "solana_program" },
-  { pattern: /\bspl[_-]token\b/i, network: "Solana", weight: 9, label: "SPL token" },
+  { pattern: /\bspl[_\- ]?token\b/i, network: "Solana", weight: 9, label: "SPL token" },
   { pattern: /\bPubkey\b/i, network: "Solana", weight: 6, label: "Pubkey type" },
   { pattern: /\b(solana|sol)\s+cli\b/i, network: "Solana", weight: 7, label: "Solana CLI" },
   { pattern: /metaplex/i, network: "Solana", weight: 8, label: "Metaplex" },
@@ -170,6 +174,7 @@ const SIGNALS: Signal[] = [
   { pattern: /\bAccountInfo\b/i, network: "Solana", weight: 5, label: "AccountInfo" },
   { pattern: /program_id/i, network: "Solana", weight: 6, label: "program_id" },
   { pattern: /\bsolana\b/i, network: "Solana", weight: 5, label: "Solana mention" },
+  { pattern: /\bjupiter\b/i, network: "Solana", weight: 7, label: "Jupiter (Solana DEX)" },
   { pattern: /\brust\b.*\bcontract/i, network: "Solana", weight: 3, label: "Rust contract" },
 
   // === Sui ===
@@ -203,6 +208,71 @@ const SIGNALS: Signal[] = [
   // === TON ===
   { pattern: /\bton\b.*\bblockchain\b|\bton\b.*\bcontract/i, network: "TON", weight: 7, label: "TON blockchain" },
   { pattern: /\bfunc\b.*\bton\b|\btact\b/i, network: "TON", weight: 8, label: "FunC/Tact" },
+
+  // === Recommendation signals (weight 25 — overrides accumulated code signals) ===
+  // Active: "I recommend Solana", "go with Base", "start on Arbitrum", etc.
+  // Passive: "Solana is the best choice", "Arbitrum would be ideal", etc.
+  // Indirect: "recommendation...: **Solana", "best option: Solana", etc.
+
+  // Solana
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+solana/i, network: "Solana", weight: 40, label: "recommends Solana" },
+  { pattern: /solana\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Solana", weight: 40, label: "Solana rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*solana\b/i, network: "Solana", weight: 40, label: "recommendation: Solana" },
+
+  // Ethereum → Mainnet
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+ethereum/i, network: "Mainnet", weight: 40, label: "recommends Ethereum" },
+  { pattern: /ethereum\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Mainnet", weight: 40, label: "Ethereum rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*ethereum\b/i, network: "Mainnet", weight: 40, label: "recommendation: Ethereum" },
+
+  // Base
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+base\b/i, network: "Base", weight: 40, label: "recommends Base" },
+  { pattern: /\bbase\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Base", weight: 40, label: "Base rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*base\b/i, network: "Base", weight: 40, label: "recommendation: Base" },
+
+  // Arbitrum
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+arbitrum/i, network: "Arbitrum", weight: 40, label: "recommends Arbitrum" },
+  { pattern: /arbitrum\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Arbitrum", weight: 40, label: "Arbitrum rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*arbitrum\b/i, network: "Arbitrum", weight: 40, label: "recommendation: Arbitrum" },
+
+  // Optimism
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+optimism/i, network: "Optimism", weight: 40, label: "recommends Optimism" },
+  { pattern: /optimism\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Optimism", weight: 40, label: "Optimism rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*optimism\b/i, network: "Optimism", weight: 40, label: "recommendation: Optimism" },
+
+  // Polygon
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+polygon/i, network: "Polygon", weight: 40, label: "recommends Polygon" },
+  { pattern: /polygon\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Polygon", weight: 40, label: "Polygon rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*polygon\b/i, network: "Polygon", weight: 40, label: "recommendation: Polygon" },
+
+  // BSC / BNB Chain
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+(?:bsc|bnb\s+chain|binance\s+smart\s+chain)/i, network: "BSC", weight: 40, label: "recommends BSC" },
+  { pattern: /(?:bsc|bnb\s+chain|binance\s+smart\s+chain)\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "BSC", weight: 40, label: "BSC rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*(?:bsc|bnb\s+chain|binance\s+smart\s+chain)\b/i, network: "BSC", weight: 40, label: "recommendation: BSC" },
+
+  // Avalanche
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+(?:avalanche|avax)/i, network: "Avalanche", weight: 40, label: "recommends Avalanche" },
+  { pattern: /(?:avalanche|avax)\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Avalanche", weight: 40, label: "Avalanche rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*(?:avalanche|avax)\b/i, network: "Avalanche", weight: 40, label: "recommendation: Avalanche" },
+
+  // Sui
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+sui/i, network: "Sui", weight: 40, label: "recommends Sui" },
+  { pattern: /sui\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Sui", weight: 40, label: "Sui rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*sui\b/i, network: "Sui", weight: 40, label: "recommendation: Sui" },
+
+  // Aptos
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+aptos/i, network: "Aptos", weight: 40, label: "recommends Aptos" },
+  { pattern: /aptos\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Aptos", weight: 40, label: "Aptos rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*aptos\b/i, network: "Aptos", weight: 40, label: "recommendation: Aptos" },
+
+  // Cosmos
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+cosmos/i, network: "Cosmos", weight: 40, label: "recommends Cosmos" },
+  { pattern: /cosmos\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Cosmos", weight: 40, label: "Cosmos rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*cosmos\b/i, network: "Cosmos", weight: 40, label: "recommendation: Cosmos" },
+
+  // Near
+  { pattern: /(?:I\s+)?(?:recommend|suggest|go with|choose|pick|start (?:with|on))\s+near\b/i, network: "Near", weight: 40, label: "recommends Near" },
+  { pattern: /\bnear\s+(?:is|would be)\s+(?:the\s+|currently\s+)*(?:best|top|ideal|recommended|strongest|safest|easiest)/i, network: "Near", weight: 40, label: "Near rated best" },
+  { pattern: /(?:recommend(?:ation)?|suggest(?:ion)?|(?:best|top|ideal)\s+(?:option|choice|pick))[^.!?\n]{0,60}:\s*\**\s*near\b/i, network: "Near", weight: 40, label: "recommendation: Near" },
 ];
 
 export function detect(text: string): Detection {

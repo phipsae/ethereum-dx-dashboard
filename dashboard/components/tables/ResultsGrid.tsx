@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { getNetworkColor, getChainColor } from "@/lib/types";
+import { getNetworkColor, getChainColor, getDisplayName } from "@/lib/types";
 
 interface ResultsGridProps {
   data: Array<{ promptId: string; networks: Record<string, number> }>;
@@ -62,7 +62,7 @@ export default function ResultsGrid({ data }: ResultsGridProps) {
                     >
                       {pct > 15 && (
                         <span className="text-xs font-semibold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-                          {network}
+                          {getDisplayName(network)}
                         </span>
                       )}
                     </div>
@@ -90,7 +90,7 @@ export default function ResultsGrid({ data }: ResultsGridProps) {
                 className="h-3 w-3 rounded-sm"
                 style={{ backgroundColor: getColor(net) }}
               />
-              <span className="text-xs text-[#a0a0b0]">{net}</span>
+              <span className="text-xs text-[#a0a0b0]">{getDisplayName(net)}</span>
             </div>
           ));
         })()}
@@ -110,21 +110,11 @@ export default function ResultsGrid({ data }: ResultsGridProps) {
             <span className="font-mono text-[#e94560]">{hovered.promptId}</span>
           </div>
           <div className="mt-0.5 font-semibold" style={{ color: getColor(hovered.network) }}>
-            {hovered.network}
+            {getDisplayName(hovered.network)}
           </div>
           <div className="text-xs text-[#a0a0b0]">
             {hovered.count} of {hovered.total} responses ({((hovered.count / hovered.total) * 100).toFixed(0)}%)
           </div>
-          {hovered.network === "Unknown" && (
-            <div className="mt-1 text-xs text-[#a0a0b0] italic">
-              Response didn&apos;t specify a blockchain or was chain-agnostic
-            </div>
-          )}
-          {hovered.network === "Unspecified" && (
-            <div className="mt-1 text-xs text-[#a0a0b0] italic">
-              Said Ethereum but didn&apos;t name a specific L2/network
-            </div>
-          )}
         </div>
       )}
     </div>

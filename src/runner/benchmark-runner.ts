@@ -9,10 +9,10 @@ import { delay, getDelay } from "./rate-limiter.js";
 const MAX_RETRIES = 3;
 const RETRY_DELAYS = [5000, 15000, 30000]; // 5s, 15s, 30s
 
-async function sendWithRetry(provider: Provider, prompt: string, modelId: string): Promise<ProviderResponse> {
+async function sendWithRetry(provider: Provider, prompt: string, modelId: string, webSearch?: boolean): Promise<ProviderResponse> {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
-      return await provider.send(prompt, modelId);
+      return await provider.send(prompt, modelId, webSearch);
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       const isRetryable = /503|429|overloaded|high demand|rate limit/i.test(message);
@@ -33,10 +33,11 @@ export interface RunOptions {
   runs: number;
   dryRun: boolean;
   outputDir: string;
+  webSearch?: boolean;
 }
 
 export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult[]> {
-  const { prompts, models, runs, dryRun, outputDir } = options;
+  const { prompts, models, runs, dryRun, outputDir, webSearch } = options;
   const totalCalls = prompts.length * models.length * runs;
 
   if (dryRun) {
@@ -50,6 +51,7 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
       console.log(`  - ${m.displayName} (${m.id}) [${m.tier}]`);
     }
     console.log(`\nRuns: ${runs}`);
+    console.log(`Web search: ${webSearch ? "ON" : "OFF"}`);
     console.log(`Total API calls: ${totalCalls}`);
     console.log(`Estimated cost: $${(totalCalls * 0.15).toFixed(2)} - $${(totalCalls * 0.30).toFixed(2)}`);
     return [];
@@ -95,8 +97,8 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
             console.log(`${progress} ${model.displayName} × "${prompt.id}" ...`);
 
             try {
-              const response = await sendWithRetry(provider, prompt.text, model.id);
-              const analysis = analyzeResponse(response.content);
+              const response = await sendWithRetry(provider, prompt.text, model.id, webSearch);
+              const analysis = await analyzeResponse(response.content, prompt.text);
 
               const result: BenchmarkResult = {
                 promptId: prompt.id,
@@ -107,6 +109,7 @@ export async function runBenchmark(options: RunOptions): Promise<BenchmarkResult
                 analysis,
                 timestamp: new Date().toISOString(),
                 runId,
+                webSearch: webSearch ?? false,
               };
 
               results.push(result);

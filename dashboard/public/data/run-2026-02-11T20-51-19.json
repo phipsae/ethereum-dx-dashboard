@@ -1,0 +1,898 @@
+{
+  "meta": {
+    "timestamp": "2026-02-11T20:51:19.405Z",
+    "runId": "run-1770825090010-0",
+    "modelCount": 2,
+    "promptCount": 12,
+    "resultCount": 24,
+    "webSearch": true
+  },
+  "results": [
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 42827,
+      "tokensUsed": 6353,
+      "evidence": [
+        "The response mentions multiple blockchains (Ethereum L2s like Base/Arbitrum/Optimism, and Solana) as equal viable options without recommending one specifically. It explicitly defers chain selection to the user based on their own criteria (fees, ecosystem, wallets, liquidity, compliance), which matches the \"Unspecified\" classification rule for responses that list multiple chains as equal options."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 50684,
+      "tokensUsed": 7221,
+      "evidence": [
+        "The response presents multiple blockchain options (Ethereum L2s, BSC, Solana) as equally viable choices without recommending one, then explicitly asks the user to decide their target chain. This is a clear case of leaving the choice to the user rather than defaulting to a specific network."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Solana",
+      "network": "Solana",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 36944,
+      "tokensUsed": 5911,
+      "evidence": [
+        "The response explicitly recommends Solana as the default choice for meme coin launches, citing it as \"meme-coin-native\" with \"cheap, fast\" execution. The final recommendation section directly states \"Solana + Jupiter swap\" as the minimal-complexity path, making this an explicit recommendation that wins per the classification rules."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 65,
+      "latencyMs": 92610,
+      "tokensUsed": 35059,
+      "evidence": [
+        "Response lists multiple chains (Ethereum, Polygon, BSC, Base) as equal options and explicitly asks the user which blockchain to deploy on, without recommending any specific chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 13546,
+      "tokensUsed": 5011,
+      "evidence": [
+        "The AI response explicitly refuses the betting platform request and offers alternatives without recommending any specific blockchain. No chain is mentioned or favored."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 78,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 70534,
+      "tokensUsed": 29882,
+      "evidence": [
+        "Response presents multiple L2s (Arbitrum, Optimism) as equal options without picking one. Generic Solidity code with no chain-specific targeting. Defers choice to user based on cost/risk tolerance."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 27508,
+      "tokensUsed": 5654,
+      "evidence": [
+        "Response recommends EVM L2s (Base, Arbitrum, Optimism) and Polygon as equal alternatives for the marketplace architecture without selecting one specific chain. Lists multiple chains as equivalent options and asks user to choose, matching the \"Unspecified\" classification rule."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 45642,
+      "tokensUsed": 7227,
+      "evidence": [
+        "The response lists multiple chains (Ethereum mainnet, Polygon, Solana, Flow, Arbitrum, Optimism) as equal options and explicitly asks the user to choose, without making a specific recommendation. This matches the rule for \"Unspecified\" classification."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 34558,
+      "tokensUsed": 6082,
+      "evidence": [
+        "The response provides a generic governance framework architecture without recommending or targeting any specific blockchain. It mentions \"EVM chain\" as one option and asks clarifying questions about the underlying chain (ERC-20, Solana, Sui, Cosmos), but takes no stance on which to use."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 75,
+      "latencyMs": 50398,
+      "tokensUsed": 7601,
+      "evidence": [
+        "The response is explicitly chain-agnostic, asking the user to specify blockchain preferences rather than recommending one. It provides generic EVM/Solidity code and defers all chain decisions to the user."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 36160,
+      "tokensUsed": 6255,
+      "evidence": [
+        "Response recommends \"an EVM L2 (e.g., Polygon, Arbitrum, Optimism, Base)\" as a category without selecting a specific chain. Generic Solidity code applies to all EVM networks equally."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 39385,
+      "tokensUsed": 6703,
+      "evidence": [
+        "Response lists multiple chains (Ethereum, Polygon, Arbitrum, Solana, Flow) as interchangeable options and asks user to choose based on budget/audience. Generic architecture works on any EVM chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 26480,
+      "tokensUsed": 5543,
+      "evidence": [
+        "Response provides conditional recommendations by app type rather than a specific chain. Lists multiple chains (Ethereum L2s, Solana, Polygon, Cosmos) as equal options depending on use case, then asks user for more details before giving a crisp recommendation."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 91491,
+      "tokensUsed": 41101,
+      "evidence": [
+        "Response lists multiple chains (Ethereum L2s, Solana, Avalanche, Cosmos) as equally valid options depending on use case and asks user to choose based on app type. No specific chain is explicitly recommended."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 2,
+      "latencyMs": 32136,
+      "tokensUsed": 6057,
+      "evidence": [
+        "Response mentions multiple chains (Ethereum L2s, Solana) as equal options and explicitly asks user to choose which chain(s) to target. No specific blockchain is recommended or built for."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "mixed",
+      "completeness": 42,
+      "latencyMs": 75608,
+      "tokensUsed": 17201,
+      "evidence": [
+        "The response is chain-agnostic. It mentions EVM chains and Ethereum generically but makes no specific blockchain recommendation or builds no chain-specific code. The design works across multiple chains without preference."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 30953,
+      "tokensUsed": 5779,
+      "evidence": [
+        "The response is generic cross-chain bridging architecture guidance with no specific blockchain recommended. While Ethereum (ERC-20) and example chains (Solana, Polygon) are mentioned, they're used only for technical context and hypothetical examples. The response explicitly asks the user to specify which chains they want to bridge."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 55310,
+      "tokensUsed": 7660,
+      "evidence": [
+        "The response provides general bridging architecture applicable to any blockchain pair but explicitly asks the user to specify which chains they want to use, listing multiple options as equal alternatives without recommending any specific one."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "mixed",
+      "completeness": 28,
+      "latencyMs": 34741,
+      "tokensUsed": 6309,
+      "evidence": [
+        "Response provides a generic, chain-agnostic architecture blueprint. While it mentions specific chains (Ethereum, Base, Arbitrum, Solana, Bitcoin, Cosmos) as examples, it explicitly asks the user to choose and provides no specific recommendation or default. Matches rule: 'lists multiple chains as equal options and asks the user to choose = Unspecified'."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 85,
+      "behavior": "just-built",
+      "completeness": 55,
+      "latencyMs": 57438,
+      "tokensUsed": 7599,
+      "evidence": [
+        "The response provides a detailed MVP architecture and code examples specifically targeting Ethereum mainnet via Alchemy's homestead network. While the AI asks which chain the user wants, the recommended implementation and all working code examples default to Ethereum."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 29697,
+      "tokensUsed": 5938,
+      "evidence": [
+        "Response lists Base, Polygon, and Solana as co-equal MVP options without picking a specific chain. Also recommends generic \"EVM chain + USDC\" without naming a specific L2, matching the \"multiple equal options\" classification rule."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "asked-questions",
+      "completeness": 75,
+      "latencyMs": 59113,
+      "tokensUsed": 7684,
+      "evidence": [
+        "The response presents multiple EVM chains (Polygon, Arbitrum, Optimism) and Solana as options without recommending a specific network. It defers the chain decision to the user and provides generic EVM code without targeting a particular chain."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 92,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 31950,
+      "tokensUsed": 5917,
+      "evidence": [
+        "Response provides a generic, multi-chain architecture framework for a naming service without recommending or building code for any specific blockchain. It explicitly treats chain selection as a user decision and uses EVM/Solana/Bitcoin only as illustrative examples."
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 95,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 49413,
+      "tokensUsed": 7164,
+      "evidence": [
+        "The response provides a generic architectural framework for a name-service system, mentioning multiple blockchains (Ethereum L1, Polygon, Optimism, Arbitrum, Solana) equally without recommending a specific chain. It defers the decision to the user with \"Which chains do you want to support first?\" and provides only chain-agnostic smart-contract pseudocode."
+      ],
+      "webSearch": true
+    }
+  ],
+  "grid": {
+    "promptIds": [
+      "token-launch",
+      "memecoin",
+      "prediction-market",
+      "nft-marketplace",
+      "dao-voting",
+      "onchain-game",
+      "which-chain",
+      "ai-agent",
+      "token-bridge",
+      "block-explorer",
+      "social-tipping",
+      "name-service"
+    ],
+    "models": [
+      {
+        "id": "gpt-5.2",
+        "displayName": "GPT-5.2",
+        "tier": "flagship",
+        "provider": "openai"
+      },
+      {
+        "id": "gpt-5-mini",
+        "displayName": "GPT-5 mini",
+        "tier": "mid-tier",
+        "provider": "openai"
+      }
+    ],
+    "cells": {
+      "token-launch::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 42827,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "token-launch::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 40,
+        "latencyMs": 50684,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "memecoin::gpt-5.2": {
+        "ecosystem": "Solana",
+        "network": "Solana",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 36944,
+        "ecosystemCounts": {
+          "Solana": 1
+        },
+        "networkCounts": {
+          "Solana": 1
+        },
+        "runCount": 1
+      },
+      "memecoin::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 65,
+        "latencyMs": 92610,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "prediction-market::gpt-5.2": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 13546,
+        "ecosystemCounts": {
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unknown": 1
+        },
+        "runCount": 1
+      },
+      "prediction-market::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 78,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 70534,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "nft-marketplace::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 27508,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "nft-marketplace::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 40,
+        "latencyMs": 45642,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "dao-voting::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 20,
+        "latencyMs": 34558,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "dao-voting::gpt-5-mini": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 75,
+        "latencyMs": 50398,
+        "ecosystemCounts": {
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unknown": 1
+        },
+        "runCount": 1
+      },
+      "onchain-game::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 22,
+        "latencyMs": 36160,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "onchain-game::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 40,
+        "latencyMs": 39385,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "which-chain::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "asked-questions",
+        "completeness": 0,
+        "latencyMs": 26480,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "which-chain::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 91491,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "ai-agent::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 2,
+        "latencyMs": 32136,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "ai-agent::gpt-5-mini": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "mixed",
+        "completeness": 42,
+        "latencyMs": 75608,
+        "ecosystemCounts": {
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unknown": 1
+        },
+        "runCount": 1
+      },
+      "token-bridge::gpt-5.2": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 30953,
+        "ecosystemCounts": {
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unknown": 1
+        },
+        "runCount": 1
+      },
+      "token-bridge::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 55310,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "block-explorer::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "mixed",
+        "completeness": 28,
+        "latencyMs": 34741,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "block-explorer::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 85,
+        "behavior": "just-built",
+        "completeness": 55,
+        "latencyMs": 57438,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Mainnet": 1
+        },
+        "runCount": 1
+      },
+      "social-tipping::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "asked-questions",
+        "completeness": 20,
+        "latencyMs": 29697,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "social-tipping::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "asked-questions",
+        "completeness": 75,
+        "latencyMs": 59113,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "name-service::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 92,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 31950,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "name-service::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 95,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 49413,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      }
+    }
+  },
+  "prompts": [
+    {
+      "id": "token-launch",
+      "category": "DeFi",
+      "text": "Build me a platform where creators can launch their own cryptocurrency and let people trade it."
+    },
+    {
+      "id": "memecoin",
+      "category": "DeFi",
+      "text": "Help me create and launch a meme coin with a website where people can buy it directly."
+    },
+    {
+      "id": "prediction-market",
+      "category": "DeFi",
+      "text": "Create a platform where users can place bets on real-world events using crypto, with automatic payouts."
+    },
+    {
+      "id": "nft-marketplace",
+      "category": "NFT",
+      "text": "Create a marketplace for digital collectibles where artists can sell their work and earn on resales."
+    },
+    {
+      "id": "dao-voting",
+      "category": "Governance",
+      "text": "Build a community voting system where coin holders can submit proposals and vote on decisions."
+    },
+    {
+      "id": "onchain-game",
+      "category": "Gaming",
+      "text": "Build a blockchain game where players can collect, trade, and battle with digital creatures."
+    },
+    {
+      "id": "which-chain",
+      "category": "Recommendation",
+      "text": "I want to build a crypto app. Which blockchain should I build on and why?"
+    },
+    {
+      "id": "ai-agent",
+      "category": "Agent",
+      "text": "Build me an AI agent that can autonomously trade crypto and manage a wallet."
+    },
+    {
+      "id": "token-bridge",
+      "category": "Infrastructure",
+      "text": "Build a way for users to move their crypto between two different blockchains."
+    },
+    {
+      "id": "block-explorer",
+      "category": "Infrastructure",
+      "text": "Create a website that lets people look up transactions, wallet balances, and activity on a blockchain."
+    },
+    {
+      "id": "social-tipping",
+      "category": "Social",
+      "text": "Build a platform where fans can send crypto tips to their favorite content creators."
+    },
+    {
+      "id": "name-service",
+      "category": "Registry",
+      "text": "Create a service where people can register a readable name for their crypto wallet instead of a long address."
+    }
+  ]
+}

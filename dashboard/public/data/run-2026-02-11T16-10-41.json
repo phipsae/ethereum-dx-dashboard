@@ -1,0 +1,1009 @@
+{
+  "meta": {
+    "timestamp": "2026-02-11T16:10:41.253Z",
+    "runId": "run-1770825090010-0",
+    "modelCount": 2,
+    "promptCount": 12,
+    "resultCount": 24,
+    "webSearch": true
+  },
+  "results": [
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Arbitrum",
+      "confidence": 68,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 42827,
+      "tokensUsed": 6353,
+      "evidence": [
+        "arbitrum (×2, weight 8)",
+        "OpenZeppelin (×1, weight 7)",
+        "wagmi (×1, weight 6)",
+        "viem (×1, weight 6)",
+        "MetaMask (×1, weight 4)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-launch",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 60,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 50684,
+      "tokensUsed": 7221,
+      "evidence": [
+        "ethereum mainnet (×1, weight 10)",
+        "ethers.js (×1, weight 6)",
+        "OpenZeppelin (×3, weight 7)",
+        "Infura/Alchemy (×2, weight 4)",
+        "MetaMask (×1, weight 4)",
+        "Solidity mention (×1, weight 6)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "BSC",
+      "network": "BSC",
+      "confidence": 51,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 36944,
+      "tokensUsed": 5911,
+      "evidence": [
+        "BSC/BNB Chain (×3, weight 7)",
+        "PancakeSwap (×1, weight 7)",
+        "ERC standard (×1, weight 8)",
+        "OpenZeppelin (×1, weight 7)",
+        "MetaMask (×1, weight 4)",
+        "Ethereum mention (×1, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "memecoin",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 81,
+      "behavior": "asked-questions",
+      "completeness": 65,
+      "latencyMs": 92610,
+      "tokensUsed": 35059,
+      "evidence": [
+        "ethereum mainnet (×1, weight 10)",
+        "etherscan (×8, weight 4)",
+        "pragma solidity (×1, weight 10)",
+        ".sol file reference (×1, weight 5)",
+        "Hardhat (×1, weight 7)",
+        "ERC standard (×9, weight 8)",
+        "OpenZeppelin (×13, weight 7)",
+        "msg.sender (×1, weight 8)",
+        "MetaMask (×1, weight 4)",
+        "Solidity mention (×3, weight 6)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Unknown",
+      "network": "Unknown",
+      "confidence": 0,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 13546,
+      "tokensUsed": 5011,
+      "evidence": [],
+      "webSearch": true
+    },
+    {
+      "promptId": "prediction-market",
+      "promptCategory": "DeFi",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Arbitrum",
+      "confidence": 87,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 70534,
+      "tokensUsed": 29882,
+      "evidence": [
+        "arbitrum (×1, weight 8)",
+        "Hardhat (×1, weight 7)",
+        "Foundry/Forge (×1, weight 7)",
+        "Solidity mapping (×1, weight 5)",
+        "MetaMask (×2, weight 4)",
+        "Solidity mention (×3, weight 6)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Arbitrum",
+      "confidence": 67,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 27508,
+      "tokensUsed": 5654,
+      "evidence": [
+        "arbitrum (×1, weight 8)",
+        "ERC standard (×2, weight 8)",
+        "MetaMask (×1, weight 4)",
+        "Ethereum mention (×1, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "nft-marketplace",
+      "promptCategory": "NFT",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 69,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 45642,
+      "tokensUsed": 7227,
+      "evidence": [
+        "polygon (×2, weight 7)",
+        "ERC standard (×6, weight 8)",
+        "OpenZeppelin (×1, weight 7)",
+        "Infura/Alchemy (×2, weight 4)",
+        "MetaMask (×2, weight 4)",
+        "Solidity mention (×3, weight 6)",
+        "Ethereum mention (×1, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 91,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 34558,
+      "tokensUsed": 6082,
+      "evidence": [
+        "ERC standard (×4, weight 8)",
+        "OpenZeppelin (×3, weight 7)",
+        "Solidity mention (×1, weight 6)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "dao-voting",
+      "promptCategory": "Governance",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 93,
+      "behavior": "asked-questions",
+      "completeness": 75,
+      "latencyMs": 50398,
+      "tokensUsed": 7601,
+      "evidence": [
+        "polygon (×1, weight 7)",
+        "pragma solidity (×1, weight 10)",
+        ".sol file reference (×7, weight 5)",
+        "Hardhat (×6, weight 7)",
+        "ethers.js (×3, weight 6)",
+        "ERC standard (×15, weight 8)",
+        "OpenZeppelin (×16, weight 7)",
+        "ABI encoding (×1, weight 6)",
+        "wagmi (×2, weight 6)",
+        "Solidity mention (×5, weight 6)",
+        "Ethereum mention (×1, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Arbitrum",
+      "confidence": 87,
+      "behavior": "just-built",
+      "completeness": 22,
+      "latencyMs": 36160,
+      "tokensUsed": 6255,
+      "evidence": [
+        "arbitrum (×2, weight 8)",
+        ".sol file reference (×6, weight 5)",
+        "Hardhat (×1, weight 7)",
+        "Foundry/Forge (×1, weight 7)",
+        "web3.js (×1, weight 5)",
+        "ERC standard (×6, weight 8)",
+        "OpenZeppelin (×1, weight 7)",
+        "ABI encoding (×2, weight 6)",
+        "msg.sender (×1, weight 8)",
+        "Solidity require() (×4, weight 5)",
+        "Solidity mapping (×1, weight 5)",
+        "wagmi (×1, weight 6)",
+        "Solidity mention (×3, weight 6)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "onchain-game",
+      "promptCategory": "Gaming",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 68,
+      "behavior": "asked-questions",
+      "completeness": 40,
+      "latencyMs": 39385,
+      "tokensUsed": 6703,
+      "evidence": [
+        "ethereum mainnet (×2, weight 10)",
+        "Hardhat (×1, weight 7)",
+        "Foundry/Forge (×1, weight 7)",
+        "ERC standard (×9, weight 8)",
+        "MetaMask (×1, weight 4)",
+        "Solidity mention (×4, weight 6)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Optimism",
+      "confidence": 35,
+      "behavior": "asked-questions",
+      "completeness": 0,
+      "latencyMs": 26480,
+      "tokensUsed": 5543,
+      "evidence": [
+        "optimism (×2, weight 8)",
+        "OP Stack (×1, weight 7)",
+        "Solidity mention (×1, weight 6)",
+        "Ethereum mention (×10, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "which-chain",
+      "promptCategory": "Recommendation",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Arbitrum",
+      "confidence": 48,
+      "behavior": "just-built",
+      "completeness": 0,
+      "latencyMs": 91491,
+      "tokensUsed": 41101,
+      "evidence": [
+        "arbitrum (×2, weight 8)",
+        "Hardhat (×1, weight 7)",
+        "Foundry/Forge (×1, weight 7)",
+        "OpenZeppelin (×1, weight 7)",
+        "Solidity mention (×4, weight 6)",
+        "Ethereum mention (×9, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Arbitrum",
+      "confidence": 73,
+      "behavior": "just-built",
+      "completeness": 2,
+      "latencyMs": 32136,
+      "tokensUsed": 6057,
+      "evidence": [
+        "arbitrum (×1, weight 8)",
+        "web3.js (×1, weight 5)",
+        "ERC standard (×1, weight 8)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "ai-agent",
+      "promptCategory": "Agent",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Unspecified",
+      "confidence": 100,
+      "behavior": "mixed",
+      "completeness": 42,
+      "latencyMs": 75608,
+      "tokensUsed": 17201,
+      "evidence": [
+        "web3.js (×8, weight 5)",
+        "Ethereum mention (×6, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 88,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 30953,
+      "tokensUsed": 5779,
+      "evidence": [
+        "polygon (×1, weight 7)",
+        "ERC standard (×4, weight 8)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "token-bridge",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 66,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 55310,
+      "tokensUsed": 7660,
+      "evidence": [
+        "polygon (×1, weight 7)",
+        "Solidity mention (×4, weight 6)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Base",
+      "confidence": 70,
+      "behavior": "mixed",
+      "completeness": 28,
+      "latencyMs": 34741,
+      "tokensUsed": 6309,
+      "evidence": [
+        "Base mainnet (×1, weight 9)",
+        "ERC standard (×2, weight 8)",
+        "Infura/Alchemy (×4, weight 4)",
+        "Ethereum mention (×2, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "block-explorer",
+      "promptCategory": "Infrastructure",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Mainnet",
+      "confidence": 93,
+      "behavior": "just-built",
+      "completeness": 55,
+      "latencyMs": 57438,
+      "tokensUsed": 7599,
+      "evidence": [
+        "etherscan (×1, weight 4)",
+        "ethers.js (×5, weight 6)",
+        "ERC standard (×9, weight 8)",
+        "Infura/Alchemy (×11, weight 4)",
+        "Ethereum mention (×3, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 71,
+      "behavior": "asked-questions",
+      "completeness": 20,
+      "latencyMs": 29697,
+      "tokensUsed": 5938,
+      "evidence": [
+        "polygon (×1, weight 7)",
+        "ERC standard (×2, weight 8)",
+        "wagmi (×1, weight 6)",
+        "Infura/Alchemy (×2, weight 4)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "social-tipping",
+      "promptCategory": "Social",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 83,
+      "behavior": "asked-questions",
+      "completeness": 75,
+      "latencyMs": 59113,
+      "tokensUsed": 7684,
+      "evidence": [
+        "polygon (×2, weight 7)",
+        "pragma solidity (×1, weight 10)",
+        "ethers.js (×1, weight 6)",
+        "ERC standard (×15, weight 8)",
+        "OpenZeppelin (×2, weight 7)",
+        "msg.sender (×13, weight 8)",
+        "Solidity require() (×8, weight 5)",
+        "Solidity mapping (×3, weight 5)",
+        "Solidity emit (×4, weight 4)",
+        "payable keyword (×3, weight 4)",
+        "MetaMask (×3, weight 4)",
+        "Solidity mention (×3, weight 6)",
+        "Ethereum mention (×1, weight 3)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5.2",
+      "modelDisplayName": "GPT-5.2",
+      "modelTier": "flagship",
+      "ecosystem": "Solana",
+      "network": "Solana",
+      "confidence": 77,
+      "behavior": "just-built",
+      "completeness": 20,
+      "latencyMs": 31950,
+      "tokensUsed": 5917,
+      "evidence": [
+        "Solana mention (×2, weight 5)"
+      ],
+      "webSearch": true
+    },
+    {
+      "promptId": "name-service",
+      "promptCategory": "Registry",
+      "model": "gpt-5-mini",
+      "modelDisplayName": "GPT-5 mini",
+      "modelTier": "mid-tier",
+      "ecosystem": "Ethereum Ecosystem",
+      "network": "Polygon",
+      "confidence": 64,
+      "behavior": "just-built",
+      "completeness": 40,
+      "latencyMs": 49413,
+      "tokensUsed": 7164,
+      "evidence": [
+        "polygon (×2, weight 7)",
+        "ERC standard (×3, weight 8)",
+        "payable keyword (×1, weight 4)",
+        "MetaMask (×2, weight 4)",
+        "Solidity mention (×1, weight 6)",
+        "Ethereum mention (×1, weight 3)"
+      ],
+      "webSearch": true
+    }
+  ],
+  "grid": {
+    "promptIds": [
+      "token-launch",
+      "memecoin",
+      "prediction-market",
+      "nft-marketplace",
+      "dao-voting",
+      "onchain-game",
+      "which-chain",
+      "ai-agent",
+      "token-bridge",
+      "block-explorer",
+      "social-tipping",
+      "name-service"
+    ],
+    "models": [
+      {
+        "id": "gpt-5.2",
+        "displayName": "GPT-5.2",
+        "tier": "flagship",
+        "provider": "openai"
+      },
+      {
+        "id": "gpt-5-mini",
+        "displayName": "GPT-5 mini",
+        "tier": "mid-tier",
+        "provider": "openai"
+      }
+    ],
+    "cells": {
+      "token-launch::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Arbitrum",
+        "confidence": 68,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 42827,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Arbitrum": 1
+        },
+        "runCount": 1
+      },
+      "token-launch::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 60,
+        "behavior": "asked-questions",
+        "completeness": 40,
+        "latencyMs": 50684,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Mainnet": 1
+        },
+        "runCount": 1
+      },
+      "memecoin::gpt-5.2": {
+        "ecosystem": "BSC",
+        "network": "BSC",
+        "confidence": 51,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 36944,
+        "ecosystemCounts": {
+          "BSC": 1
+        },
+        "networkCounts": {
+          "BSC": 1
+        },
+        "runCount": 1
+      },
+      "memecoin::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 81,
+        "behavior": "asked-questions",
+        "completeness": 65,
+        "latencyMs": 92610,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Mainnet": 1
+        },
+        "runCount": 1
+      },
+      "prediction-market::gpt-5.2": {
+        "ecosystem": "Unknown",
+        "network": "Unknown",
+        "confidence": 0,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 13546,
+        "ecosystemCounts": {
+          "Unknown": 1
+        },
+        "networkCounts": {
+          "Unknown": 1
+        },
+        "runCount": 1
+      },
+      "prediction-market::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Arbitrum",
+        "confidence": 87,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 70534,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Arbitrum": 1
+        },
+        "runCount": 1
+      },
+      "nft-marketplace::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Arbitrum",
+        "confidence": 67,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 27508,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Arbitrum": 1
+        },
+        "runCount": 1
+      },
+      "nft-marketplace::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 69,
+        "behavior": "asked-questions",
+        "completeness": 40,
+        "latencyMs": 45642,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Polygon": 1
+        },
+        "runCount": 1
+      },
+      "dao-voting::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 91,
+        "behavior": "asked-questions",
+        "completeness": 20,
+        "latencyMs": 34558,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "dao-voting::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 93,
+        "behavior": "asked-questions",
+        "completeness": 75,
+        "latencyMs": 50398,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Polygon": 1
+        },
+        "runCount": 1
+      },
+      "onchain-game::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Arbitrum",
+        "confidence": 87,
+        "behavior": "just-built",
+        "completeness": 22,
+        "latencyMs": 36160,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Arbitrum": 1
+        },
+        "runCount": 1
+      },
+      "onchain-game::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 68,
+        "behavior": "asked-questions",
+        "completeness": 40,
+        "latencyMs": 39385,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Mainnet": 1
+        },
+        "runCount": 1
+      },
+      "which-chain::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Optimism",
+        "confidence": 35,
+        "behavior": "asked-questions",
+        "completeness": 0,
+        "latencyMs": 26480,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Optimism": 1
+        },
+        "runCount": 1
+      },
+      "which-chain::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Arbitrum",
+        "confidence": 48,
+        "behavior": "just-built",
+        "completeness": 0,
+        "latencyMs": 91491,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Arbitrum": 1
+        },
+        "runCount": 1
+      },
+      "ai-agent::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Arbitrum",
+        "confidence": 73,
+        "behavior": "just-built",
+        "completeness": 2,
+        "latencyMs": 32136,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Arbitrum": 1
+        },
+        "runCount": 1
+      },
+      "ai-agent::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Unspecified",
+        "confidence": 100,
+        "behavior": "mixed",
+        "completeness": 42,
+        "latencyMs": 75608,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Unspecified": 1
+        },
+        "runCount": 1
+      },
+      "token-bridge::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 88,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 30953,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Polygon": 1
+        },
+        "runCount": 1
+      },
+      "token-bridge::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 66,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 55310,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Polygon": 1
+        },
+        "runCount": 1
+      },
+      "block-explorer::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Base",
+        "confidence": 70,
+        "behavior": "mixed",
+        "completeness": 28,
+        "latencyMs": 34741,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Base": 1
+        },
+        "runCount": 1
+      },
+      "block-explorer::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Mainnet",
+        "confidence": 93,
+        "behavior": "just-built",
+        "completeness": 55,
+        "latencyMs": 57438,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Mainnet": 1
+        },
+        "runCount": 1
+      },
+      "social-tipping::gpt-5.2": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 71,
+        "behavior": "asked-questions",
+        "completeness": 20,
+        "latencyMs": 29697,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Polygon": 1
+        },
+        "runCount": 1
+      },
+      "social-tipping::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 83,
+        "behavior": "asked-questions",
+        "completeness": 75,
+        "latencyMs": 59113,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Polygon": 1
+        },
+        "runCount": 1
+      },
+      "name-service::gpt-5.2": {
+        "ecosystem": "Solana",
+        "network": "Solana",
+        "confidence": 77,
+        "behavior": "just-built",
+        "completeness": 20,
+        "latencyMs": 31950,
+        "ecosystemCounts": {
+          "Solana": 1
+        },
+        "networkCounts": {
+          "Solana": 1
+        },
+        "runCount": 1
+      },
+      "name-service::gpt-5-mini": {
+        "ecosystem": "Ethereum Ecosystem",
+        "network": "Polygon",
+        "confidence": 64,
+        "behavior": "just-built",
+        "completeness": 40,
+        "latencyMs": 49413,
+        "ecosystemCounts": {
+          "Ethereum Ecosystem": 1
+        },
+        "networkCounts": {
+          "Polygon": 1
+        },
+        "runCount": 1
+      }
+    }
+  },
+  "prompts": [
+    {
+      "id": "token-launch",
+      "category": "DeFi",
+      "text": "Build me a platform where creators can launch their own cryptocurrency and let people trade it."
+    },
+    {
+      "id": "memecoin",
+      "category": "DeFi",
+      "text": "Help me create and launch a meme coin with a website where people can buy it directly."
+    },
+    {
+      "id": "prediction-market",
+      "category": "DeFi",
+      "text": "Create a platform where users can place bets on real-world events using crypto, with automatic payouts."
+    },
+    {
+      "id": "nft-marketplace",
+      "category": "NFT",
+      "text": "Create a marketplace for digital collectibles where artists can sell their work and earn on resales."
+    },
+    {
+      "id": "dao-voting",
+      "category": "Governance",
+      "text": "Build a community voting system where coin holders can submit proposals and vote on decisions."
+    },
+    {
+      "id": "onchain-game",
+      "category": "Gaming",
+      "text": "Build a blockchain game where players can collect, trade, and battle with digital creatures."
+    },
+    {
+      "id": "which-chain",
+      "category": "Recommendation",
+      "text": "I want to build a crypto app. Which blockchain should I build on and why?"
+    },
+    {
+      "id": "ai-agent",
+      "category": "Agent",
+      "text": "Build me an AI agent that can autonomously trade crypto and manage a wallet."
+    },
+    {
+      "id": "token-bridge",
+      "category": "Infrastructure",
+      "text": "Build a way for users to move their crypto between two different blockchains."
+    },
+    {
+      "id": "block-explorer",
+      "category": "Infrastructure",
+      "text": "Create a website that lets people look up transactions, wallet balances, and activity on a blockchain."
+    },
+    {
+      "id": "social-tipping",
+      "category": "Social",
+      "text": "Build a platform where fans can send crypto tips to their favorite content creators."
+    },
+    {
+      "id": "name-service",
+      "category": "Registry",
+      "text": "Create a service where people can register a readable name for their crypto wallet instead of a long address."
+    }
+  ]
+}

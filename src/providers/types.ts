@@ -8,7 +8,7 @@ export interface ProviderResponse {
 
 export interface Provider {
   name: string;
-  send(prompt: string, model: string): Promise<ProviderResponse>;
+  send(prompt: string, model: string, webSearch?: boolean): Promise<ProviderResponse>;
 }
 
 export interface ModelConfig {
@@ -24,6 +24,7 @@ export interface Detection {
   confidence: number;
   evidence: string[];
   all: Record<string, number>;
+  reasoning?: string;
 }
 
 export interface BehaviorClassification {
@@ -56,4 +57,5 @@ export interface BenchmarkResult {
   analysis: AnalysisResult;
   timestamp: string;
   runId: string;
+  webSearch?: boolean;
 }

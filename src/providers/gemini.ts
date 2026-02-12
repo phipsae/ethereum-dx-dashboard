@@ -1,27 +1,33 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 import { MAX_TOKENS } from "../config.js";
 import type { Provider, ProviderResponse } from "./types.js";
 
 export class GeminiProvider implements Provider {
   name = "google";
-  private genAI: GoogleGenerativeAI;
+  private client: GoogleGenAI;
 
   constructor(apiKey: string) {
-    this.genAI = new GoogleGenerativeAI(apiKey);
+    this.client = new GoogleGenAI({ apiKey });
   }
 
-  async send(prompt: string, model: string): Promise<ProviderResponse> {
-    const genModel = this.genAI.getGenerativeModel({
-      model,
-      generationConfig: { maxOutputTokens: MAX_TOKENS },
-    });
+  async send(prompt: string, model: string, webSearch?: boolean): Promise<ProviderResponse> {
+    const config: Record<string, unknown> = {
+      maxOutputTokens: MAX_TOKENS,
+    };
+
+    if (webSearch) {
+      config.tools = [{ googleSearch: {} }];
+    }
 
     const start = Date.now();
-    const result = await genModel.generateContent(prompt);
+    const response = await this.client.models.generateContent({
+      model,
+      contents: prompt,
+      config,
+    });
     const latencyMs = Date.now() - start;
 
-    const response = result.response;
-    const content = response.text();
+    const content = response.text ?? "";
     const usage = response.usageMetadata;
 
     return {

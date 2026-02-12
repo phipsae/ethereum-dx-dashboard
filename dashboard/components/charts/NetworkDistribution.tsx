@@ -8,7 +8,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { getNetworkColor } from "@/lib/types";
+import { getNetworkColor, getDisplayName } from "@/lib/types";
 
 interface NetworkDistributionProps {
   overall: Record<string, number>;
@@ -25,7 +25,7 @@ export default function NetworkDistribution({ overall, perModel }: NetworkDistri
   const pieData = Object.entries(overall)
     .filter(([, v]) => v > 0)
     .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }));
+    .map(([name, value]) => ({ name: getDisplayName(name), value }));
 
   const total = pieData.reduce((sum, d) => sum + d.value, 0);
 
@@ -57,18 +57,6 @@ export default function NetworkDistribution({ overall, perModel }: NetworkDistri
               itemStyle={{ color: "#e0e0e0" }}
               formatter={(value: number, name: string) => {
                 const pct = `${value} (${((value / total) * 100).toFixed(1)}%)`;
-                if (name === "Unspecified") {
-                  return [
-                    <span key="unspecified">
-                      {pct}
-                      <br />
-                      <span style={{ fontSize: 11, color: "#a0a0b0" }}>
-                        Said Ethereum but didn&apos;t name a specific L2/network
-                      </span>
-                    </span>,
-                    name,
-                  ];
-                }
                 return [pct, name];
               }}
             />
@@ -84,7 +72,7 @@ export default function NetworkDistribution({ overall, perModel }: NetworkDistri
             const modelData = Object.entries(entry.networks)
               .filter(([, v]) => v > 0)
               .sort((a, b) => b[1] - a[1])
-              .map(([name, value]) => ({ name, value }));
+              .map(([name, value]) => ({ name: getDisplayName(name), value }));
 
             if (modelData.length === 0) return null;
 
@@ -119,18 +107,6 @@ export default function NetworkDistribution({ overall, perModel }: NetworkDistri
                       itemStyle={{ color: "#e0e0e0" }}
                       formatter={(value: number, name: string) => {
                         const pct = `${value} (${((value / modelTotal) * 100).toFixed(1)}%)`;
-                        if (name === "Unspecified") {
-                          return [
-                            <span key="unspecified">
-                              {pct}
-                              <br />
-                              <span style={{ fontSize: 11, color: "#a0a0b0" }}>
-                                Said Ethereum but didn&apos;t name a specific L2/network
-                              </span>
-                            </span>,
-                            name,
-                          ];
-                        }
                         return [pct, name];
                       }}
                     />
