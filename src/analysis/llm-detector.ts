@@ -2,7 +2,7 @@ import { execFile } from "node:child_process";
 import type { Detection, Strength } from "../providers/types.js";
 import { getEcosystem } from "./detector.js";
 
-const VOTE_COUNT = 3;
+const VOTE_COUNT = 1;
 
 const VALID_NETWORKS = new Set([
   "Mainnet", "Base", "Arbitrum", "Optimism", "Polygon", "zkSync", "Scroll",
