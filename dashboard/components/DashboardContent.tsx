@@ -132,6 +132,11 @@ export default function DashboardContent({
 
   return (
     <div className="space-y-8">
+      {/* Hero subtitle */}
+      <p className="text-[#a0a0b0] text-base">
+        Which blockchain do AI models default to when asked to build?
+      </p>
+
       {/* Tab bar */}
       <div className="flex items-center gap-6 border-b border-[#0f3460]">
         <button
@@ -444,16 +449,16 @@ export default function DashboardContent({
                 models via their APIs, with no system prompt, to measure each model&apos;s inherent chain
                 defaults. Every response is classified by Claude Opus 4.6.
               </p>
-              <p>
-                Classification follows a strict priority: an explicit chain recommendation wins first; then
-                a concrete example or tutorial targeting one chain; then code with chain-specific
-                configuration (chain IDs, RPC URLs); generic Ethereum/EVM code without a specific L2 is
-                marked &quot;Ethereum Ecosystem&quot;; multiple EVM chains presented equally is also
-                &quot;Ethereum Ecosystem&quot;; if listed chains span multiple ecosystems (e.g. Solana,
-                Base, and Ethereum presented equally), the response is &quot;Chain-Agnostic&quot;; and if
-                no blockchain is mentioned or the model refuses to choose, it is also
-                &quot;Chain-Agnostic&quot;.
-              </p>
+              <p className="mb-3">Classification follows a strict priority:</p>
+              <ul className="list-disc space-y-1.5 pl-5">
+                <li>An explicit chain recommendation wins first</li>
+                <li>A concrete example or tutorial targeting one chain</li>
+                <li>Code with chain-specific configuration (chain IDs, RPC URLs)</li>
+                <li>Generic Ethereum/EVM code without a specific L2 &rarr; &quot;Ethereum Ecosystem&quot;</li>
+                <li>Multiple EVM chains presented equally &rarr; &quot;Ethereum Ecosystem&quot;</li>
+                <li>Chains spanning multiple ecosystems (e.g. Solana, Base, and Ethereum presented equally) &rarr; &quot;Chain-Agnostic&quot;</li>
+                <li>No blockchain mentioned or the model refuses to choose &rarr; &quot;Chain-Agnostic&quot;</li>
+              </ul>
             </>
           ) : (
             <>

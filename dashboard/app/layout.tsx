@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://chain-bias-dashboard.vercel.app"),
   title: "Chain Bias Dashboard",
   description:
-    "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
+    "Which blockchain do AI models default to when asked to build? Measuring chain and tool bias across LLMs.",
   openGraph: {
     title: "Chain Bias Dashboard",
     description:
-      "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
+      "Which blockchain do AI models default to when asked to build? Measuring chain and tool bias across LLMs.",
     url: "https://chain-bias-dashboard.vercel.app",
     siteName: "Chain Bias Dashboard",
     type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chain Bias Dashboard",
     description:
-      "Which blockchain do AI models default to? Measuring chain bias across LLMs.",
+      "Which blockchain do AI models default to when asked to build? Measuring chain and tool bias across LLMs.",
     images: ["/og-image.png"],
   },
 };
