@@ -13,6 +13,9 @@ import {
   computeOverallTools,
   computePerModelTools,
   computeToolsByCategory,
+  computeEcosystemComparison,
+  computePerModelComparison,
+  computeToolComparison,
 } from "@/lib/data";
 import ChainPieChart from "@/components/charts/ChainPieChart";
 import NetworkDistribution from "@/components/charts/NetworkDistribution";
@@ -21,6 +24,8 @@ import ToolFrequencyBar from "@/components/charts/ToolFrequencyBar";
 import ToolStackedBar from "@/components/charts/ToolStackedBar";
 import ResultsGrid from "@/components/tables/ResultsGrid";
 import PromptsTable from "@/components/tables/PromptsTable";
+import ComparisonBar from "@/components/charts/ComparisonBar";
+import ComparisonStackedBar from "@/components/charts/ComparisonStackedBar";
 import ModeToggle from "@/components/ModeToggle";
 
 interface DashboardContentProps {
@@ -74,6 +79,9 @@ export default function DashboardContent({
 
   // Tool filtering: only show tools with >= 10% of results by default
   const minToolCount = toolData ? Math.ceil(toolData.meta.resultCount * 0.1) : 0;
+  const minToolCountCompare = hasToolToggle
+    ? Math.ceil(Math.min(toolStandard!.meta.resultCount, toolWebSearch!.meta.resultCount) * 0.1)
+    : minToolCount;
   const filteredOverallTools = useMemo(() => {
     if (showAllTools) return overallTools;
     return overallTools.filter((t) => t.count >= minToolCount);
@@ -104,9 +112,23 @@ export default function DashboardContent({
     }));
   }, [toolsByCategory, showAllTools, visibleToolNames]);
 
-  const activeData = tab === "network" ? chainData : toolData;
+  // Comparison computations (only when both modes exist)
+  const ecosystemComparison = useMemo(
+    () => hasChainToggle ? computeEcosystemComparison(standard!, webSearch!) : [],
+    [hasChainToggle, standard, webSearch],
+  );
+  const perModelComparison = useMemo(
+    () => hasChainToggle ? computePerModelComparison(standard!, webSearch!) : [],
+    [hasChainToggle, standard, webSearch],
+  );
+  const toolComparison = useMemo(
+    () => hasToolToggle ? computeToolComparison(toolStandard!, toolWebSearch!) : [],
+    [hasToolToggle, toolStandard, toolWebSearch],
+  );
+
+  const activeData = tab === "network" ? chainData : tab === "tools" ? toolData : null;
   const modeLabel = activeData?.meta.webSearch ? "Web Search" : "Base Model";
-  const hasToggle = tab === "network" ? hasChainToggle : hasToolToggle;
+  const hasToggle = tab === "network" ? hasChainToggle : tab === "tools" ? hasToolToggle : false;
 
   return (
     <div className="space-y-8">
@@ -132,20 +154,34 @@ export default function DashboardContent({
         >
           Tool Bias
         </button>
+        {hasChainToggle && (
+          <button
+            onClick={() => setTab("compare")}
+            className={`pb-2 text-sm font-medium transition-colors ${
+              tab === "compare"
+                ? "border-b-2 border-[#e94560] text-white"
+                : "text-[#a0a0b0] hover:text-white"
+            }`}
+          >
+            Compare
+          </button>
+        )}
       </div>
 
       {/* Run stats + toggle */}
-      <div className="flex flex-wrap items-center gap-4">
-        {hasToggle && <ModeToggle mode={mode} onChange={setMode} />}
-        {activeData && (
-          <p className="text-sm text-[#a0a0b0]">
-            {hasToggle && <span className="font-medium text-white">{modeLabel} &middot; </span>}
-            Run: {new Date(activeData.meta.timestamp).toLocaleString()} &middot;{" "}
-            {activeData.meta.resultCount} results &middot; {activeData.meta.modelCount} models &middot;{" "}
-            {activeData.meta.promptCount} prompts
-          </p>
-        )}
-      </div>
+      {tab !== "compare" && (
+        <div className="flex flex-wrap items-center gap-4">
+          {hasToggle && <ModeToggle mode={mode} onChange={setMode} />}
+          {activeData && (
+            <p className="text-sm text-[#a0a0b0]">
+              {hasToggle && <span className="font-medium text-white">{modeLabel} &middot; </span>}
+              Run: {new Date(activeData.meta.timestamp).toLocaleString()} &middot;{" "}
+              {activeData.meta.resultCount} results &middot; {activeData.meta.modelCount} models &middot;{" "}
+              {activeData.meta.promptCount} prompts
+            </p>
+          )}
+        </div>
+      )}
 
       {/* Network Bias Tab */}
       {tab === "network" && (
@@ -280,13 +316,128 @@ export default function DashboardContent({
         </>
       )}
 
+      {/* Compare Tab */}
+      {tab === "compare" && hasChainToggle && (
+        <>
+          {/* Summary */}
+          <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-4">
+            <p className="text-sm text-[#e0e0e0]">
+              Comparing{" "}
+              <span className="font-semibold text-white">{standard!.meta.resultCount} base model</span>
+              {" "}vs{" "}
+              <span className="font-semibold text-white">{webSearch!.meta.resultCount} web search</span>
+              {" "}responses across {standard!.meta.modelCount} models and{" "}
+              {standard!.meta.promptCount} prompts.
+            </p>
+            {ecosystemComparison.length > 0 && (() => {
+              const biggest = ecosystemComparison[0];
+              const sign = biggest.deltaPp > 0 ? "+" : "";
+              return (
+                <p className="mt-2 text-xs text-[#a0a0b0]">
+                  Largest shift: <span className="font-medium text-white">{biggest.label}</span>{" "}
+                  moved{" "}
+                  <span className={biggest.deltaPp > 0 ? "text-[#4bc0c0]" : "text-[#e94560]"}>
+                    {sign}{Math.round(biggest.deltaPp * 10) / 10}pp
+                  </span>{" "}
+                  with web search enabled.
+                </p>
+              );
+            })()}
+          </div>
+
+          {/* Ecosystem Distribution: Base vs Web Search */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Ecosystem Distribution: Base vs Web Search
+            </h2>
+            <ComparisonBar
+              data={ecosystemComparison.map((r) => ({
+                label: r.label,
+                baseValue: r.basePct,
+                webValue: r.webPct,
+                deltaPp: r.deltaPp,
+              }))}
+              title="Share of responses per ecosystem (%)"
+            />
+          </section>
+
+          {/* Ecosystem by Model: Base vs Web Search */}
+          <section>
+            <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+              Ecosystem by Model: Base vs Web Search
+            </h2>
+            <ComparisonStackedBar data={perModelComparison.map((r) => ({ label: r.model, base: r.base, web: r.web }))} />
+          </section>
+
+          {/* Tool Recommendations: Base vs Web Search */}
+          {hasToolToggle && toolComparison.length > 0 && (
+            <>
+              <section>
+                <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+                  Most Recommended Tools: Base vs Web Search
+                </h2>
+                <p className="mb-3 text-xs text-[#a0a0b0]">
+                  Top 20 tools by overall popularity. Each bar shows the % of responses that recommended this tool.
+                </p>
+                <ComparisonBar
+                  data={toolComparison
+                    .slice(0, 20)
+                    .map((r) => ({
+                    label: r.tool,
+                    baseValue: r.basePct,
+                    webValue: r.webPct,
+                    deltaPp: r.deltaPp,
+                  }))}
+                  title="Share of responses recommending each tool (%)"
+                />
+              </section>
+
+              <section>
+                <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
+                  Biggest Shifts with Web Search
+                </h2>
+                <p className="mb-3 text-xs text-[#a0a0b0]">
+                  Tools with the largest change in recommendation rate between modes, sorted by absolute difference in percentage points.
+                </p>
+                <ComparisonBar
+                  data={[...toolComparison]
+                    .sort((a, b) => Math.abs(b.deltaPp) - Math.abs(a.deltaPp))
+                    .slice(0, 15)
+                    .map((r) => ({
+                    label: r.tool,
+                    baseValue: r.basePct,
+                    webValue: r.webPct,
+                    deltaPp: r.deltaPp,
+                  }))}
+                  title="Share of responses recommending each tool (%)"
+                />
+              </section>
+            </>
+          )}
+        </>
+      )}
+
       {/* About */}
       <section>
         <h2 className="mb-4 border-b-2 border-[#0f3460] pb-2 text-lg font-semibold text-white">
           About this Research
         </h2>
         <div className="rounded-lg border border-[#0f3460] bg-[#16213e] p-6 text-sm leading-relaxed text-[#e0e0e0]">
-          {tab === "network" ? (
+          {tab === "compare" ? (
+            <>
+              <p className="mb-3">
+                This view compares model responses collected in two modes: <strong className="text-white">Base Model</strong>{" "}
+                (standard API calls with no system prompt) and <strong className="text-white">Web Search</strong>{" "}
+                (the same prompts with web search enabled). Both sets use identical prompts and models.
+              </p>
+              <p>
+                Deltas are shown in percentage points (pp). A positive delta means web search increased
+                the share of that ecosystem or tool; a negative delta means it decreased. All responses
+                are classified by the same Claude Opus 4.6 classifier, so any differences reflect changes
+                in model behavior, not classifier variance.
+              </p>
+            </>
+          ) : tab === "network" ? (
             <>
               <p className="mb-3">
                 This benchmark sends {chainData.meta.promptCount} chain-agnostic prompts to {chainData.meta.modelCount} AI

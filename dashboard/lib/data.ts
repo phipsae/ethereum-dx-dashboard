@@ -185,6 +185,92 @@ export function computeToolFrequency(
     .sort((a, b) => b.count - a.count);
 }
 
+// --- Comparison compute functions ---
+
+export interface EcosystemComparisonRow {
+  label: string;
+  baseCount: number;
+  webCount: number;
+  basePct: number;
+  webPct: number;
+  deltaPp: number;
+}
+
+export function computeEcosystemComparison(
+  base: DashboardRunData,
+  web: DashboardRunData,
+): EcosystemComparisonRow[] {
+  const baseCounts = computeOverallEcosystems(base);
+  const webCounts = computeOverallEcosystems(web);
+  const baseTotal = base.results.length;
+  const webTotal = web.results.length;
+  const allLabels = new Set([...Object.keys(baseCounts), ...Object.keys(webCounts)]);
+  return [...allLabels]
+    .map((label) => {
+      const bc = baseCounts[label] ?? 0;
+      const wc = webCounts[label] ?? 0;
+      const basePct = baseTotal > 0 ? (bc / baseTotal) * 100 : 0;
+      const webPct = webTotal > 0 ? (wc / webTotal) * 100 : 0;
+      return { label, baseCount: bc, webCount: wc, basePct, webPct, deltaPp: webPct - basePct };
+    })
+    .sort((a, b) => Math.abs(b.deltaPp) - Math.abs(a.deltaPp));
+}
+
+export interface PerModelComparisonRow {
+  model: string;
+  base: Record<string, number>;
+  web: Record<string, number>;
+}
+
+export function computePerModelComparison(
+  base: DashboardRunData,
+  web: DashboardRunData,
+): PerModelComparisonRow[] {
+  const basePerModel = computePerModelEcosystems(base);
+  const webPerModel = computePerModelEcosystems(web);
+  const webMap = new Map(webPerModel.map((e) => [e.model, e.ecosystems]));
+  const allModels = new Set([
+    ...basePerModel.map((e) => e.model),
+    ...webPerModel.map((e) => e.model),
+  ]);
+  return [...allModels].map((model) => ({
+    model,
+    base: basePerModel.find((e) => e.model === model)?.ecosystems ?? {},
+    web: webMap.get(model) ?? {},
+  }));
+}
+
+export interface ToolComparisonRow {
+  tool: string;
+  baseCount: number;
+  webCount: number;
+  basePct: number;
+  webPct: number;
+  deltaPp: number;
+}
+
+export function computeToolComparison(
+  baseTools: ToolDashboardRunData,
+  webTools: ToolDashboardRunData,
+): ToolComparisonRow[] {
+  const baseCounts = computeOverallTools(baseTools);
+  const webCounts = computeOverallTools(webTools);
+  const baseTotal = baseTools.results.length;
+  const webTotal = webTools.results.length;
+  const baseMap = new Map(baseCounts.map((e) => [e.tool, e.count]));
+  const webMap = new Map(webCounts.map((e) => [e.tool, e.count]));
+  const allTools = new Set([...baseMap.keys(), ...webMap.keys()]);
+  return [...allTools]
+    .map((tool) => {
+      const bc = baseMap.get(tool) ?? 0;
+      const wc = webMap.get(tool) ?? 0;
+      const basePct = baseTotal > 0 ? (bc / baseTotal) * 100 : 0;
+      const webPct = webTotal > 0 ? (wc / webTotal) * 100 : 0;
+      return { tool, baseCount: bc, webCount: wc, basePct, webPct, deltaPp: webPct - basePct };
+    })
+    .sort((a, b) => Math.max(b.basePct, b.webPct) - Math.max(a.basePct, a.webPct));
+}
+
 // --- Tool bias compute functions ---
 
 export function computeOverallTools(

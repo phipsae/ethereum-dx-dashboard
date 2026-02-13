@@ -98,7 +98,7 @@ export interface ToolDashboardRunData {
 }
 
 export type SearchMode = "standard" | "webSearch";
-export type DashboardTab = "network" | "tools";
+export type DashboardTab = "network" | "tools" | "compare";
 
 export const CHAIN_COLORS: Record<string, string> = {
   "Ethereum Ecosystem": "#627eea",
